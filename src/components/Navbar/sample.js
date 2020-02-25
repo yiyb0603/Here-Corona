@@ -8,12 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./sample.scss";
 import $ from "jquery";
 import "./styleSample.scss";
-
+import { Icon } from "@class101/ui";
 class Sample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: ""
+      firstman: "1,000",
+      secondman: "100"
     };
   }
 
@@ -34,7 +35,7 @@ class Sample extends Component {
   //             </Nav.Link>
   //           </Nav>
   //           {/* <Nav>
-  //             <Nav.Link href="#deets">More deets</Nav.Link>
+  //             <Nav.Link href="#deets">More deets</Nav.Link>~`~
   //             <Nav.Link eventKey={2} href="#memes">
   //               Dank memes
   //             </Nav.Link>
@@ -154,14 +155,51 @@ class Sample extends Component {
             <div className="lastUpdate">
               마지막 업데이트: 2020년 02월25일 화요일
             </div>
-            <div className="firstBox">asd</div>
+            <div className="firstBox">
+              <div className="mainplusBox">
+                <div className="mainText">국내 확진자</div>
+                <div className="plus">
+                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                </div>
+              </div>
+              <br />
+              <div className="people">{this.state.firstman} 명</div>
+            </div>
             <div class="line"></div>
-            <div className="secondBox">asd</div>
+            <div className="secondBox">
+              <div className="mainplusBox">
+                <div className="mainText">검사 진행중</div>
+                <div className="plus">
+                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                </div>
+              </div>
+              <br />
+              <div className="people">{this.state.secondman} 명</div>
+            </div>
             <div></div>
             <div class="line"></div>
-            <div className="thirdBox">asd</div>
+            <div className="thirdBox">
+              <div className="mainplusBox">
+                <div className="mainText">격리 해제</div>
+                <div className="plus">
+                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                </div>
+              </div>
+              <br />
+              <div className="people">명</div>
+            </div>
             <div class="line"></div>
-            <div className="fourthBox">asd</div>
+            <div className="fourthBox">
+              <div className="mainplusBox">
+                <div className="mainText">사망자</div>
+                <div className="plus">
+                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                </div>
+              </div>
+              <br />
+              <div className="people">명</div>
+            </div>
+            <div class="line"></div>
           </div>
         </div>
       </div>
