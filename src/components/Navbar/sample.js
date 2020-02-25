@@ -13,8 +13,10 @@ class Sample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstman: "1,000",
-      secondman: "100"
+      firstman: "977",
+      secondman: "13,880",
+      thirdman: "22",
+      fourthman: "11"
     };
   }
 
@@ -157,7 +159,7 @@ class Sample extends Component {
             </div>
             <div className="firstBox">
               <div className="mainplusBox">
-                <div className="mainText">국내 확진자</div>
+                <div className="mainText">국내 확진환자</div>
                 <div className="plus">
                   <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
                 </div>
@@ -186,7 +188,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">명</div>
+              <div className="people">{this.state.thirdman}명</div>
             </div>
             <div class="line"></div>
             <div className="fourthBox">
@@ -197,7 +199,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">명</div>
+              <div className="people">{this.state.fourthman}명</div>
             </div>
             <div class="line"></div>
           </div>
