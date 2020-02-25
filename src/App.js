@@ -1,7 +1,8 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "./App.css";
-import Sample from "./components/Navbar/sample";
+import AdminLogin from './components/Admin/AdminLogin';
+import Sample from './components/Navbar/sample';
+
 function App() {
   return (
     <>
