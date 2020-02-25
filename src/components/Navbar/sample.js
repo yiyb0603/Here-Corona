@@ -64,21 +64,13 @@ class Sample extends Component {
             <ul class="list-unstyled components">
               <p>Corona?</p>
               <li class="active">
-                <a
-                  href="#homeSubmenu"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                >
+                <a data-toggle="collapse" aria-expanded="false">
                   국내현황
                 </a>
               </li>
               <li>
                 <a href="#">전세계 현황</a>
-                <a
-                  href="#pageSubmenu"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                >
+                <a data-toggle="collapse" aria-expanded="false">
                   국내 사망자 현황
                 </a>
               </li>
@@ -157,14 +149,17 @@ class Sample extends Component {
                 </div>
               </div>
             </nav>
-
-            <h2>메로나, 여기</h2>
-
+            <div className="lastUpdate">
+              마지막 업데이트: 2020년 02월25일 화요일
+            </div>
+            <div className="firstBox">asd</div>
             <div class="line"></div>
-
+            <div className="firstBox">asd</div>
+            <div></div>
             <div class="line"></div>
-
+            <div className="firstBox">asd</div>
             <div class="line"></div>
+            <div className="firstBox">asd</div>
           </div>
         </div>
       </div>
