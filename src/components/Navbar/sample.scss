@@ -1,0 +1,15 @@
+@media screen and (max-width: 1023px) {
+  /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
+
+  .bg-dark {
+    background-color: transparent !important;
+  }
+  .navbar-dark .navbar-toggler {
+    color: red !important;
+    background-color: red !important;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: red !important;
+    text-align: center;
+  }
+}
