@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import { Component } from "react";
 // import Navbar from "react-bootstrap/Navbar";
@@ -154,12 +156,12 @@ class Sample extends Component {
             </div>
             <div className="firstBox">asd</div>
             <div class="line"></div>
-            <div className="firstBox">asd</div>
+            <div className="secondBox">asd</div>
             <div></div>
             <div class="line"></div>
-            <div className="firstBox">asd</div>
+            <div className="thirdBox">asd</div>
             <div class="line"></div>
-            <div className="firstBox">asd</div>
+            <div className="fourthBox">asd</div>
           </div>
         </div>
       </div>
