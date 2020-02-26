@@ -25,6 +25,7 @@ const config = {
   radius: 0.8,
   padding: "auto",
   data,
+  color: ["#05C2AB", "#FF5152"],
   angleField: "value",
   colorField: "type",
   statistic: {

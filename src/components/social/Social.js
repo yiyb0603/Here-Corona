@@ -7,6 +7,7 @@ import $ from "jquery";
 import "./styleSample.scss";
 import { Icon } from "@class101/ui";
 import Circle from "../Chart/Circle";
+import AgeChart from "../Chart/AgeChart";
 
 class Social extends Component {
   constructor(props) {
@@ -129,6 +130,7 @@ class Social extends Component {
               </nav>
               여기 지도
               <Circle />
+              <AgeChart />
             </div>
           </div>
         </div>
