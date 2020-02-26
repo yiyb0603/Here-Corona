@@ -1,5 +1,254 @@
-// 국내 현황 페이지
-// 메인 페이지이자 국내 현황 페이지다
-// 여기서 색깔별로 네모박스 네개가 있을텐데 각각 국내 확진자, 격리 해제, 사망자 (Red, Blue, Black) 폴더로 이동한다
-// 색깔별로 네모박스 버튼 형식으로 만들어야함
-// 검사진행중은 알려줄 정보가 없어서 이동하는 페이지가 없다
+/* eslint-disable */
+
+import React from "react";
+import { Component } from "react";
+// import Navbar from "react-bootstrap/Navbar";
+// import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./sample.scss";
+import $ from "jquery";
+import "./styleSample.scss";
+import { Icon } from "@class101/ui";
+import { IoMdAddCircleOutline } from "react-icons/io";
+import ColumnChart from "../Chart/Chart";
+import { SERVER } from "../../config/server.json";
+import axios from "axios";
+
+class Sample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstman: "",
+      firtManUpdate: "",
+      secondman: "",
+      secondManUpdate: "",
+      thirdman: "",
+      thirdMainUpdate: "",
+      fourthman: "",
+      fourthManUpdate: ""
+    };
+  }
+
+  // render() {
+  //   return (
+  //     <>
+  //       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  //         <Navbar.Brand href="#home"></Navbar.Brand>
+  //         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  //         <Navbar.Collapse id="responsive-navbar-nav">
+  //           <Nav className="mr-auto">
+  //             <Nav.Link href="#features">Features</Nav.Link>
+  //             <Nav.Link href="#pricing">Pricing</Nav.Link>
+
+  //             <Nav.Link href="#deets">More deets</Nav.Link>
+  //             <Nav.Link eventKey={2} href="#memes">
+  //               Dank memes
+  //             </Nav.Link>
+  //           </Nav>
+  //           {/* <Nav>
+  //             <Nav.Link href="#deets">More deets</Nav.Link>~`~
+  //             <Nav.Link eventKey={2} href="#memes">
+  //               Dank memes
+  //             </Nav.Link>
+  //           </Nav> */}
+  //         </Navbar.Collapse>
+  //       </Navbar>
+  //       색상나오고 마추면 될거임 빨간색은 그냥 보이기 쉬운 색으로 만들어서
+  //       나중에 색 나오면 바꾸면 될듯
+  //     </>
+  //   );
+  // }
+  componentDidMount() {
+    $(document).ready(function() {
+      $("#sidebarCollapse").on("click", function() {
+        $("#sidebar").toggleClass("active");
+        $(this).toggleClass("active");
+      });
+    });
+    let getinfectee = async () => {
+      await axios.get(`${SERVER}/api/infectee`).then(response => {
+        this.setState({ firstman: response.data.data.infectee.length });
+      });
+    };
+
+    getinfectee();
+  }
+
+  handleChangeSite() {
+    console.log("test");
+  }
+  render() {
+    return (
+      <div className="allType">
+        <div class="wrapper">
+          <nav id="sidebar">
+            <div class="sidebar-header">
+              <h3>메로나, 여기</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+              <p>Corona?</p>
+              <li class="active">
+                <a
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  onClick={() => {
+                    this.props.history.push("/");
+                  }}
+                >
+                  국내현황
+                </a>
+              </li>
+              <li>
+                <a href="#">전세계 현황</a>
+                <a data-toggle="collapse" aria-expanded="false">
+                  국내 사망자 현황
+                </a>
+              </li>
+              <li>
+                <a href="#">격리 해제 현황</a>
+              </li>
+              <li>
+                <a href="#">지역 공유 게시판</a>
+              </li>
+              <li>
+                <a href="#">의심 증상</a>
+              </li>
+              <li>
+                <a href="#">자영업자 장터</a>
+              </li>
+              <li>
+                <a href="#">문의 질문</a>
+              </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+              <li>
+                <a>지역 콜센터 120</a>
+              </li>
+              <li>
+                <a>콜센터 1339</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <button
+                  class="btn btn-dark d-inline-block d-lg-none ml-auto"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  {/* <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                  </ul> */}
+                </div>
+              </div>
+            </nav>
+            <div className="lastUpdate">
+              마지막 업데이트: 2020년 02월25일 화요일
+            </div>
+            <div className="firstBox">
+              <div className="mainplusBox">
+                <div className="mainText">국내 확진환자</div>
+                <div className="plus">
+                  <div
+                    className="pressCircle"
+                    onClick={() => {
+                      this.props.history.push("/social");
+                    }}
+                  >
+                    <IoMdAddCircleOutline className="circleInPlus" />
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.firstman} (▲{this.state.firtManUpdate})명
+              </div>
+            </div>
+            <div class="line"></div>
+            <div className="secondBox">
+              <div className="mainplusBox">
+                <div className="mainText">검사 진행중</div>
+                <div className="plus">
+                  <IoMdAddCircleOutline className="circleInPlus" />
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.secondman} (▲{this.state.secondManUpdate})명
+              </div>
+            </div>
+            <div></div>
+            <div class="line"></div>
+            <div className="thirdBox">
+              <div className="mainplusBox">
+                <div className="mainText">격리 해제</div>
+                <div className="plus">
+                  <IoMdAddCircleOutline className="circleInPlus" />
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.thirdman}(▲{this.state.thirdMainUpdate})명
+              </div>
+            </div>
+            <div class="line"></div>
+            <div className="fourthBox">
+              <div className="mainplusBox">
+                <div className="mainText">사망자</div>
+                <div className="plus">
+                  <IoMdAddCircleOutline className="circleInPlus" />
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.fourthman}(▲{this.state.firtManUpdate})명
+              </div>
+            </div>
+            <div class="line"></div>
+            <ColumnChart />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Sample;
