@@ -9,6 +9,8 @@ import "./sample.scss";
 import $ from "jquery";
 import "./styleSample.scss";
 import { Icon } from "@class101/ui";
+import { IoMdAddCircleOutline } from "react-icons/io";
+import ColumnChart from "../Chart/Chart";
 class Sample extends Component {
   constructor(props) {
     super(props);
@@ -161,18 +163,18 @@ class Sample extends Component {
               <div className="mainplusBox">
                 <div className="mainText">국내 확진환자</div>
                 <div className="plus">
-                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                  <IoMdAddCircleOutline className="circleInPlus" />
                 </div>
               </div>
               <br />
-              <div className="people">{this.state.firstman} 명</div>
+              <div className="people">{this.state.firstman} (+90)명</div>
             </div>
             <div class="line"></div>
             <div className="secondBox">
               <div className="mainplusBox">
                 <div className="mainText">검사 진행중</div>
                 <div className="plus">
-                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                  <IoMdAddCircleOutline className="circleInPlus" />
                 </div>
               </div>
               <br />
@@ -184,7 +186,7 @@ class Sample extends Component {
               <div className="mainplusBox">
                 <div className="mainText">격리 해제</div>
                 <div className="plus">
-                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                  <IoMdAddCircleOutline className="circleInPlus" />
                 </div>
               </div>
               <br />
@@ -195,13 +197,14 @@ class Sample extends Component {
               <div className="mainplusBox">
                 <div className="mainText">사망자</div>
                 <div className="plus">
-                  <Icon.AddCircleOutline size={36} className="plusIcon" />{" "}
+                  <IoMdAddCircleOutline className="circleInPlus" />
                 </div>
               </div>
               <br />
               <div className="people">{this.state.fourthman}명</div>
             </div>
             <div class="line"></div>
+            <ColumnChart />
           </div>
         </div>
       </div>

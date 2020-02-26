@@ -1,6 +1,6 @@
 @media screen and (max-width: 1023px) {
   /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
-  position: relative;
+  // position: relative;
   .bg-dark {
     background-color: transparent !important;
   }
@@ -75,5 +75,8 @@
     text-align: right;
     // justify-content: center;
     font-size: 1.5rem;
+  }
+  .circleInPlus {
+    font-size: 2.5rem;
   }
 }
