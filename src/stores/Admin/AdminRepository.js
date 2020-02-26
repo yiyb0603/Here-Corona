@@ -1,4 +1,4 @@
-import { SERVER } from "config/server.json";
+import { SERVER } from "../../config/server.json";
 import axios from "axios";
 
 class AdminRepository {

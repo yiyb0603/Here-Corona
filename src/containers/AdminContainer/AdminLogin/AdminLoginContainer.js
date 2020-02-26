@@ -4,7 +4,7 @@ import { observer, inject } from "mobx-react";
 import Swal from "sweetalert2";
 import { withRouter } from "react-router-dom";
 
-import AdminLogin from "components/Admin/AdminLogin";
+import AdminLogin from "../../../components/Admin/AdminLogin";
 
 const AdminLoginContainer = ({ store, history }) => {
   const [code, setCode] = useState("");
@@ -12,7 +12,7 @@ const AdminLoginContainer = ({ store, history }) => {
   const requestAdminLogin = e => {
     e.preventDefault();
     const data = {
-      code: sha512(code)
+      c: sha512(code)
     };
     handleAdminLogin(data)
       .then(response => {
