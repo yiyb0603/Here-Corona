@@ -100,7 +100,13 @@ class Sample extends Component {
                 </a>
               </li>
               <li>
-                <a href="#">전세계 현황</a>
+                <a
+                  onClick={() => {
+                    this.props.history.push("/worldWide");
+                  }}
+                >
+                  전세계 현황
+                </a>
                 <a data-toggle="collapse" aria-expanded="false">
                   국내 사망자 현황
                 </a>

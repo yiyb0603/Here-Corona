@@ -48,25 +48,31 @@ class Social extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="#">전세계 현황</a>
+                  <a
+                    onClick={() => {
+                      this.props.history.push("/worldWide");
+                    }}
+                  >
+                    전세계 현황
+                  </a>
                   <a data-toggle="collapse" aria-expanded="false">
                     국내 사망자 현황
                   </a>
                 </li>
                 <li>
-                  <a href="#">격리 해제 현황</a>
+                  <a>격리 해제 현황</a>
                 </li>
                 <li>
-                  <a href="#">지역 공유 게시판</a>
+                  <a>지역 공유 게시판</a>
                 </li>
                 <li>
-                  <a href="#">의심 증상</a>
+                  <a>의심 증상</a>
                 </li>
                 <li>
-                  <a href="#">자영업자 장터</a>
+                  <a>자영업자 장터</a>
                 </li>
                 <li>
-                  <a href="#">문의 질문</a>
+                  <a>문의 질문</a>
                 </li>
               </ul>
               <ul class="list-unstyled CTAs">
@@ -105,22 +111,22 @@ class Social extends Component {
                   >
                     {/* <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link">
                         Page
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link">
                         Page
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link">
                         Page
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link">
                         Page
                       </a>
                     </li>
