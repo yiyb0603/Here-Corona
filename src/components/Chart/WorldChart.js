@@ -9,23 +9,23 @@ const config = {
   forceFit: true,
   data: [
     {
-      type: "2.25",
-      sales: 997
+      get: "2.25",
+      tex: 997
     },
     {
-      type: "2.26",
-      sales: 1146
+      get: "2.26",
+      tex: 1146
     }
   ],
   padding: "auto",
   color: "#eb962a",
-  xField: "type",
-  yField: "sales",
+  xField: "get",
+  yField: "tex",
   meta: {
-    type: {
+    get: {
       alias: "날짜"
     },
-    sales: {
+    tex: {
       alias: "국내 확진자"
     }
   }
