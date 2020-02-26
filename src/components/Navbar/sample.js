@@ -167,7 +167,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">{this.state.firstman} (+90)명</div>
+              <div className="people">{this.state.firstman} (▲90)명</div>
             </div>
             <div class="line"></div>
             <div className="secondBox">
