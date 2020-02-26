@@ -4,6 +4,10 @@ import AdminLogin from "./components/Admin/AdminLogin";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Social from "./components/social/Social";
+import DaeguBoard from './components/Board/Daegu/DaeguBoard';
+import SeoulBoard from './components/Board/Seoul/SeoulBoard';
+import BusanBoard from './components/Board/Busan/BusanBoard';
+import NewsTemplate from './components/News/NewsTemplate';
 
 function App() {
   return (
@@ -12,6 +16,10 @@ function App() {
         <Route exact path="/admin" component={AdminLogin} />
         <Route exact path="/" component={Main} />
         <Route exact path="/social" component={Social} />
+        <Route exact path ="/DaeguBoard" component ={DaeguBoard} />
+        <Route exact path ="/SeoulBoard" component ={SeoulBoard} />
+        <Route exact path ="/BusanBoard" component ={BusanBoard} />
+        <Route exact path ="/News" component ={NewsTemplate} />
       </Switch>
     </Router>
   );
