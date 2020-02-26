@@ -76,4 +76,21 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .writeBoard {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        background-color: #353b48;
+        color: white;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 }

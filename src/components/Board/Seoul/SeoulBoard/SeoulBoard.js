@@ -6,10 +6,10 @@ import { FaBars, FaPen } from 'react-icons/fa';
 const SeoulBoard = () => {
     return (
         <div className ="SeoulBoard">
-            <div className="SeoulBoard-Top">
+            <span className="SeoulBoard-Top">
                 <FaBars className ="showNavbar" />
                 <input type ="text" className ="boardSearch" placeholder ="검색어를 입력하세요." />
-            </div>
+            </span>
 
             <div className="SeoulBoard-TitleZone">
                 <span className="SeoulBoard-Title">서울 정보 공유 게시판</span>
