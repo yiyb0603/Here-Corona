@@ -9,6 +9,7 @@ import SeoulBoard from "./components/Board/Seoul/SeoulBoard";
 import BusanBoard from "./components/Board/Busan/BusanBoard";
 import NewsTemplate from "./components/News/NewsTemplate";
 import Symptom from "./components/Symptom/symptom";
+import Market from "./components/Market/market";
 import WorldWide from "./components/WorldWide/WorldWide";
 import World from "./components/WorldInfoAsia/World";
 
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/News" component={NewsTemplate} />
 
         <Route exact path="/symptom" component={Symptom} />
+        <Route exact path="/market" cmoponent={Market}/>
       </Switch>
     </Router>
   );

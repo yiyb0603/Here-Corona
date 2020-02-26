@@ -1,13 +1,39 @@
+$green: #05C2AB;
+$red: #FF5152;
+$purple: #7A69DB;
+$yellow: #E8E113;
+$orange: #EB962A;
+$blue: #6179D8;
+$white: #f5f5f5;
+
 .symptom{
     &-title{
-
+        font-size: 1.5rem;
+        color: $red;
+        text-align: center;
     }
 
     &-MainImage{
-
+        background-color: $white;
+        width: 52%;
+        height: 100%;
+        max-height: 150px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &-list{
-        
+        margin-left: 25%;
+    }
+
+    &-item{
+        width: 70%;
+        max-height: 150px;
+        background-color: $blue;
+        margin-bottom: 2%;
+        padding: 1%;
+        list-style: none;
+        color: $white;
+        text-align: center;
     }
 }
