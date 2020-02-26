@@ -1,6 +1,6 @@
 import React from "react";
 // import logo from "./logo.svg";
-// import AdminLogin from "./components/Admin/AdminLogin";
+// import AdminLogin from "./containers/AdminContainer/AdminLogin/AdminLoginContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Social from "./components/social/Social";
@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/News" component={NewsTemplate} />
 
         <Route exact path="/symptom" component={Symptom} />
-        <Route exact path="/market" cmoponent={Market}/>
+        <Route exact path="/market" cmoponent={Market} />
       </Switch>
     </Router>
   );
