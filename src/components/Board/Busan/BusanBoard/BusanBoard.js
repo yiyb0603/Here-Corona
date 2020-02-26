@@ -1,7 +1,7 @@
 import React from 'react';
 import './BusanBoard.scss';
 import BusanBoardList from '../BusanBoardList';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaPen } from 'react-icons/fa';
 
 const SeoulBoard = () => {
     return (
@@ -23,7 +23,11 @@ const SeoulBoard = () => {
 
             <div className="BusanBoard-List">
                 <BusanBoardList />
-            </div>          
+            </div>
+
+            <button className ="writeBoard">
+                <FaPen />
+            </button>
         </div>
     );
 }

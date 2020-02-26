@@ -1,7 +1,7 @@
 import React from 'react';
 import './DaeguBoard.scss';
 import DaeguBoardList from '../DaeguBoardList';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaPen } from 'react-icons/fa';
 
 const DaeguBoard = () => {
     return (
@@ -23,7 +23,10 @@ const DaeguBoard = () => {
 
             <div className="DaeguBoard-List">
                 <DaeguBoardList />
-            </div>          
+            </div>
+            <button className ="writeBoard">
+                <FaPen />
+            </button>
         </div>
     );
 }

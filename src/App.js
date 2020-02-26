@@ -1,7 +1,8 @@
 import React from "react";
+// import logo from "./logo.svg";
+import AdminLogin from './components/Admin/AdminLogin';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import AdminLogin from "./containers/AdminContainer/AdminLoginContainer";
-import Sample from "components/Navbar/sample";
+import Sample from './components/Navbar/sample';
 
 function App() {
   return (
