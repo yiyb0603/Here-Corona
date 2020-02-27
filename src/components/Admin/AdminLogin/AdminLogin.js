@@ -3,7 +3,7 @@ import "./AdminLogin.scss";
 import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 
-const AdminLogin = ({ code, setCode, requestAdminLogin }) => {
+const AdminLogin = ({ pw, setPw, requestAdminLogin }) => {
   return (
     <form onSubmit={requestAdminLogin}>
       <TextField
@@ -12,8 +12,8 @@ const AdminLogin = ({ code, setCode, requestAdminLogin }) => {
         type="password"
         variant="outlined"
         className="code"
-        value={code}
-        onChange={e => setCode(e.target.value)}
+        value={pw}
+        onChange={e => setPw(e.target.value)}
       />
       <Button
         type="submit"
