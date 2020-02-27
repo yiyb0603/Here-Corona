@@ -20,8 +20,7 @@ const AdminPageContainer = ({ store, history }) => {
     };
     handleAdminPage(data)
       .then(response => {
-        console.log(response.message);
-        if (response.message === "전체 감염자 수정 성공.") {
+        if (response.messages === "수정 성공.") {
           Swal.fire("성공", "정보수정에 성공하였습니다", "success");
           history.push("/");
         }
