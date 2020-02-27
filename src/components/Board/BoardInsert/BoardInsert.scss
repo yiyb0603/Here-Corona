@@ -1,8 +1,91 @@
-.BoardInsert {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+@media screen and (max-width: 1023px) {
+    .BoardInsert {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+
+        &-Top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            & span {
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+        }
+
+        &-Arrow {
+            position: absolute;
+            left: 0;
+            font-size: 2rem;
+            color: #0090D5;
+        }
+
+        &-Insert {
+            margin-top: -15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &-Title {
+                border: none;
+                border-bottom: 2px solid #b2bec3;
+                width: 100%;
+                font-size: 1.5rem;
+                text-align: center;
+                &::placeholder {
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+            }
+
+            &-Choice {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-color: #b2bec3;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                &-Select {
+                    font-weight: bold;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 5px;
+                    padding-bottom: 2.5px;
+                }
+            }
+
+            &-Contents {
+                width: 100%;
+                font-size: 1.25rem;
+                padding-bottom: 100%;
+                margin-bottom: 5%;
+            }
+        }
+
+        &-Button {
+            border: none;
+            outline: none;
+            background-color: #0090d5;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            position: relative;
+            bottom: 0;
+            &:active {
+                transition: 0.2s ease-in;
+            }
+        }
+    }
 }
