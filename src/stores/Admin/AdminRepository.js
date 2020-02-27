@@ -11,6 +11,20 @@ class AdminRepository {
       throw error;
     }
   }
+
+  async handleAdminPage(request) {
+    //정보 수정
+    try {
+      const { data } = await axios.put(
+        `${SERVER}/api/infectee/total
+      `,
+        request
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default new AdminRepository();
