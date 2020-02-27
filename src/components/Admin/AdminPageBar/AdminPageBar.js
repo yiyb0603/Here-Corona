@@ -13,10 +13,7 @@ const clickChange = () => {
 };
 const AdminPageBar = ({
   requestAdminPageBar,
-  day,
-  setDay,
-  person,
-  setPerson
+  date, setDate, number, setNumber
 }) => {
   return (
     <form onSubmit={requestAdminPageBar}>
@@ -25,14 +22,14 @@ const AdminPageBar = ({
       <input
         placeholder="날짜"
         className="day"
-        value={day}
-        onChange={e => setDay(e.target.value)}
+        value={date}
+        onChange={e => setDate(e.target.value)}
       />
       <input
         placeholder="사람 수"
         className="setDay"
-        value={person}
-        onChange={e => setPerson(e.target.vaule)}
+        value={number}
+        onChange={e => setNumber(e.target.vaule)}
       />
       <button
         className="sub"

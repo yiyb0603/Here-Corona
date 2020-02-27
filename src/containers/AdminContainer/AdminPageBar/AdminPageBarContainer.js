@@ -5,14 +5,14 @@ import Swal from "sweetalert2";
 import AdminPageBar from "components/Admin/AdminPageBar";
 
 const AdminPageBarContainer = ({ store, history }) => {
-  const [day, setDay] = useState("");
-  const [person, setPerson] = useState("");
+  const [date, setDate] = useState("");
+  const [number, setNumber] = useState("");
   const { handleAdminPageBar } = store.AdminStore;
   const requestAdminPageBar = e => {
     e.preventDefault();
     const data = {
-      date: day,
-      number: person
+      date,
+      number
     };
     handleAdminPageBar(data)
       .then(response => {
@@ -31,10 +31,10 @@ const AdminPageBarContainer = ({ store, history }) => {
   };
   return (
     <AdminPageBar
-      day={day}
-      setDay={setDay}
-      person={person}
-      setPerson={setPerson}
+      date={date}
+      setDate={setDate}
+      number={number}
+      setNumber={setNumber}
       requestAdminPageBar={requestAdminPageBar}
     />
   );
