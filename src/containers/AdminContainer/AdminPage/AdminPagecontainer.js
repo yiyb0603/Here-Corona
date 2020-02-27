@@ -11,7 +11,6 @@ const AdminPageContainer = ({ store, history }) => {
   const [black, setBlack] = useState("");
   const { handleAdminPage } = store.AdminStore;
   const requestAdminPage = e => {
-    console.log("hello");
     e.preventDefault();
     const data = {
       confirmed: red,

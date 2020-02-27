@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./AdminPage.scss";
 import TextField from "@material-ui/core/TextField";
 
-const AdminPage = ({ requestAdminPage }) => {
-  const [red, setRed] = useState("");
-  const [orange, setOrange] = useState("");
-  const [blue, setBlue] = useState("");
-  const [black, setBlack] = useState("");
-
+const AdminPage = ({
+  requestAdminPage,
+  red,
+  setRed,
+  orange,
+  setOrange,
+  blue,
+  setBlue,
+  black,
+  setBlack
+}) => {
   return (
     <form onSubmit={requestAdminPage}>
       <h3 className="kor-title">국내</h3>
