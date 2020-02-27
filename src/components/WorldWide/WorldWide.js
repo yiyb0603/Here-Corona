@@ -32,7 +32,7 @@ class WorldWide extends Component {
   render() {
     return (
       <>
-        <div className="allType">
+        <div className="allType2">
           <div class="wrapper">
             <nav id="sidebar">
               <div class="sidebar-header">
@@ -144,7 +144,9 @@ class WorldWide extends Component {
 
               <div className="firstBox1">
                 <div className="mainplusBox">
-                  <div className="mainText">국제 총 확진자</div>
+                  <div className="mainText">
+                    국제 총 <br /> 확진자
+                  </div>
                   <div className="plus">
                     <div
                       className="pressCircle"
@@ -157,14 +159,14 @@ class WorldWide extends Component {
                   </div>
                 </div>
                 <br />
-                <div className="people">
-                  {this.state.firstman} (▲{this.state.firtManUpdate})명
-                </div>
+                <div className="people">{this.state.firstman}명</div>
               </div>
-              <div class="line"></div>
+              {/* <div class="line"></div> */}
               <div className="thirdBox3">
                 <div className="mainplusBox">
-                  <div className="mainText">국제 총 회복자</div>
+                  <div className="mainText">
+                    국제 총 <br /> 회복자
+                  </div>
                   <div className="plus">
                     <IoMdAddCircleOutline className="circleInPlus" />
                   </div>
@@ -177,7 +179,9 @@ class WorldWide extends Component {
               <div class="line"></div>
               <div className="fourthBox4">
                 <div className="mainplusBox">
-                  <div className="mainText">국제 총 사망자</div>
+                  <div className="mainText">
+                    국제 총 <br /> 사망자
+                  </div>
                   <div className="plus">
                     <IoMdAddCircleOutline className="circleInPlus" />
                   </div>

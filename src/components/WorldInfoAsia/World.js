@@ -31,7 +31,7 @@ class World extends Component {
   render() {
     return (
       <>
-        <div className="allType">
+        <div className="allType1">
           <div class="wrapper">
             <nav id="sidebar">
               <div class="sidebar-header">
