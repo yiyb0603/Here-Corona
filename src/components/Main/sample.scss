@@ -56,7 +56,7 @@
     .firstBoxLong {
       width: 100%;
       height: 20%;
-      max-height: 100px;
+      max-height: 150px;
       background-color: #e53a40;
       padding: 10px 20px 10px 20px;
       color: white;
@@ -64,12 +64,18 @@
       .mainText {
         font-size: 1.2rem !important;
       }
+      .people {
+        margin-top: 85px;
+      }
+      #noned {
+        cursor: pointer;
+      }
     }
     .mainplusBox {
       width: 100%;
       margin: 0 auto;
       .mainText {
-        // width: 50%;
+        width: 50%;
         // position: relative;
         font-size: 1rem;
         font-weight: 500;
@@ -82,7 +88,7 @@
       }
     }
     .people {
-      margin-top: 40px;
+      margin-top: 60px;
       text-align: right;
       font-size: 1.2rem;
     }
