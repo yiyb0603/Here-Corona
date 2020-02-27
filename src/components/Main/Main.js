@@ -69,7 +69,7 @@ class Sample extends Component {
     });
     let getinfectee = async () => {
       await axios.get(`${SERVER}/api/infectee/total`).then(response => {
-        console.log(response.data.data.total_state.last_update);
+        console.log(response.data.data.total_state);
         this.setState({
           confirmed: response.data.data.total_state.confirmed,
           confirmedUp: response.data.data.total_state.last_confirmed,
@@ -268,7 +268,10 @@ class Sample extends Component {
                 {this.state.death}(▲{this.state.deathUp})명
               </div>
             </div>
-            <div className="lastUpdate">마지막 업데이트: {this.state.time}</div>
+            <br />
+            <div className="lastgetUpdate">
+              전체 업데이트: {this.state.time}
+            </div>
 
             <div class="line"></div>
             <ColumnChart />
