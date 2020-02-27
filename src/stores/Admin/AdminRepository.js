@@ -18,7 +18,12 @@ class AdminRepository {
       const { data } = await axios.put(
         `${SERVER}/api/infectee/total
       `,
-        request
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
       );
       return data;
     } catch (error) {
