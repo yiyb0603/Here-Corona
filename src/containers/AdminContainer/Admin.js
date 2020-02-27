@@ -1,5 +1,5 @@
 import React from "react";
-import AdminPage from "./AdminPage/AdminPageContainer";
+import AdminPage from './AdminPage/AdminPageContainer';
 import AdminPageBar from "./AdminPageBar/AdminPageBarContainer";
 
 function Admin() {
