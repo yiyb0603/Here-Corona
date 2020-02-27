@@ -30,6 +30,24 @@ class AdminRepository {
       throw error;
     }
   }
+
+  async handleAdminPageBar(request) {
+    //바 그래프 날짜 추가
+    try {
+      const { data } = await axios.post(
+        `${SERVER}/api/infectee/date`,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default new AdminRepository();

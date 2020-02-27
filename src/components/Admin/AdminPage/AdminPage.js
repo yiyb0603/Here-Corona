@@ -3,9 +3,12 @@ import "./AdminPage.scss";
 import TextField from "@material-ui/core/TextField";
 
 const clickChange = () => {
-  let localitem = localStorage.getItem("x-access-toekn");
+  let localitem = localStorage.getItem("x-access-token");
   if (localitem === null) {
     window.alert("관리자만 수정 가능합니다.");
+    window.location = "/";
+  } else {
+    window.alert("성공");
     window.location = "/";
   }
 };
