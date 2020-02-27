@@ -9,7 +9,7 @@ import "./sample.scss";
 import $ from "jquery";
 import "./styleSample.scss";
 import { Icon } from "@class101/ui";
-import { IoMdAddCircleOutline } from "react-icons/io";
+import { IoMdAddCircleOutline, IoMdArrowRoundForward } from "react-icons/io";
 import ColumnChart from "../Chart/Chart";
 import { SERVER } from "../../config/server.json";
 import axios from "axios";
@@ -261,8 +261,8 @@ class Sample extends Component {
             <div className="firstBoxLong">
               <div className="mainplusBox">
                 <div className="mainText">
-                  내 지역 확진환자 <br />
-                  자세히 보러가기
+                  우리 지역은 <br />
+                  안전할까?
                 </div>
                 <div className="plus">
                   <div
@@ -271,12 +271,24 @@ class Sample extends Component {
                       this.props.history.push("/social");
                     }}
                   >
-                    <IoMdAddCircleOutline className="circleInPlus" />
+                    {/* 다른지역
+                    <IoMdArrowRoundForward className="circleInPlus" /> */}
                   </div>
                 </div>
               </div>
+              <div
+                className="people"
+                id="noned"
+                onClick={() => {
+                  this.props.history.push("/social");
+                }}
+              >
+                우리 지역 알아보기
+                <IoMdArrowRoundForward className="circleInPlus" />
+              </div>
               <br />
             </div>
+            <div class="line"></div>
           </div>
         </div>
       </div>
