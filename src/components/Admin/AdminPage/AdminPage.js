@@ -2,6 +2,13 @@ import React from "react";
 import "./AdminPage.scss";
 import TextField from "@material-ui/core/TextField";
 
+const clickChange = () => {
+  let localitem = localStorage.getItem("x-access-toekn");
+  if (localitem === null) {
+    window.alert("관리자만 수정 가능합니다.");
+    window.location = "/";
+  }
+};
 const AdminPage = ({
   requestAdminPage,
   red,
@@ -44,7 +51,11 @@ const AdminPage = ({
         onChange={e => setBlack(e.target.value)}
       />
 
-      <button className="save" onSubmit={requestAdminPage}>
+      <button
+        className="save"
+        onClick={clickChange}
+        onSubmit={requestAdminPage}
+      >
         수정하기
       </button>
     </form>

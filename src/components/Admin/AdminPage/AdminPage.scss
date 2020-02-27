@@ -1,25 +1,33 @@
 .kor-title {
-  margin-left: 2%;
-  margin-top: 1%;
+  font-weight: bolder;
+  margin-left: 1%;
+  margin-top: 0.5%;
 }
 .kor-1 {
-  margin-left: 5%;
+  position: relative;
+  left: 1%;
   width: 8%;
 }
 
 .k1 {
+  margin-left: 1%;
   color: red;
 }
 
 .k2 {
+  margin-left: 1%;
   color: orange;
 }
 .k3 {
+  margin-left: 1%;
   color: blue;
+}
+.k4 {
+  margin-left: 1%;
 }
 
 .save {
   position: absolute;
-  top: 80%;
-  right: 10%;
+  top: 48%;
+  left: 2%;
 }

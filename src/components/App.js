@@ -12,7 +12,7 @@ import Symptom from "./Symptom/symptom";
 import Market from "./Market/market";
 import WorldWide from "./WorldWide/WorldWide";
 import World from "./WorldInfoAsia/World";
-import AdminPage from "containers/AdminContainer/AdminPage/AdminPageContainer";
+import AdminPage from "containers/AdminContainer/Admin";
 
 function App() {
   return (
