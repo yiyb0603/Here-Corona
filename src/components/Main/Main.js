@@ -13,19 +13,21 @@ import { IoMdAddCircleOutline, IoMdArrowRoundForward } from "react-icons/io";
 import ColumnChart from "../Chart/Chart";
 import { SERVER } from "../../config/server.json";
 import axios from "axios";
+import Moment from "moment";
 
 class Sample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstman: "",
-      firtManUpdate: "",
-      secondman: "14000",
-      secondManUpdate: "",
-      thirdman: "",
-      thirdMainUpdate: "",
-      fourthman: "",
-      fourthManUpdate: ""
+      confirmed: "",
+      confirmedUp: "",
+      check: "",
+      checkUp: "",
+      heal: "",
+      healUp: "",
+      death: "",
+      deathUp: "",
+      time: ""
     };
   }
 
@@ -66,11 +68,24 @@ class Sample extends Component {
       });
     });
     let getinfectee = async () => {
-      await axios.get(`${SERVER}/api/infectee`).then(response => {
-        this.setState({ firstman: response.data.data.infectee.length });
+      await axios.get(`${SERVER}/api/infectee/total`).then(response => {
+        console.log(response.data.data.total_state.last_update);
+        this.setState({
+          confirmed: response.data.data.total_state.confirmed,
+          confirmedUp: response.data.data.total_state.last_confirmed,
+          check: response.data.data.total_state.check,
+          checkUp: response.data.data.total_state.last_check,
+          heal: response.data.data.total_state.heal,
+          healUp: response.data.data.total_state.last_heal,
+          death: response.data.data.total_state.death,
+          deathUp: response.data.data.total_state.last_death,
+          time: Moment(
+            response.data.data.total_state.last_update,
+            "llll"
+          ).format("YYYY-MM-DD h:mm a")
+        });
       });
     };
-
     getinfectee();
   }
 
@@ -186,9 +201,6 @@ class Sample extends Component {
                 </div>
               </div>
             </nav>
-            <div className="lastUpdate">
-              {/* 마지막 업데이트: 2020년 02월25일 화요일 */}
-            </div>
             {/* <div className="twoBoxalign"> */}
             <div className="firstBox">
               <div className="mainplusBox">
@@ -209,7 +221,7 @@ class Sample extends Component {
               </div>
               <br />
               <div className="people">
-                {this.state.firstman} (▲{this.state.firtManUpdate})명
+                {this.state.confirmed} (▲{this.state.confirmedUp})명
               </div>
             </div>
             <div className="secondBox">
@@ -223,7 +235,7 @@ class Sample extends Component {
               </div>
               <br />
               <div className="people">
-                {this.state.secondman} (▲{this.state.secondManUpdate})명
+                {this.state.check} (▲{this.state.checkUp})명
               </div>
             </div>
             {/* </div> */}
@@ -240,7 +252,7 @@ class Sample extends Component {
               </div>
               <br />
               <div className="people">
-                {this.state.thirdman}(▲{this.state.thirdMainUpdate})명
+                {this.state.heal}(▲{this.state.healUp})명
               </div>
             </div>
             {/* <div class="line"></div> */}
@@ -253,9 +265,11 @@ class Sample extends Component {
               </div>
               <br />
               <div className="people">
-                {this.state.fourthman}(▲{this.state.firtManUpdate})명
+                {this.state.death}(▲{this.state.deathUp})명
               </div>
             </div>
+            <div className="lastUpdate">마지막 업데이트: {this.state.time}</div>
+
             <div class="line"></div>
             <ColumnChart />
             <div className="firstBoxLong">
