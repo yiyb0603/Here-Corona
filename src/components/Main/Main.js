@@ -20,7 +20,7 @@ class Sample extends Component {
     this.state = {
       firstman: "",
       firtManUpdate: "",
-      secondman: "",
+      secondman: "14000",
       secondManUpdate: "",
       thirdman: "",
       thirdMainUpdate: "",
@@ -79,7 +79,7 @@ class Sample extends Component {
   }
   render() {
     return (
-      <div className="allType">
+      <div className="allType12">
         <div class="wrapper">
           <nav id="sidebar">
             <div class="sidebar-header">
@@ -187,11 +187,83 @@ class Sample extends Component {
               </div>
             </nav>
             <div className="lastUpdate">
-              마지막 업데이트: 2020년 02월25일 화요일
+              {/* 마지막 업데이트: 2020년 02월25일 화요일 */}
             </div>
+            {/* <div className="twoBoxalign"> */}
             <div className="firstBox">
               <div className="mainplusBox">
-                <div className="mainText">국내 확진환자</div>
+                <div className="mainText">
+                  국내 <br />
+                  확진환자
+                </div>
+                <div className="plus">
+                  <div
+                    className="pressCircle"
+                    onClick={() => {
+                      this.props.history.push("/social");
+                    }}
+                  >
+                    {/* <IoMdAddCircleOutline className="circleInPlus" /> */}
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.firstman} (▲{this.state.firtManUpdate})명
+              </div>
+            </div>
+            <div className="secondBox">
+              <div className="mainplusBox">
+                <div className="mainText">
+                  검사 <br /> 진행중
+                </div>
+                <div className="plus">
+                  {/* <IoMdAddCircleOutline className="circleInPlus" /> */}
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.secondman} (▲{this.state.secondManUpdate})명
+              </div>
+            </div>
+            {/* </div> */}
+            {/* <div class="line"></div> */}
+
+            {/* <div></div> */}
+            <div class="line"></div>
+            <div className="thirdBox">
+              <div className="mainplusBox">
+                <div className="mainText">격리 해제</div>
+                <div className="plus">
+                  {/* <IoMdAddCircleOutline className="circleInPlus" /> */}
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.thirdman}(▲{this.state.thirdMainUpdate})명
+              </div>
+            </div>
+            {/* <div class="line"></div> */}
+            <div className="fourthBox">
+              <div className="mainplusBox">
+                <div className="mainText">사망자</div>
+                <div className="plus">
+                  {/* <IoMdAddCircleOutline className="circleInPlus" /> */}
+                </div>
+              </div>
+              <br />
+              <div className="people">
+                {this.state.fourthman}(▲{this.state.firtManUpdate})명
+              </div>
+            </div>
+            <div class="line"></div>
+            <ColumnChart />
+            <div className="firstBoxLong">
+              <div className="mainplusBox">
+                <div className="mainText">
+                  내 지역 확진환자 <br />
+                  자세히 보러가기
+                </div>
                 <div className="plus">
                   <div
                     className="pressCircle"
@@ -204,52 +276,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">
-                {this.state.firstman} (▲{this.state.firtManUpdate})명
-              </div>
             </div>
-            <div class="line"></div>
-            <div className="secondBox">
-              <div className="mainplusBox">
-                <div className="mainText">검사 진행중</div>
-                <div className="plus">
-                  <IoMdAddCircleOutline className="circleInPlus" />
-                </div>
-              </div>
-              <br />
-              <div className="people">
-                {this.state.secondman} (▲{this.state.secondManUpdate})명
-              </div>
-            </div>
-            <div></div>
-            <div class="line"></div>
-            <div className="thirdBox">
-              <div className="mainplusBox">
-                <div className="mainText">격리 해제</div>
-                <div className="plus">
-                  <IoMdAddCircleOutline className="circleInPlus" />
-                </div>
-              </div>
-              <br />
-              <div className="people">
-                {this.state.thirdman}(▲{this.state.thirdMainUpdate})명
-              </div>
-            </div>
-            <div class="line"></div>
-            <div className="fourthBox">
-              <div className="mainplusBox">
-                <div className="mainText">사망자</div>
-                <div className="plus">
-                  <IoMdAddCircleOutline className="circleInPlus" />
-                </div>
-              </div>
-              <br />
-              <div className="people">
-                {this.state.fourthman}(▲{this.state.firtManUpdate})명
-              </div>
-            </div>
-            <div class="line"></div>
-            <ColumnChart />
           </div>
         </div>
       </div>
