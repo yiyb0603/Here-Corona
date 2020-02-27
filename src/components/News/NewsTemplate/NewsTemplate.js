@@ -4,6 +4,7 @@ import { FaBars, FaPen } from 'react-icons/fa';
 import NewsItem from '../NewsItem';
 
 const NewsTemplate = () => {
+    const isToken = localStorage.getItem('x-access-token');
     return (
         <div className ="NewsTemplate">
             <span className="NewsTemplate-Top">
@@ -24,9 +25,12 @@ const NewsTemplate = () => {
                 <NewsItem />
             </div>
 
-            <button className ="writeBoard">
+            {
+                // 토큰 유/무에 따른 버튼 보임
+                isToken ? <button className ="writeBoard">
                 <FaPen />
-            </button>
+            </button> : <></>
+            }
         </div>
     );
 }

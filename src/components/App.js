@@ -8,6 +8,7 @@ import DaeguBoard from "./Board/Daegu/DaeguBoard";
 import SeoulBoard from "./Board/Seoul/SeoulBoard";
 import BusanBoard from "./Board/Busan/BusanBoard";
 import NewsTemplate from "./News/NewsTemplate";
+import NewsInsert from './News/NewsInsert';
 import Symptom from "./Symptom/symptom";
 import Market from "./Market/market";
 import WorldWide from "./WorldWide/WorldWide";
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/SeoulBoard" component={SeoulBoard} />
         <Route exact path="/BusanBoard" component={BusanBoard} />
         <Route exact path="/News" component={NewsTemplate} />
+        <Route exact path ="/NewsInsert" component ={NewsInsert} />
         <Route exact path="/symptom" component={Symptom} />
         <Route exact path="/market" component={Market} />
         <Route exact path="/adminpage" component={AdminPage} />

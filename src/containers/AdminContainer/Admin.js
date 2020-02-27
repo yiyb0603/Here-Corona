@@ -1,5 +1,5 @@
 import React from "react";
-import AdminPage from "./AdminPage/AdminPagecontainer";
+import AdminPage from "./AdminPage/AdminPageContainer";
 
 function Admin() {
   return <AdminPage />;

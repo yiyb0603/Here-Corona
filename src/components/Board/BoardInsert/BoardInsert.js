@@ -13,7 +13,7 @@ const BoardInsert = ({ history }) => {
             <hr />
 
             <div className="BoardInsert-Insert">
-                <input type ="text" maxlength ="20" className ="BoardInsert-Insert-Title" placeholder ="제목을 입력하세요." />
+                <input type ="text" maxlength ="20" required className ="BoardInsert-Insert-Title" placeholder ="제목을 입력하세요." />
                 <div className ="BoardInsert-Insert-Choice">
                     <select className ="BoardInsert-Insert-Choice-Select">
                         <option value ="서울">서울</option>
@@ -23,7 +23,7 @@ const BoardInsert = ({ history }) => {
                     </select>
                 </div>
 
-                <textarea className="BoardInsert-Insert-Contents" placeholder ="내용을 입력하세요." required />
+                <textarea className="BoardInsert-Insert-Contents" required placeholder ="내용을 입력하세요." />
                 <button className ="BoardInsert-Button">완료</button>
             </div>
         </div>
