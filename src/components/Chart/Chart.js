@@ -42,16 +42,21 @@ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      getArray: ""
+      getArray: []
     };
   }
   componentDidMount() {
     let date = async () => {
       await axios.get(`${SERVER}/api/infectee/date`).then(response => {
         console.log(response.data.data.date_infectee);
-        this.setState({
-          getArray: response.data.data.date_infectee
-        });
+        if (response.data.data.date_infectee.reverse().length >= 4) {
+          response.data.data.date_infectee.length = 4;
+          this.setState({
+            getArray: response.data.data.date_infectee
+          });
+        } else {
+          return null;
+        }
       });
     };
     date();
@@ -79,7 +84,6 @@ class Chart extends Component {
         }
       }
     };
-    console.log(this.state.getArray);
     return (
       <section>
         <ColumnChart {...config} />
