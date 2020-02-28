@@ -86,7 +86,7 @@ class Sample extends Component {
         });
       });
     };
-    getinfectee();
+    // getinfectee();
   }
 
   handleChangeSite() {
@@ -220,7 +220,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">
+              <div className="peoplePoint">
                 {this.state.confirmed} (▲{this.state.confirmedUp})명
               </div>
             </div>
@@ -234,7 +234,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">
+              <div className="peoplePoint">
                 {this.state.check} (▲{this.state.checkUp})명
               </div>
             </div>
@@ -251,7 +251,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">
+              <div className="peoplePoint">
                 {this.state.heal}(▲{this.state.healUp})명
               </div>
             </div>
@@ -264,7 +264,7 @@ class Sample extends Component {
                 </div>
               </div>
               <br />
-              <div className="people">
+              <div className="peoplePoint">
                 {this.state.death}(▲{this.state.deathUp})명
               </div>
             </div>
@@ -294,7 +294,7 @@ class Sample extends Component {
                 </div>
               </div>
               <div
-                className="people"
+                className="peoplePoint"
                 id="noned"
                 onClick={() => {
                   this.props.history.push("/social");
