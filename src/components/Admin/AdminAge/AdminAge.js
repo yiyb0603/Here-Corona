@@ -1,5 +1,5 @@
-import React from 'react';
-import './AdminAge.scss';
+import React from "react";
+import "./AdminAge.scss";
 
 const clickChange = () => {
   let localitem = localStorage.getItem("x-access-token");
@@ -9,7 +9,7 @@ const clickChange = () => {
   }
 };
 
-const AdminAge=({
+const AdminAge = ({
   requestAdminAge,
   one,
   setOne,
@@ -21,26 +21,52 @@ const AdminAge=({
   setFour,
   five,
   setFive
-})=>{
-  return(
+}) => {
+  return (
     <form onSubmit={requestAdminAge}>
-      <h3>나이대별 확진자 바그래프</h3>
-      <div>10대</div>
-      <input value={one} onChange={e=>setOne(e.target.value)}/>
-      <div>20대</div>
-      <input value={two} onChange={e=>setTwo(e.target.value)}/>
+      <h3 className="agebar">나이대별 확진자 바그래프</h3>
+      <input
+        value={one}
+        onChange={e => setOne(e.target.value)}
+        placeholder="10대"
+        className="a1"
+      />
+      <input
+        value={two}
+        onChange={e => setTwo(e.target.value)}
+        className="a2"
+        placeholder="20대"
+      />
 
-      <div>30대</div>
-      <input value={three} onChange={e=>setThree(e.target.value)}/>
+      <input
+        value={three}
+        onChange={e => setThree(e.target.value)}
+        placeholder="30대"
+        className="a3"
+      />
 
-      <div>40대</div>
-      <input value={four} onChange={e=>setFour(e.target.value)}/>
+      <input
+        value={four}
+        onChange={e => setFour(e.target.value)}
+        placeholder="40대"
+        className="a4"
+      />
 
-      <div>50대</div>
-      <input value={five} onChange={e=>setFive(e.target.value)}/>
-  <button onClick={clickChange} onSubmit={requestAdminAge}>수정하기</button>
+      <input
+        value={five}
+        onChange={e => setFive(e.target.value)}
+        placeholder="50대"
+        className="a5"
+      />
+      <button
+        onClick={clickChange}
+        onSubmit={requestAdminAge}
+        className="save3"
+      >
+        수정하기
+      </button>
+      <div className="underbox"></div>
     </form>
-
-  )
-}
+  );
+};
 export default AdminAge;

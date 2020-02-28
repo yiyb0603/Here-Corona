@@ -25,15 +25,24 @@ const WorldWide = ({
       <TextField
         value={confirmed}
         onChange={e => setComfirmed(e.target.value)}
+        className="wor-1"
       />
 
       <h4 className="w2">격리해제</h4>
-      <TextField value={heal} onChange={e => setHeal(e.target.value)} />
+      <TextField
+        value={heal}
+        onChange={e => setHeal(e.target.value)}
+        className="wor-1"
+      />
 
       <h4 className="w3">사망자</h4>
-      <TextField value={death} onChange={e => setDeath(e.target.value)} />
+      <TextField
+        value={death}
+        onChange={e => setDeath(e.target.value)}
+        className="wor-1"
+      />
 
-      <button onClick={clickChange} onSubmit={requestWorldWide}>
+      <button onClick={clickChange} onSubmit={requestWorldWide} className="fix">
         수정하기
       </button>
     </form>

@@ -17,19 +17,25 @@ const WorldWideBar = ({
 }) => {
   return (
     <form onSubmit={requestWorldWideBar}>
-      <h3>전세계 확진환자 현황 바그래프</h3>
-      <h4>추가하기</h4>
+      <h3 className="bar2">전세계 확진환자 현황 바그래프</h3>
+      <h4 className="addbar2">추가하기</h4>
       <input
         placeholder="날짜"
+        className="date"
         value={date}
         onChange={e => setDate(e.target.value)}
       />
       <input
+        className="people"
         placeholder="사람 수"
         value={number}
         onChange={e => setNumber(e.target.value)}
       />
-      <button onClick={clickChange} onSubmit={requestWorldWideBar}>
+      <button
+        className="sub2"
+        onClick={clickChange}
+        onSubmit={requestWorldWideBar}
+      >
         추가하기
       </button>
     </form>
