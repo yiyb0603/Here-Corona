@@ -95,6 +95,44 @@ class AdminRepository {
       throw error;
     }
   }
+
+  async handleAdminCircle(request) {
+    //성별 원그래프
+    try {
+      const { data } = await axios.put(
+        `${SERVER}
+      `,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async handleAdminAge(request) {
+    //나이별 바그래프
+    try {
+      const { data } = await axios.put(
+        `${SERVER}
+      `,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default new AdminRepository();
