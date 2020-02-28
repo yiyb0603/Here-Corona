@@ -10,14 +10,8 @@ const clickChange = () => {
     window.alert("성공");
   }
 };
-const AdminPageBar = ({
-  requestAdminPageBar2,
-  date,
-  setDate,
-  number,
-  setNumber,
-  idx
-}) => {
+const AdminPageBar = ({ requestAdminPageBar2, AdminPageInfo }) => {
+  const { date, setDate, setNumber, number, idx } = AdminPageInfo;
   return (
     <form onSubmit={requestAdminPageBar2}>
       <h4 className="addbar">수정하기</h4>

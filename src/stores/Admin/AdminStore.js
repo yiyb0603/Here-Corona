@@ -124,6 +124,51 @@ class AdminStore {
       });
     }
   }
+
+  @action
+  handleAdminArea(data) {
+    try {
+      const response = AdminRepository.handleAdminArea(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      });
+    } catch (error) {
+      console.log(error);
+      return new Promise((resolve, reject) => {
+        reject(error);
+      });
+    }
+  }
+
+  @action
+  handleAdminHeal(data) {
+    try {
+      const response = AdminRepository.handleAdminHeal(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      });
+    } catch (error) {
+      console.log(error);
+      return new Promise((resolve, reject) => {
+        reject(error);
+      });
+    }
+  }
+
+  @action
+  handleAdminDeath(data) {
+    try {
+      const response = AdminRepository.handleAdminDeath(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      });
+    } catch (error) {
+      console.log(error);
+      return new Promise((resolve, reject) => {
+        reject(error);
+      });
+    }
+  }
 }
 
 export default AdminStore;

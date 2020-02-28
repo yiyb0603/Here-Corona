@@ -133,6 +133,53 @@ class AdminRepository {
       throw error;
     }
   }
+
+  async handleAdminArea(request) {
+    //지역별 정보 수정
+    try {
+      const { data } = await axios.put(
+        `${SERVER}
+      `,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async handleAdminHeal(request) {
+    //격리 해제 현황
+    try {
+      const { data } = await axios.post(`${SERVER}`, request, {
+        headers: {
+          "x-access-token": localStorage.getItem("x-access-token")
+        }
+      });
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async handleAdminDeath(request) {
+    //사망자 현황
+    try {
+      const { data } = await axios.post(`${SERVER}`, request, {
+        headers: {
+          "x-access-token": localStorage.getItem("x-access-token")
+        }
+      });
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default new AdminRepository();
