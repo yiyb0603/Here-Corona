@@ -1,6 +1,7 @@
 //의심 증상
 import React from 'react';
 import './symptom.scss';
+import { FaLongArrowAltDown } from "react-icons/fa";
 
 const Symptom =()=> {
     return(
@@ -13,6 +14,8 @@ const Symptom =()=> {
             <li className="symptom-item">음식 섭취 시 아픈 목</li>
             <li className="symptom-item">구토와 설사, 복통</li>
             <li className="symptom-item">온몸이 뻐근하고 아픈 근육통</li>
+            
+                <FaLongArrowAltDown className="symptom-icon"/>
         </div>
         </>
     )
