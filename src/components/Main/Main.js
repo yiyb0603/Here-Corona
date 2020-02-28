@@ -86,7 +86,7 @@ class Sample extends Component {
         });
       });
     };
-    // getinfectee();
+    getinfectee();
   }
 
   handleChangeSite() {
