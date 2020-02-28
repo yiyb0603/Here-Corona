@@ -13,7 +13,7 @@ class AdminRepository {
   }
 
   async handleAdminPage(request) {
-    //정보 수정
+    //국내 정보 수정
     try {
       const { data } = await axios.put(
         `${SERVER}/api/infectee/total
@@ -53,6 +53,39 @@ class AdminRepository {
     //바 그래프 날짜 수정
     try {
       const { data } = await axios.put(`${SERVER}/api/infectee/date/${idx}`, {
+        headers: {
+          "x-access-token": localStorage.getItem("x-access-token")
+        }
+      });
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async handleWorldWide(request) {
+    //전세계 정보 수정
+    try {
+      const { data } = await axios.put(
+        `${SERVER}
+      `,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async handleWorldWideBar(request) {
+    //전세계 바 그래프 추가
+    try {
+      const { data } = await axios.post(`${SERVER}`, request, {
         headers: {
           "x-access-token": localStorage.getItem("x-access-token")
         }

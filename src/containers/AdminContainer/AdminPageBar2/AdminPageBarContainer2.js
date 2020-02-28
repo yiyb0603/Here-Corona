@@ -12,6 +12,7 @@ const AdminPageBarContainer2 = ({ store, history }) => {
     console.log(idx);
     handleAdminPageBar2(idx)
       .then(response => {
+        console.log(response);
         if (response.message === "날짜별 확진자 수정 성공.") {
           window.alert("수정 성공");
         }
