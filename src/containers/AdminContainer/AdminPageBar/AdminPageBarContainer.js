@@ -6,7 +6,7 @@ import AdminPageBar from "components/Admin/AdminPageBar";
 
 const AdminPageBarContainer = ({ store, history }) => {
   const [date, setDate] = useState("");
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState(0);
   const { handleAdminPageBar } = store.AdminStore;
   const requestAdminPageBar = e => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const AdminPageBarContainer = ({ store, history }) => {
     handleAdminPageBar(data)
       .then(response => {
         console.log(response);
-        if (response.messages === "날짜별 확진자 생성 성공.") {
+        if (response.message === "날짜별 확진자 생성 성공.") {
           Swal.fire("성공", "날짜별 확진자 생성 성공", "success");
         }
       })

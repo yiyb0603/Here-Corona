@@ -29,7 +29,7 @@ const AdminPageBar = ({
         placeholder="사람 수"
         className="setDay"
         value={number}
-        onChange={e => setNumber(e.target.vaule)}
+        onChange={e => setNumber(e.target.value)}
       />
       <button
         className="sub"
