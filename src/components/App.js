@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./Main/Main";
 import Social from "./social/Social";
 import BoardInsert from "./Board/BoardInsert";
+import NationWideBoard from './Board/NationWide/NationWideBoard';
 import DaeguBoard from "./Board/Daegu/DaeguBoard";
 import SeoulBoard from "./Board/Seoul/SeoulBoard";
 import BusanBoard from "./Board/Busan/BusanBoard";
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/worldWide" component={WorldWide} />
         <Route exact path="/worldInfoAsia" component={World} />
         <Route exact path="/BoardInsert" component={BoardInsert} />
+        <Route exact path ="/NationWideBoard" component ={NationWideBoard} />
         <Route exact path="/DaeguBoard" component={DaeguBoard} />
         <Route exact path="/SeoulBoard" component={SeoulBoard} />
         <Route exact path="/BusanBoard" component={BusanBoard} />

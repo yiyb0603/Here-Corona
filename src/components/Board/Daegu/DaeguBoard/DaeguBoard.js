@@ -24,7 +24,7 @@ const DaeguBoard = () => {
             <div className="DaeguBoard-List">
                 <DaeguBoardList />
             </div>
-            <button className ="writeBoard">
+            <button className ="writeBoard" onClick ={() => window.location ="/BoardInsert"}>
                 <FaPen />
             </button>
         </div>

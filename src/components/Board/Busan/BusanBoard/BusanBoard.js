@@ -25,7 +25,7 @@ const SeoulBoard = () => {
                 <BusanBoardList />
             </div>
 
-            <button className ="writeBoard">
+            <button className ="writeBoard" onClick ={() => window.location ="/BoardInsert"}>
                 <FaPen />
             </button>
         </div>
