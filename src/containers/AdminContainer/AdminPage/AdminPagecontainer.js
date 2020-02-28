@@ -20,9 +20,8 @@ const AdminPageContainer = ({ store, history }) => {
     };
     handleAdminPage(data)
       .then(response => {
-        if (response.message === "수정 성공.") {
+        if (response.messages === "수정 성공.") {
           Swal.fire("성공", "정보수정에 성공하였습니다", "success");
-          history.push("/");
         }
       })
       .catch(error => {

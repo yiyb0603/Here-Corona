@@ -6,19 +6,21 @@ const clickChange = () => {
   if (localitem === null) {
     window.alert("관리자만 수정 가능합니다.");
     window.location = "/";
+  } else {
+    window.alert("성공");
   }
 };
 const AdminPageBar = ({
-  requestAdminPageBar,
+  requestAdminPageBar2,
   date,
   setDate,
   number,
-  setNumber
+  setNumber,
+  idx
 }) => {
   return (
-    <form onSubmit={requestAdminPageBar}>
-      <h3 className="bar1">국내 확진환자 현황 바그래프</h3>
-      <h4 className="addbar">추가하기</h4>
+    <form onSubmit={requestAdminPageBar2}>
+      <h4 className="addbar">수정하기</h4>
       <input
         placeholder="날짜"
         className="day"
@@ -34,9 +36,9 @@ const AdminPageBar = ({
       <button
         className="sub"
         onClick={clickChange}
-        onSubmit={requestAdminPageBar}
+        onSubmit={() => requestAdminPageBar2(idx)}
       >
-        추가하기
+        수정하기
       </button>
     </form>
   );

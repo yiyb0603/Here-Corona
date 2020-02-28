@@ -7,9 +7,6 @@ const clickChange = () => {
   if (localitem === null) {
     window.alert("관리자만 수정 가능합니다.");
     window.location = "/";
-  } else {
-    window.alert("성공");
-    window.location = "/";
   }
 };
 const AdminPage = ({
