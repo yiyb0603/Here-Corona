@@ -51,21 +51,6 @@ class AdminStore {
   }
 
   @action
-  handleAdminPageBar2(data) {
-    try {
-      const response = AdminRepository.handleAdminPageBar2(data);
-      return new Promise((resolve, reject) => {
-        resolve(response);
-      });
-    } catch (error) {
-      console.log(error);
-      return new Promise((resolve, reject) => {
-        reject(error);
-      });
-    }
-  }
-
-  @action
   handleWorldWide(data) {
     try {
       const response = AdminRepository.handleWorldWide(data);
