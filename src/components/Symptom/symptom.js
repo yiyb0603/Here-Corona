@@ -1,16 +1,19 @@
 //의심 증상
 import React from 'react';
 import './symptom.scss';
+
 import { FaLongArrowAltDown } from "react-icons/fa";
+
 import symptom1 from 'asset/images/symptom1.png';
 import symptom2 from 'asset/images/symptom2.png';
 import symptom3 from 'asset/images/symptom3.png';
+import symptomMain from 'asset/images/symptomMain.jpg';
 
 const Symptom =()=> {
     return(
         <>
         <div className="symptom-title">신종 코로나 바이러스 의심 증상</div>
-        <div className="symptom-MainImage">image</div>
+        <img src={symptomMain} className="symptom-MainImage"/>
         <div className="symptom-list">
             <li className="symptom-item">숨 쉬는게 힘들 정도의 마른 기침</li>
             <li className="symptom-item">37.5도 이상의 발열</li>
