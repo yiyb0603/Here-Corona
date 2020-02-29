@@ -10,7 +10,7 @@ const Market = () => {
         <>
             <div className="market-title">
                 <input type="text" className="market-input"/>
-                <span>자영업자 장터</span>
+                <span className="market-titleText">자영업자 장터</span>
             </div>
 
             <div className="market-Notice">
