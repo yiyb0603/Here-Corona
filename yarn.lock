@@ -113,7 +113,7 @@
     "@antv/event-emitter" "~0.1.0"
     d3-ease "^1.0.5"
 
-"@antv/g2@~3.6.0-beta.18":
+"@antv/g2@~3.6.0-beta.18", "@antv/g2@~3.6.0-beta.19":
   version "3.6.0-beta.19"
   resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-3.6.0-beta.19.tgz#a90f5c324e5f56bc41ae83fa0398da6b86b26c34"
   integrity sha512-b57+teizhcJ0+OBXHgwziMS8gM4tXNjmQ5OjEu4DrtM7QERNwgf7ZNEgsZ8xQ/4EXw0a/T92YAeegHHVu6dVqA==
@@ -138,6 +138,19 @@
   dependencies:
     "@antv/g-gesture" "~0.1.0"
     "@antv/g2" "~3.6.0-beta.18"
+    "@antv/gui" "~0.1.0"
+    d3-regression "^1.2.8"
+    fecha "~4.1.0"
+    resize-observer-polyfill "^1.5.1"
+    tslib "^1.10.0"
+
+"@antv/g2plot@^0.11.34":
+  version "0.11.34"
+  resolved "https://registry.yarnpkg.com/@antv/g2plot/-/g2plot-0.11.34.tgz#8c3290ecc58edd36a9b77b49eb82b3b7b4470c7f"
+  integrity sha512-ZoA56yxxfWa3+Y+Tgsh3QbMgaftCzS4jUEVwL+1F9TtcE98GyNN6yEO0DVpdauzXbYve5YbS8bK6U+64QT/zXA==
+  dependencies:
+    "@antv/g-gesture" "~0.1.0"
+    "@antv/g2" "~3.6.0-beta.19"
     "@antv/gui" "~0.1.0"
     d3-regression "^1.2.8"
     fecha "~4.1.0"
