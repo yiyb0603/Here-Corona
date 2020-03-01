@@ -6,7 +6,8 @@ import "./sample.scss";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import $ from "jquery";
 import "./styleSample.scss";
-import WorldChart from "../Chart/WorldChart";
+// import WorldChart from "../Chart/WorldChart";
+import WorldseroChart from "../Chart/WorldseroChart";
 class WorldWide extends Component {
   constructor(props) {
     super(props);
@@ -192,7 +193,7 @@ class WorldWide extends Component {
                 </div>
               </div>
               <div class="line"></div>
-              <WorldChart />
+              <WorldseroChart />
             </div>
           </div>
         </div>
