@@ -6,6 +6,7 @@ import WorldWideBar from "./WorldWideBar/WorldWideBarContainer";
 import AdminAge from "./AdminAge/AdminAgeContainer";
 import AdminCircle from "./AdminCircle/AdminCircleContainer";
 import AdminArea from "./AdminArea/AdminAreaContainer";
+import AdminWorld from "./AdminWorld/AdminWorldContainer";
 
 function Admin() {
   return (
@@ -17,6 +18,7 @@ function Admin() {
       <AdminAge />
       <AdminCircle />
       <AdminArea />
+      <AdminWorld />
     </>
   );
 }

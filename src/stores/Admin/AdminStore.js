@@ -154,6 +154,21 @@ class AdminStore {
       });
     }
   }
+
+  @action
+  handleAdminWorld(data) {
+    try {
+      const response = AdminRepository.handleAdminWorld(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      });
+    } catch (error) {
+      console.log(error);
+      return new Promise((resolve, reject) => {
+        reject(error);
+      });
+    }
+  }
 }
 
 export default AdminStore;

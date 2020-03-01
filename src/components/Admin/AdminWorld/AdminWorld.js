@@ -1,5 +1,5 @@
 import React from "react";
-import "./AdminArea.scss";
+import "./AdminWorld.scss";
 
 const clickChange = () => {
   let localitem = localStorage.getItem("x-access-token");
@@ -9,7 +9,7 @@ const clickChange = () => {
   }
 };
 
-const AdminArea = ({
+const AdminWorld = ({
   requestZero,
   requestOne,
   requestTwo,
@@ -27,6 +27,11 @@ const AdminArea = ({
   requestFourteen,
   requestFifteen,
   requestSixteen,
+  requestSeventeen,
+  requestEighteen,
+  requestNineteen,
+  requestTwenty,
+  requestTwentyone,
   zero,
   setZero,
   one,
@@ -60,168 +65,244 @@ const AdminArea = ({
   fifteen,
   setFifteen,
   sixteen,
-  setSixteen
+  setSixteen,
+  seventeen,
+  setSeventeen,
+  eighteen,
+  setEighteen,
+  nineteen,
+  setNineteen,
+  twenty,
+  setTwenty,
+  twentyone,
+  setTwentyone
 }) => {
   return (
     <>
-      <h3 className="areatitle">국내 지역별 감염자 </h3>
-      <div className="adminarea">
+      <h3 className="worldtitle">국가별 감염자</h3>
+      <div className="worldarea">
         <form onSubmit={requestZero}>
           <input
-            placeholder="서울"
+            placeholder="중국"
             value={zero}
             onChange={e => setZero(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
-
           <br />
         </form>
+
         <form onSubmit={requestOne}>
           <input
-            placeholder="세정"
+            placeholder="한국"
             value={one}
             onChange={e => setOne(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestTwo}>
           <input
-            placeholder="인천"
+            placeholder="이탈리아"
             value={two}
             onChange={e => setTwo(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestThree}>
           <input
-            placeholder="부산"
+            placeholder="일본"
             value={three}
             onChange={e => setThree(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestFour}>
           <input
-            placeholder="대구"
+            placeholder="이란"
             value={four}
             onChange={e => setFour(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestFive}>
           <input
-            placeholder="광주"
+            placeholder="싱가포르"
             value={five}
             onChange={e => setFive(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestSix}>
           <input
-            placeholder="대전"
+            placeholder="홍콩"
             value={six}
             onChange={e => setSix(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestSeven}>
           <input
-            placeholder="울산"
+            placeholder="독일"
             value={seven}
             onChange={e => setSeven(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestEight}>
           <input
-            placeholder="경기"
+            placeholder="미국"
             value={eight}
             onChange={e => setEight(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestNine}>
           <input
-            placeholder="강원"
+            placeholder="프랑스"
             value={nine}
             onChange={e => setNine(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestTen}>
           <input
-            placeholder="충남"
+            placeholder="쿠웨이트"
             value={ten}
             onChange={e => setTen(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestEleven}>
           <input
-            placeholder="충북"
+            placeholder="스페인"
             value={eleven}
             onChange={e => setEleven(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestTwelve}>
           <input
-            placeholder="전남"
+            placeholder="태국"
             value={twelve}
             onChange={e => setTwelve(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestThirteen}>
           <input
-            placeholder="전북"
+            placeholder="대만"
             value={thirteen}
             onChange={e => setThirteen(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestFourteen}>
           <input
-            placeholder="경남"
+            placeholder="바레인"
             value={fourteen}
             onChange={e => setFourteen(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestFifteen}>
           <input
-            placeholder="경북"
+            placeholder="호주"
             value={fifteen}
             onChange={e => setFifteen(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
           <br />
         </form>
+
         <form onSubmit={requestSixteen}>
           <input
-            placeholder="제주"
+            placeholder="말레이시아"
             value={sixteen}
             onChange={e => setSixteen(e.target.value)}
-          ></input>
+          />
           <button onClick={clickChange}>수정하기</button>
+          <br />
+        </form>
+
+        <form onSubmit={requestSeventeen}>
+          <input
+            placeholder="영국"
+            value={seventeen}
+            onChange={e => setSeventeen(e.target.value)}
+          />
+          <button onClick={clickChange}>수정하기</button>
+          <br />
+        </form>
+
+        <form onSubmit={requestEighteen}>
+          <input
+            placeholder="캐나다"
+            value={eighteen}
+            onChange={e => setEighteen(e.target.value)}
+          />
+          <button onClick={clickChange}>수정하기</button>
+          <br />
+        </form>
+
+        <form onSubmit={requestNineteen}>
+          <input
+            placeholder="스위스"
+            value={nineteen}
+            onChange={e => setNineteen(e.target.value)}
+          />
+          <button onClick={clickChange}>수정하기</button>
+          <br />
+        </form>
+
+        <form onSubmit={requestTwenty}>
+          <input
+            placeholder="스웨덴"
+            value={twenty}
+            onChange={e => setTwenty(e.target.value)}
+          />
+          <button onClick={clickChange}>수정하기</button>
+          <br />
+        </form>
+
+        <form onSubmit={requestTwentyone}>
+          <input
+            placeholder="인도"
+            value={twentyone}
+            onChange={e => setTwentyone(e.target.value)}
+          />
+          <button onClick={clickChange}>수정하기</button>
+          <br />
         </form>
       </div>
     </>
   );
 };
 
-export default AdminArea;
+export default AdminWorld;

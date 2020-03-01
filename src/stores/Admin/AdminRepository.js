@@ -139,6 +139,24 @@ class AdminRepository {
     }
   }
 
+  async handleAdminWorld(request) {
+    //국가별 감염자
+    try {
+      const { data } = await axios.put(
+        `${SERVER}/api/infectee/nation
+      `,
+        request,
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("x-access-token")
+          }
+        }
+      );
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
   async handleAdminHeal(request) {
     //격리 해제 현황
     try {
