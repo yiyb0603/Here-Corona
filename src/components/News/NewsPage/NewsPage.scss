@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023px) {
+
     .NewsPage {
         width: 100%;
         height: 100%;
@@ -23,6 +23,7 @@
             left: 0;
             font-size: 2rem;
             color: #0090D5;
+            cursor: pointer;
         }
 
         &-Page {
@@ -59,4 +60,3 @@
             }
         }
     }
-}

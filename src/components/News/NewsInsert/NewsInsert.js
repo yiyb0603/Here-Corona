@@ -19,7 +19,7 @@ const NewsInsert = ({ history }) => {
 
             <div className="NewsInsert-Insert">
                 <input type ="text" maxlength ="20" required className ="NewsInsert-Insert-Title" placeholder ="제목을 입력하세요." />
-                <textarea className="NewsInsert-Insert-Contents" required placeholder ="내용을 입력하세요." />
+                <textarea className="NewsInsert-Insert-Contents" rows ="20" required placeholder ="내용을 입력하세요." />
                 <button className ="NewsInsert-Button">완료</button>
             </div>
         </div>

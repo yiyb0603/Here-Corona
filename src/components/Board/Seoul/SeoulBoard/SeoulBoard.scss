@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023px) {
+
     .SeoulBoard {
         width: 100%;
         height: 100%;
@@ -93,4 +93,23 @@
         border-radius: 50%;
         cursor: pointer;
     }
-}
+
+    @media screen and (min-width: 1024px) {
+        .SeoulBoard-Title {
+            font-size: 1.5rem;
+        }
+    
+        .SeoulBoard-NoticeContents {
+            font-size: 1.25rem;
+        }
+    
+        .sortBtn {
+            padding: 10px;
+            cursor: pointer;
+        }
+    
+        .showNavbar {
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }

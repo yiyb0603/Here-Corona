@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023px) {
+
     .NewsTemplate {
         width: 100%;
         height: 100%;
@@ -83,4 +83,23 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+@media screen and (min-width: 1024px) {
+    .NewsTemplate-Title {
+        font-size: 1.5rem;
+    }
+
+    .NewsTemplate-NoticeContents {
+        font-size: 1.25rem;
+    }
+
+    .sortBtn {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .showNavbar {
+        font-size: 3rem;
+        cursor: pointer;
+    }
 }

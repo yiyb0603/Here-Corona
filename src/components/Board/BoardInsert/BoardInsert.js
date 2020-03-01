@@ -7,7 +7,7 @@ const BoardInsert = ({ history }) => {
         <div className ="BoardInsert">
             <span className="BoardInsert-Top">
                 <FaArrowLeft className ="BoardInsert-Arrow" onClick ={() => history.go(-1)}/> {/* 이전 페이지 이동 */}
-                <span>게시글 작성하기</span>
+                <span className ="writesss">게시글 작성하기</span>
             </span>
 
             <hr />
@@ -23,7 +23,7 @@ const BoardInsert = ({ history }) => {
                     </select>
                 </div>
 
-                <textarea className="BoardInsert-Insert-Contents" required placeholder ="내용을 입력하세요." />
+                <textarea className="BoardInsert-Insert-Contents" rows ="15" required placeholder ="내용을 입력하세요." />
                 <button className ="BoardInsert-Button">완료</button>
             </div>
         </div>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023px) {
+
     .NewsInsert {
         width: 100%;
         height: 100%;
@@ -46,7 +46,6 @@
             &-Contents {
                 width: 100%;
                 font-size: 1.25rem;
-                padding-bottom: 100%;
                 margin-bottom: 5%;
             }
         }
@@ -71,4 +70,17 @@
             }
         }
     }
-}
+
+    @media screen and (min-width: 1024px) {
+        .NewsInsert-Insert-Contents {
+            padding-bottom: 0;
+        }
+
+        .NewsInsert-Button {
+            padding: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
