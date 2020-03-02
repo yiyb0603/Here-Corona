@@ -53,7 +53,7 @@ class AdminRepository {
     //전세계 정보 수정
     try {
       const { data } = await axios.put(
-        `${SERVER}
+        `${SERVER}/api/infectee/nation/total
       `,
         request,
         {
