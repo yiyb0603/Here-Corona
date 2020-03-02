@@ -278,8 +278,8 @@ class Sample extends Component {
             <div className="firstBoxLong">
               <div className="mainplusBox">
                 <div className="mainText">
-                  우리 지역 <br />
-                  현황 보기
+                  지금 우리 <br />
+                  지역은 ?
                 </div>
                 <div className="plus">
                   <div
