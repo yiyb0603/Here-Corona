@@ -53,7 +53,7 @@ class WorldWide extends Component {
                     국내현황
                   </a>
                 </li>
-                <li class="active">
+                <li>
                   <a
                     onClick={() => {
                       this.props.history.push("/worldWide");
@@ -61,14 +61,17 @@ class WorldWide extends Component {
                   >
                     전세계 현황
                   </a>
-                </li>
-                <li>
-                  <a data-toggle="collapse" aria-expanded="false">
+
+                  <a
+                    onClick={() => {
+                      this.props.history.push("/passed");
+                    }}
+                  >
                     국내 사망자 현황
                   </a>
                 </li>
                 <li>
-                  <a>격리 해제 현황</a>
+                  <a>국내 격리 해제 현황</a>
                 </li>
                 <li>
                   <a
@@ -81,27 +84,27 @@ class WorldWide extends Component {
                   </a>
                   <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                      <a href="#">전국</a>
+                      <a href="/NationWideBoard">전국</a>
                     </li>
                     <li>
-                      <a href="#">대구</a>
+                      <a href="/DaeguBoard">대구</a>
                     </li>
                     <li>
-                      <a href="#">부산</a>
+                      <a href="/BusanBoard">부산</a>
                     </li>
                     <li>
-                      <a href="#">서울</a>
+                      <a href="/SeoulBoard">서울</a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a>의심 증상</a>
+                  <a href="#">의심 증상</a>
                 </li>
                 <li>
-                  <a>자영업자 장터</a>
+                  <a href="#">자영업자 장터</a>
                 </li>
                 <li>
-                  <a>문의 질문</a>
+                  <a href="#">문의/질문</a>
                 </li>
               </ul>
               <ul class="list-unstyled CTAs">
@@ -113,7 +116,6 @@ class WorldWide extends Component {
                 </li>
               </ul>
             </nav>
-
             <div id="content">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
