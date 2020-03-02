@@ -139,16 +139,16 @@ class Sample extends Component {
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                   <li>
-                    <a href="#">전국</a>
+                    <a href="/NationWideBoard">전국</a>
                   </li>
                   <li>
-                    <a href="#">대구</a>
+                    <a href="/DaeguBoard">대구</a>
                   </li>
                   <li>
-                    <a href="#">부산</a>
+                    <a href="/BusanBoard">부산</a>
                   </li>
                   <li>
-                    <a href="#">서울</a>
+                    <a href="/SeoulBoard">서울</a>
                   </li>
                 </ul>
               </li>
