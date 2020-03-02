@@ -98,7 +98,7 @@ class Sample extends Component {
         <div class="wrapper">
           <nav id="sidebar">
             <div class="sidebar-header">
-              <h3>메로나, 여기</h3>
+              <h3>코로나, 여기</h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -127,7 +127,7 @@ class Sample extends Component {
                 </a>
               </li>
               <li>
-                <a href="#">격리 해제 현황</a>
+                <a href="#">국내 격리 해제 현황</a>
               </li>
               <li>
                 <a href="#">지역 공유 게시판</a>
@@ -139,7 +139,7 @@ class Sample extends Component {
                 <a href="#">자영업자 장터</a>
               </li>
               <li>
-                <a href="#">문의 질문</a>
+                <a href="#">문의/질문</a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">
