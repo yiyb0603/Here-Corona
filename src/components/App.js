@@ -18,6 +18,7 @@ import WorldWide from "./WorldWide/WorldWide";
 import World from "./WorldInfoAsia/World";
 import AdminPage from "containers/AdminContainer/Admin";
 import Death from "components/Status/Death";
+import Heal from "components/Status/Heal";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route exact path="/market" component={Market} />
         <Route exact path="/adminpage" component={AdminPage} />
         <Route exact path="/passed" component={Death} />
+        <Route exact path="/healed" component={Heal} />
       </Switch>
     </Router>
   );

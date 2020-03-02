@@ -71,7 +71,13 @@ class WorldWide extends Component {
                   </a>
                 </li>
                 <li>
-                  <a>국내 격리 해제 현황</a>
+                  <a
+                    onClick={() => {
+                      this.props.history.push("/healed");
+                    }}
+                  >
+                    국내 격리 해제 현황
+                  </a>
                 </li>
                 <li>
                   <a

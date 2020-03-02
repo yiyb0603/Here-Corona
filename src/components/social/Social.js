@@ -57,12 +57,18 @@ class Social extends Component {
                       전세계 현황
                     </a>
 
-                    <a>국내 사망자 현황</a>
+                    <a
+                      onClick={() => {
+                        this.props.history.push("/passed");
+                      }}
+                    >
+                      국내 사망자 현황
+                    </a>
                   </li>
                   <li>
                     <a
                       onClick={() => {
-                        this.props.history.push("/passed");
+                        this.props.history.push("/healed");
                       }}
                     >
                       국내 격리 해제 현황
