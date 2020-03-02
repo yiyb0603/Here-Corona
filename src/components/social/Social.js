@@ -64,7 +64,28 @@ class Social extends Component {
                     <a>격리 해제 현황</a>
                   </li>
                   <li>
-                    <a>지역 공유 게시판</a>
+                    <a
+                      href="#pageSubmenu"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      class="dropdown-toggle"
+                    >
+                      지역 공유 게시판
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                      <li>
+                        <a href="#">전국</a>
+                      </li>
+                      <li>
+                        <a href="#">대구</a>
+                      </li>
+                      <li>
+                        <a href="#">부산</a>
+                      </li>
+                      <li>
+                        <a href="#">서울</a>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <a>의심 증상</a>

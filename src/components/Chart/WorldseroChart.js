@@ -28,7 +28,7 @@ class WorldseroChart extends Component {
     const config = {
       title: {
         visible: true,
-        text: "국제 총 확진자 누적 그래프"
+        text: "모오든나라"
       },
       forceFit: true,
       data: this.state.getAsia,
