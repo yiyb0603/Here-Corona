@@ -9,6 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 import "./Heal.scss";
+import "./HealTable.scss";
 
 const columns = [
   { id: "number", label: "환자번호", minWidth: 80, align: "left" },
@@ -284,59 +285,175 @@ const Heal = () => {
 
   return (
     <>
-      <Paper className={classes.root} id="table1">
-        <TableContainer className={classes.container}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map(column => (
-                  <TableCell
-                    key={column.id}
-                    align={column.align}
-                    style={{ minWidth: column.minWidth }}
-                  >
-                    {column.label}
-                  </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map(row => {
-                  return (
-                    <TableRow
-                      hover
-                      role="checkbox"
-                      tabIndex={-1}
-                      key={row.code}
-                    >
-                      {columns.map(column => {
-                        const value = row[column.id];
+      <div className="HealTable">
+        <div class="wrapper">
+          <nav id="sidebar">
+            <div class="sidebar-header">
+              <h3>메로나, 여기</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+              <p>Corona?</p>
+              <li>
+                <a
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  onClick={() => {
+                    // this.props.history.push("/");
+                  }}
+                >
+                  국내현황
+                </a>
+              </li>
+              <li class="active">
+                <a
+                  onClick={() => {
+                    // this.props.history.push("/worldWide");
+                  }}
+                >
+                  전세계 현황
+                </a>
+              </li>
+              <li>
+                <a data-toggle="collapse" aria-expanded="false">
+                  국내 사망자 현황
+                </a>
+              </li>
+              <li>
+                <a>격리 해제 현황</a>
+              </li>
+              <li>
+                <a>지역 공유 게시판</a>
+              </li>
+              <li>
+                <a>의심 증상</a>
+              </li>
+              <li>
+                <a>자영업자 장터</a>
+              </li>
+              <li>
+                <a>문의 질문</a>
+              </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+              <li>
+                <a>지역 콜센터 120</a>
+              </li>
+              <li>
+                <a>콜센터 1339</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <button
+                  class="btn btn-dark d-inline-block d-lg-none ml-auto"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  {/* <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                  </ul> */}
+                </div>
+              </div>
+            </nav>
+
+            <Paper className={classes.root} id="table1">
+              <TableContainer className={classes.container}>
+                <Table stickyHeader aria-label="sticky table">
+                  <TableHead>
+                    <TableRow>
+                      {columns.map(column => (
+                        <TableCell
+                          key={column.id}
+                          align={column.align}
+                          style={{ minWidth: column.minWidth }}
+                        >
+                          {column.label}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {rows
+                      .slice(
+                        page * rowsPerPage,
+                        page * rowsPerPage + rowsPerPage
+                      )
+                      .map(row => {
                         return (
-                          <TableCell key={column.id} align={column.align}>
-                            {column.format && typeof value === "number"
-                              ? column.format(value)
-                              : value}
-                          </TableCell>
+                          <TableRow
+                            hover
+                            role="checkbox"
+                            tabIndex={-1}
+                            key={row.code}
+                          >
+                            {columns.map(column => {
+                              const value = row[column.id];
+                              return (
+                                <TableCell key={column.id} align={column.align}>
+                                  {column.format && typeof value === "number"
+                                    ? column.format(value)
+                                    : value}
+                                </TableCell>
+                              );
+                            })}
+                          </TableRow>
                         );
                       })}
-                    </TableRow>
-                  );
-                })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-        />
-      </Paper>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+              <TablePagination
+                rowsPerPageOptions={[10, 25, 100]}
+                component="div"
+                count={rows.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onChangePage={handleChangePage}
+                onChangeRowsPerPage={handleChangeRowsPerPage}
+              />
+            </Paper>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
