@@ -11,34 +11,34 @@ const clickChange = () => {
 };
 const WorldWide = ({
   requestWorldWide,
-  confirmed,
-  setComfirmed,
-  heal,
-  setHeal,
-  death,
-  setDeath
+  red,
+  setRed,
+  blue,
+  setBlue,
+  black,
+  setBlack
 }) => {
   return (
     <form onSubmit={requestWorldWide}>
       <h3 className="worldwide">국제</h3>
       <h4 className="w1">확진자</h4>
       <TextField
-        value={confirmed}
-        onChange={e => setComfirmed(e.target.value)}
+        value={red}
+        onChange={e => setRed(e.target.value)}
         className="wor-1"
       />
 
       <h4 className="w2">격리해제</h4>
       <TextField
-        value={heal}
-        onChange={e => setHeal(e.target.value)}
+        value={blue}
+        onChange={e => setBlue(e.target.value)}
         className="wor-1"
       />
 
       <h4 className="w3">사망자</h4>
       <TextField
-        value={death}
-        onChange={e => setDeath(e.target.value)}
+        value={black}
+        onChange={e => setBlack(e.target.value)}
         className="wor-1"
       />
 

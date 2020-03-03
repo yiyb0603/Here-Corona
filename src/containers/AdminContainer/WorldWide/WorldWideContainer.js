@@ -5,20 +5,20 @@ import Swal from "sweetalert2";
 import WorldWide from "components/Admin/WorldWide";
 
 const WorldWideContainer = ({ store, history }) => {
-  const [confirmed, setConfirmed] = useState("");
-  const [heal, setHeal] = useState("");
-  const [death, setDeath] = useState("");
+  const [red, setRed] = useState("");
+  const [blue, setBlue] = useState("");
+  const [black, setBlack] = useState("");
   const { handleWorldWide } = store.AdminStore;
   const requestWorldWide = e => {
     e.preventDefault();
     const data = {
-      confirmed,
-      heal,
-      death
+      confirmed: red,
+      heal: blue,
+      death: black
     };
     handleWorldWide(data)
       .then(response => {
-        if (response.message === "") {
+        if (response.messages === "수정 성공.") {
           Swal.fire("성공", "정보수정에 성공하였습니다", "success");
         }
       })
@@ -33,12 +33,12 @@ const WorldWideContainer = ({ store, history }) => {
   return (
     <>
       <WorldWide
-        confirmed={confirmed}
-        setConfirmed={setConfirmed}
-        heal={heal}
-        setHeal={setHeal}
-        death={death}
-        setDeath={setDeath}
+        red={red}
+        setRed={setRed}
+        blue={blue}
+        setBlue={setBlue}
+        black={black}
+        setBlack={setBlack}
         requestWorldWide={requestWorldWide}
       />
     </>

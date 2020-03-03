@@ -16,6 +16,7 @@ class Social extends Component {
       teset: ""
     };
   }
+
   componentDidMount() {
     $(document).ready(function() {
       $("#sidebarCollapse").on("click", function() {
