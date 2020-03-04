@@ -36,7 +36,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,6 +64,7 @@
     "@storybook/react": "^5.2.8",
     "core-decorators": "^0.20.0",
     "customize-cra": "^0.9.1",
+    "gh-pages": "^2.2.0",
     "react-app-rewired": "^2.1.5"
   },
   "babel": {
@@ -82,5 +85,6 @@
         }
       ]
     ]
-  }
+  },
+  "homepage": "https://soongwan.github.io/Merona-Here"
 }
