@@ -1,9 +1,16 @@
 import React from 'react';
 import './SeoulBoard.scss';
-import SeoulBoardList from '../SeoulBoardList';
 import { FaBars, FaPen } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const SeoulBoard = () => {
+const SeoulBoard = ({ seoulList }) => {
+    const seoulItem = seoulList.map(data => {
+        return (
+            <div>
+                <Link to ="/BoardPage">제목: {data.title}</Link>
+            </div>
+        )
+    })
     return (
         <div className ="SeoulBoard">
             <span className="SeoulBoard-Top">
@@ -22,7 +29,7 @@ const SeoulBoard = () => {
             </div>
 
             <div className="SeoulBoard-List">
-                <SeoulBoardList />
+                { seoulItem }
             </div>
 
             <button className ="writeBoard" onClick ={() => window.location ="/BoardInsert"}>

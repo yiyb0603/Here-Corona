@@ -8,7 +8,7 @@ import BoardPage from "./Board/BoardPage";
 import NationWideBoard from "./Board/NationWide/NationWideBoard";
 import BusanBoard from 'containers/BoardContainer/BoardList/BusanBoardListContainer';
 import DaeguBoard from "containers/BoardContainer/BoardList/DaeguBoardListContainer";
-import SeoulBoard from "./Board/Seoul/SeoulBoard";
+import SeoulBoard from "containers/BoardContainer/BoardList/SeoulBoardListContainer";
 import NewsTemplate from "./News/NewsTemplate";
 import NewsInsert from "./News/NewsInsert";
 import NewsPage from "./News/NewsPage";

@@ -28,6 +28,15 @@ class BoardRepository {
             throw error;
         }
     }
+
+    handleSeoulBoardList = async (ORDER) => {
+        try {
+            const { data } = await axios.get(`${SERVER}/api/post?region=0&order=${ORDER}`);
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 export default new BoardRepository();
