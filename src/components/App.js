@@ -3,12 +3,12 @@ import AdminLogin from "containers/AdminContainer/AdminLogin/AdminLoginContainer
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./Main/Main";
 import Social from "./social/Social";
-import BoardInsert from "./Board/BoardInsert";
+import BoardInsert from "containers/BoardContainer/BoardInsert/BoardInsertContainer";
 import BoardPage from "./Board/BoardPage";
 import NationWideBoard from "./Board/NationWide/NationWideBoard";
-import DaeguBoard from "./Board/Daegu/DaeguBoard";
+import BusanBoard from 'containers/BoardContainer/BoardList/BusanBoardListContainer';
+import DaeguBoard from "containers/BoardContainer/BoardList/DaeguBoardListContainer";
 import SeoulBoard from "./Board/Seoul/SeoulBoard";
-import BusanBoard from "./Board/Busan/BusanBoard";
 import NewsTemplate from "./News/NewsTemplate";
 import NewsInsert from "./News/NewsInsert";
 import NewsPage from "./News/NewsPage";

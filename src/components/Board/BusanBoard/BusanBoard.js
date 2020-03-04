@@ -1,9 +1,16 @@
 import React from 'react';
 import './BusanBoard.scss';
-import BusanBoardList from '../BusanBoardList';
 import { FaBars, FaPen } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const SeoulBoard = () => {
+const BusanBoard = ({ busanList }) => {
+    const busanItem = busanList.map(data => {
+        return (
+            <div>
+                <Link to ="/BoardPage">제목: {data.title}</Link>
+            </div>
+        )
+    })
     return (
         <div className ="BusanBoard">
             <div className="BusanBoard-Top">
@@ -22,7 +29,7 @@ const SeoulBoard = () => {
             </div>
 
             <div className="BusanBoard-List">
-                <BusanBoardList />
+                {busanItem}
             </div>
 
             <button className ="writeBoard" onClick ={() => window.location ="/BoardInsert"}>
@@ -32,4 +39,4 @@ const SeoulBoard = () => {
     );
 }
 
-export default SeoulBoard;
+export default BusanBoard;

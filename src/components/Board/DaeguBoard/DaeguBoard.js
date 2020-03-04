@@ -1,9 +1,16 @@
 import React from 'react';
 import './DaeguBoard.scss';
-import DaeguBoardList from '../DaeguBoardList';
 import { FaBars, FaPen } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const DaeguBoard = () => {
+const DaeguBoard = ({ daeguList }) => {
+    const daeguItem = daeguList.map(data => {
+        return (
+            <div>
+                <Link to ="/BoardPage">제목: {data.title}</Link>
+            </div>
+        )
+    })
     return (
         <div className ="DaeguBoard">
             <div className="DaeguBoard-Top">
@@ -22,7 +29,7 @@ const DaeguBoard = () => {
             </div>
 
             <div className="DaeguBoard-List">
-                <DaeguBoardList />
+                {daeguItem}
             </div>
             <button className ="writeBoard" onClick ={() => window.location ="/BoardInsert"}>
                 <FaPen />
