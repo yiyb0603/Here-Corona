@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Merona-Here/static/css/main.3b63d051.chunk.css",
+    "main.js": "/Merona-Here/static/js/main.22b52cf2.chunk.js",
+    "main.js.map": "/Merona-Here/static/js/main.22b52cf2.chunk.js.map",
+    "runtime-main.js": "/Merona-Here/static/js/runtime-main.8828aae9.js",
+    "runtime-main.js.map": "/Merona-Here/static/js/runtime-main.8828aae9.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/Merona-Here/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.601ac517.chunk.js": "/Merona-Here/static/js/2.601ac517.chunk.js",
+    "static/js/2.601ac517.chunk.js.map": "/Merona-Here/static/js/2.601ac517.chunk.js.map",
+    "index.html": "/Merona-Here/index.html",
+    "precache-manifest.42615f9491c11d93f76fc6f4658054c2.js": "/Merona-Here/precache-manifest.42615f9491c11d93f76fc6f4658054c2.js",
+    "service-worker.js": "/Merona-Here/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/Merona-Here/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.3b63d051.chunk.css.map": "/Merona-Here/static/css/main.3b63d051.chunk.css.map",
+    "static/js/2.601ac517.chunk.js.LICENSE.txt": "/Merona-Here/static/js/2.601ac517.chunk.js.LICENSE.txt",
+    "static/media/symptom1.png": "/Merona-Here/static/media/symptom1.b7a4a9da.png",
+    "static/media/symptom2.png": "/Merona-Here/static/media/symptom2.7ab75f6f.png",
+    "static/media/symptom3.png": "/Merona-Here/static/media/symptom3.f2c62abb.png",
+    "static/media/symptomMain.jpg": "/Merona-Here/static/media/symptomMain.2b81939d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8828aae9.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.601ac517.chunk.js",
+    "static/css/main.3b63d051.chunk.css",
+    "static/js/main.22b52cf2.chunk.js"
+  ]
+}
