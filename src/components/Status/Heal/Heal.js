@@ -166,7 +166,7 @@ class Heal extends Component {
                 ></div>
               </div>
             </nav>
-            <Table striped bordered hover>
+            <Table striped bordered hover className="table-responsive">
               <thead>
                 <tr>
                   <th>환자번호</th>
