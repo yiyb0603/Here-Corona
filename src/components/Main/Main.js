@@ -253,7 +253,8 @@ class Sample extends Component {
               </div>
               <br />
               <div className="peoplePoint">
-                {this.state.confirmed} (▲{this.state.confirmedUp})명
+                {this.state.confirmed}
+                <b className="smallText">(▲{this.state.confirmedUp})명</b>
               </div>
             </div>
             <div className="secondBox">
@@ -267,7 +268,8 @@ class Sample extends Component {
               </div>
               <br />
               <div className="peoplePoint">
-                {this.state.check} (▲{this.state.checkUp})명
+                {this.state.check}
+                <b className="smallText">(▲{this.state.checkUp})명</b>
               </div>
             </div>
             {/* </div> */}
@@ -284,7 +286,8 @@ class Sample extends Component {
               </div>
               <br />
               <div className="peoplePoint">
-                {this.state.heal}(▲{this.state.healUp})명
+                {this.state.heal}
+                <b className="smallText">(▲{this.state.healUp})명</b>
               </div>
             </div>
             {/* <div class="line"></div> */}
@@ -297,7 +300,8 @@ class Sample extends Component {
               </div>
               <br />
               <div className="peoplePoint">
-                {this.state.death}(▲{this.state.deathUp})명
+                {this.state.death}{" "}
+                <b className="smallText">(▲{this.state.deathUp})</b> 명
               </div>
             </div>
             <br />
