@@ -36,26 +36,6 @@ class Heal extends Component {
         $(this).toggleClass("active");
       });
     });
-    // let getinfectee = async () => {
-    //   await axios.get(`${SERVER}/api/infectee/total`).then(response => {
-    //     console.log(response.data.data.total_state);
-    //     this.setState({
-    //       confirmed: response.data.data.total_state.confirmed,
-    //       confirmedUp: response.data.data.total_state.last_confirmed,
-    //       check: response.data.data.total_state.check,
-    //       checkUp: response.data.data.total_state.last_check,
-    //       heal: response.data.data.total_state.heal,
-    //       healUp: response.data.data.total_state.last_heal,
-    //       death: response.data.data.total_state.death,
-    //       deathUp: response.data.data.total_state.last_death,
-    //       time: Moment(
-    //         response.data.data.total_state.last_update,
-    //         "llll"
-    //       ).format("YYYY-MM-DD h:mm a")
-    //     });
-    //   });
-    // };
-    // getinfectee();
   }
 
   handleChangeSite() {
@@ -135,7 +115,13 @@ class Heal extends Component {
                 </ul>
               </li>
               <li>
-                <a href="#">의심 증상</a>
+                <a
+                  onClick={() => {
+                    this.props.history.push("/symptom");
+                  }}
+                >
+                  의심 증상
+                </a>
               </li>
               <li>
                 <a href="#">자영업자 장터</a>
