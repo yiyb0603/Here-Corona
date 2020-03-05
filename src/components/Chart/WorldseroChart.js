@@ -17,7 +17,7 @@ class WorldseroChart extends Component {
         console.log(response.data.data.nation_infectee);
 
         this.setState({
-          getAsia: response.data.data.nation_infectee
+          getAsia: response.data.data.nation_infectee.reverse()
         });
       });
     };
