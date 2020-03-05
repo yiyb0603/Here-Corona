@@ -17,6 +17,7 @@
     .firstBox {
       width: 48%;
       height: 20%;
+      margin-bottom: 2%;
       max-height: 150px;
       background-color: #e53a40;
       padding: 10px 20px 10px 20px;
@@ -28,6 +29,7 @@
       margin-left: 4%;
       width: 48%;
       height: 20%;
+      margin-bottom: 2%;
       max-height: 150px;
       background-color: #f6b352;
       padding: 10px 20px 10px 20px;
@@ -38,6 +40,7 @@
     .thirdBox {
       width: 48%;
       height: 20%;
+      margin-bottom: 2%;
       max-height: 150px;
       background-color: #4f86c6;
       padding: 10px 20px 10px 20px;
@@ -50,6 +53,7 @@
 
       width: 48%;
       height: 20%;
+      margin-bottom: 2%;
       max-height: 150px;
       background-color: #3c3530;
       padding: 10px 20px 10px 20px;
@@ -124,7 +128,10 @@
       // width: 100%;
     }
     .firstBox {
-      width: 49%;
+      // margin-left: 6.125%;
+      width: 24%;
+      // margin-left: 0.5%;
+      margin-right: 1%;
       height: 20%;
       max-height: 150px;
       max-width: 800px;
@@ -135,8 +142,9 @@
       display: inline-block;
     }
     .secondBox {
-      margin-left: 2%;
-      width: 49%;
+      // margin-left: 2%;
+      width: 24%;
+      margin-right: 1%;
       height: 20%;
       max-height: 150px;
       max-width: 800px;
@@ -147,7 +155,10 @@
       display: inline-block;
     }
     .thirdBox {
-      width: 49%;
+      // margin-left: 6.125%;
+
+      width: 24%;
+      margin-right: 1%;
       height: 20%;
       max-height: 150px;
       max-width: 800px;
@@ -158,8 +169,9 @@
       display: inline-block;
     }
     .fourthBox {
-      margin-left: 2%;
-      width: 49%;
+      // margin-left: 2%;
+      width: 24%;
+      margin-right: 1%;
       height: 20%;
       max-height: 150px;
       max-width: 800px;
@@ -170,13 +182,64 @@
       display: inline-block;
     }
     .firstBoxLong {
-      width: 100%;
+      width: 32%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-right: 2%;
       height: 20%;
       max-height: 150px;
       background-color: #e53a40;
       padding: 10px 20px 10px 20px;
       color: white;
       border-radius: 15px;
+      display: inline-block;
+
+      .mainText {
+        font-size: 1.2rem !important;
+      }
+      .people {
+        margin-top: 85px;
+      }
+      #noned {
+        cursor: pointer;
+      }
+    }
+    .secondBoxLong {
+      width: 32%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-right: 2%;
+
+      height: 20%;
+      max-height: 150px;
+      background-color: #e53a40;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+
+      .mainText {
+        font-size: 1.2rem !important;
+      }
+      .people {
+        margin-top: 85px;
+      }
+      #noned {
+        cursor: pointer;
+      }
+    }
+    .thirdBoxLong {
+      width: 32%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      height: 20%;
+      max-height: 150px;
+      background-color: #e53a40;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+
       .mainText {
         font-size: 1.2rem !important;
       }
