@@ -300,7 +300,7 @@ class Sample extends Component {
               </div>
               <br />
               <div className="peoplePoint">
-                {this.state.death}{" "}
+                {this.state.death}
                 <b className="smallText">(▲{this.state.deathUp})</b> 명
               </div>
             </div>
