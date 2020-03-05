@@ -94,7 +94,7 @@ class Sample extends Component {
   }
   render() {
     return (
-      <div className="allType12">
+      <div className="allType123">
         <div class="wrapper">
           <nav id="sidebar">
             <div class="sidebar-header">
