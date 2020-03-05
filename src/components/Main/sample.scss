@@ -66,9 +66,55 @@
       height: 20%;
       max-height: 150px;
       background-color: #e53a40;
-      padding: 25px 20px 10px 20px;
+      padding: 10px 20px 10px 20px;
       color: white;
       border-radius: 15px;
+      .mainText {
+        font-size: 1.2rem !important;
+      }
+      .people {
+        margin-top: 85px;
+      }
+      #noned {
+        cursor: pointer;
+      }
+    }
+    .secondBoxLong {
+      width: 100%;
+      margin-top: 2%;
+      // margin-bottom: 2%;
+      // margin-right: 2%;
+
+      height: 20%;
+      max-height: 150px;
+      background-color: #e53a40;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+
+      .mainText {
+        font-size: 1.2rem !important;
+      }
+      .people {
+        margin-top: 85px;
+      }
+      #noned {
+        cursor: pointer;
+      }
+    }
+    .thirdBoxLong {
+      width: 100%;
+      margin-top: 2%;
+      // margin-bottom: 2%;
+      // height: 20%;
+      max-height: 150px;
+      background-color: #e53a40;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+
       .mainText {
         font-size: 1.2rem !important;
       }
