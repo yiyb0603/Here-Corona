@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./Main/Main";
 import Social from "./social/Social";
 import BoardInsert from "containers/BoardContainer/BoardInsert/BoardInsertContainer";
-import BoardPage from "./Board/BoardPage";
+import BoardPage from "containers/BoardContainer/BoardPage/BoardPageContainer";
 import NationWideBoard from "./Board/NationWide/NationWideBoard";
 import BusanBoard from 'containers/BoardContainer/BoardList/BusanBoardListContainer';
 import DaeguBoard from "containers/BoardContainer/BoardList/DaeguBoardListContainer";

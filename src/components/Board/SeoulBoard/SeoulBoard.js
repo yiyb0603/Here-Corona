@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 const SeoulBoard = ({ seoulList }) => {
     const seoulItem = seoulList.map(data => {
+        const { idx, title } = data;
         return (
-            <div>
-                <Link to ="/BoardPage">제목: {data.title}</Link>
+            <div key ={idx}>
+                <Link to ="/BoardPage" onClick ={() => {
+                    sessionStorage.setItem('index', idx);
+                }}>제목: {title}</Link>
             </div>
         )
     })

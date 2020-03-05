@@ -1,8 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './BoardPage.scss';
 import { FaArrowLeft } from 'react-icons/fa';
+import BoardCommentWriteContainer from 'containers/BoardContainer/BoardComment/BoardCommentWriteContainer';
 
-const BoardPage = ({ history }) => {
+const BoardPage = ({ history, boardPageInfo }) => {
+    const { title, content, region } = boardPageInfo;
     return (
         <div className ="BoardPage">
             <span className="BoardPage-Top">
@@ -13,12 +16,14 @@ const BoardPage = ({ history }) => {
             <hr />
 
             <div className="BoardPage-Page">
-                <div className="BoardPage-Page-Title">제목: 제목이 들어갈 자리</div>
-                <div className="BoardPage-Page-Location">지역: 지역이 들어갈 자리</div>
-                <div className="BoardPage-Page-Contents">내용이 들어갈 자리</div>
+                <div className="BoardPage-Page-Title">제목: {title}</div>
+                <div className="BoardPage-Page-Location">지역: {region}</div>
+                <div className="BoardPage-Page-Contents">내용: {content}</div>
             </div>
+
+            <BoardCommentWriteContainer />
         </div>
     );
 }
 
-export default BoardPage;
+export default withRouter(BoardPage);

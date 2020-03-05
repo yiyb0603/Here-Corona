@@ -1,4 +1,4 @@
-import { action } from "mobx";
+import { action, observable } from "mobx";
 import { autobind } from "core-decorators";
 import BoardRepository from './BoardRepository';
 
@@ -15,6 +15,20 @@ class BoardStore {
         return new Promise((resolve, reject) => {
             reject(error);
         })
+    }
+  }
+
+  @action
+  handleBoardPage(idx) {
+    try {
+      const response = BoardRepository.handleBoardPage(idx);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
     }
   }
 
@@ -53,6 +67,34 @@ class BoardStore {
       return new Promise((resolve, reject) => {
         resolve(response);
       });
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
+    }
+  }
+
+  @action
+  handleBoardCommentWrite(data) {
+    try {
+      const response = BoardRepository.handleBoardCommentWrite(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
+    }
+  }
+
+  @action
+  handleBoardCommentList(idx) {
+    try {
+      const response = BoardRepository.handleBoardCommentList(idx);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
     } catch (error) {
       return new Promise((resolve, reject) => {
         reject(error);
