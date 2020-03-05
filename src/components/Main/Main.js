@@ -280,7 +280,7 @@ class Sample extends Component {
             {/* <div class="line"></div> */}
 
             {/* <div></div> */}
-            <div class="line"></div>
+            {/* <div class="line"></div> */}
             <div className="thirdBox">
               <div className="mainplusBox">
                 <div className="mainText">격리 해제</div>
@@ -341,6 +341,68 @@ class Sample extends Component {
                 }}
               >
                 우리 지역 알아보기
+                <IoMdArrowRoundForward className="circleInPlus" />
+              </div>
+              <br />
+            </div>
+            <div className="secondBoxLong">
+              <div className="mainplusBox">
+                <div className="mainText">
+                  전세계
+                  <br />총 확진자
+                </div>
+                <div className="plus">
+                  <div
+                    className="pressCircle"
+                    onClick={() => {
+                      this.props.history.push("/social");
+                    }}
+                  >
+                    {/* 다른지역
+                    <IoMdArrowRoundForward className="circleInPlus" /> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="peoplePoint"
+                id="noned"
+                onClick={() => {
+                  this.props.history.push("/social");
+                }}
+              >
+                자세히 알아보기
+                <IoMdArrowRoundForward className="circleInPlus" />
+              </div>
+              <br />
+            </div>
+
+            <div className="thirdBoxLong">
+              <div className="mainplusBox">
+                <div className="mainText">
+                  지역공유
+                  <br />
+                  계시판
+                </div>
+                <div className="plus">
+                  <div
+                    className="pressCircle"
+                    onClick={() => {
+                      this.props.history.push("/social");
+                    }}
+                  >
+                    {/* 다른지역
+                    <IoMdArrowRoundForward className="circleInPlus" /> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="peoplePoint"
+                id="noned"
+                onClick={() => {
+                  this.props.history.push("/social");
+                }}
+              >
+                지역공유 계시판 바로가기
                 <IoMdArrowRoundForward className="circleInPlus" />
               </div>
               <br />
