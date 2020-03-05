@@ -8,18 +8,15 @@ import $ from "jquery";
 import "./styleSample.scss";
 // import WorldChart from "../Chart/WorldChart";
 import WorldseroChart from "../Chart/WorldseroChart";
+import axios from "axios";
+import { SERVER } from "../../config/server.json";
 class WorldWide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstman: "80,005",
-      firtManUpdate: "",
-      secondman: "",
-      secondManUpdate: "",
-      thirdman: "",
-      thirdMainUpdate: "",
-      fourthman: "",
-      fourthManUpdate: ""
+      worldConfirmed: "",
+      worldHeal: "",
+      worldDeath: ""
     };
   }
   componentDidMount() {
@@ -29,6 +26,18 @@ class WorldWide extends Component {
         $(this).toggleClass("active");
       });
     });
+    //
+    let getNation = async () => {
+      await axios.get(`${SERVER}/api/infectee/nation/total`).then(response => {
+        console.log(response.data.data);
+        this.setState({
+          worldConfirmed: response.data.data.nation_total.confirmed,
+          worldHeal: response.data.data.nation_total.heal,
+          worldDeath: response.data.data.nation_total.death
+        });
+      });
+    };
+    getNation();
   }
   render() {
     return (
@@ -189,7 +198,9 @@ class WorldWide extends Component {
                   </div>
                 </div>
                 <br />
-                <div className="people">{this.state.firstman}명</div>
+                <div className="peoplePoint1">
+                  {this.state.worldConfirmed}명
+                </div>
               </div>
               {/* <div class="line"></div> */}
               <div className="thirdBox3">
@@ -197,14 +208,10 @@ class WorldWide extends Component {
                   <div className="mainText">
                     국제 총 <br /> 회복자
                   </div>
-                  <div className="plus">
-                    <IoMdAddCircleOutline className="circleInPlus" />
-                  </div>
+                  <div className="plus"></div>
                 </div>
                 <br />
-                <div className="people">
-                  {this.state.thirdman}(▲{this.state.thirdMainUpdate})명
-                </div>
+                <div className="peoplePoint1">{this.state.worldHeal}명</div>
               </div>
               <div class="line"></div>
               <div className="fourthBox4">
@@ -212,14 +219,10 @@ class WorldWide extends Component {
                   <div className="mainText">
                     국제 총 <br /> 사망자
                   </div>
-                  <div className="plus">
-                    <IoMdAddCircleOutline className="circleInPlus" />
-                  </div>
+                  <div className="plus"></div>
                 </div>
                 <br />
-                <div className="people">
-                  {this.state.fourthman}(▲{this.state.firtManUpdate})명
-                </div>
+                <div className="peoplePoint1">{this.state.worldDeath}명</div>
               </div>
               <div class="line"></div>
               <WorldseroChart />
