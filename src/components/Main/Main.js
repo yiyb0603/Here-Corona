@@ -164,8 +164,12 @@ class Sample extends Component {
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="#">의심 증상</a>
+              <li
+                onClick={() => {
+                  this.props.history.push("/symptom");
+                }}
+              >
+                <a>의심 증상</a>
               </li>
               <li>
                 <a href="#">자영업자 장터</a>

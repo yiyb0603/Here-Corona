@@ -71,7 +71,11 @@ class World extends Component {
                 <li>
                   <a>지역 공유 게시판</a>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    this.props.history.push("/symptom");
+                  }}
+                >
                   <a>의심 증상</a>
                 </li>
                 <li>
