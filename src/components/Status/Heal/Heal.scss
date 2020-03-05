@@ -144,7 +144,7 @@
       height: 20%;
       max-height: 150px;
       max-width: 800px;
-      background-color: #4f86c6;
+      // background-color: #4f86c6;
       padding: 10px 20px 10px 20px;
       color: white;
       border-radius: 15px;
@@ -313,7 +313,6 @@
   #sidebar ul li.active > a,
   a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
   }
 
   a[data-toggle="collapse"] {
@@ -331,7 +330,6 @@
   ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
   }
 
   ul.CTAs {
@@ -348,12 +346,12 @@
 
   a.download {
     background: #fff;
-    color: #7386d5;
+    // color: #7386d5;
   }
 
   a.article,
   a.article:hover {
-    background: #6d7fcc !important;
+    // background: #6d7fcc !important;
     color: #fff !important;
   }
 
