@@ -1,0 +1,14 @@
+.BoardComment {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    &-Count {
+        font-size: 1.5rem;
+    }
+
+    &-Input {
+        width: 80%;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
+import { withRouter } from 'react-router-dom';
 import './BoardInsert.scss';
 
 const BoardInsert = ({ history, titles, setTitles, contents, setContents, regions, setRegions, requestBoardInsert }) => {
@@ -31,4 +32,4 @@ const BoardInsert = ({ history, titles, setTitles, contents, setContents, region
     );
 }
 
-export default BoardInsert;
+export default withRouter(BoardInsert);
