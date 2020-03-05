@@ -172,7 +172,7 @@ class Social extends Component {
                     </div>
                   </div>
                 </nav>
-                여기 지도
+                현재 지도 추가중에 있습니다.
                 <Circle />
                 <AgeChart />
               </div>
