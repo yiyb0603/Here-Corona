@@ -8,6 +8,9 @@ import { IoMdAddCircleOutline, IoMdArrowRoundForward } from "react-icons/io";
 import { SERVER } from "config/server.json";
 import axios from "axios";
 import Moment from "moment";
+import "./Healmain.scss";
+import "./HealNav.scss";
+import { Table } from "react-bootstrap";
 
 //환자번호	출생년도	성별	격리해제일	감염경로 비고
 class Heal extends Component {
@@ -33,26 +36,26 @@ class Heal extends Component {
         $(this).toggleClass("active");
       });
     });
-    let getinfectee = async () => {
-      await axios.get(`${SERVER}/api/infectee/total`).then(response => {
-        console.log(response.data.data.total_state);
-        this.setState({
-          confirmed: response.data.data.total_state.confirmed,
-          confirmedUp: response.data.data.total_state.last_confirmed,
-          check: response.data.data.total_state.check,
-          checkUp: response.data.data.total_state.last_check,
-          heal: response.data.data.total_state.heal,
-          healUp: response.data.data.total_state.last_heal,
-          death: response.data.data.total_state.death,
-          deathUp: response.data.data.total_state.last_death,
-          time: Moment(
-            response.data.data.total_state.last_update,
-            "llll"
-          ).format("YYYY-MM-DD h:mm a")
-        });
-      });
-    };
-    getinfectee();
+    // let getinfectee = async () => {
+    //   await axios.get(`${SERVER}/api/infectee/total`).then(response => {
+    //     console.log(response.data.data.total_state);
+    //     this.setState({
+    //       confirmed: response.data.data.total_state.confirmed,
+    //       confirmedUp: response.data.data.total_state.last_confirmed,
+    //       check: response.data.data.total_state.check,
+    //       checkUp: response.data.data.total_state.last_check,
+    //       heal: response.data.data.total_state.heal,
+    //       healUp: response.data.data.total_state.last_heal,
+    //       death: response.data.data.total_state.death,
+    //       deathUp: response.data.data.total_state.last_death,
+    //       time: Moment(
+    //         response.data.data.total_state.last_update,
+    //         "llll"
+    //       ).format("YYYY-MM-DD h:mm a")
+    //     });
+    //   });
+    // };
+    // getinfectee();
   }
 
   handleChangeSite() {
@@ -61,7 +64,7 @@ class Heal extends Component {
   render() {
     var { dataList } = this.state;
     return (
-      <div className="allType12">
+      <div className="allType3">
         <div class="wrapper">
           <nav id="sidebar">
             <div class="sidebar-header">
@@ -98,7 +101,7 @@ class Heal extends Component {
                   국내 사망자 현황
                 </a>
               </li>
-              <li>
+              <li class="active">
                 <a
                   onClick={() => {
                     this.props.history.push("/healed");
@@ -150,7 +153,87 @@ class Heal extends Component {
               </li>
             </ul>
           </nav>
-          <div>안녕 네모야 </div>
+
+          <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <button
+                  class="btn btn-dark d-inline-block d-lg-none ml-auto"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  {/* <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        Page
+                      </a>
+                    </li>
+                  </ul> */}
+                </div>
+              </div>
+            </nav>
+            {/* <div className="twoBoxalign"> */}
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colSpan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
     );
