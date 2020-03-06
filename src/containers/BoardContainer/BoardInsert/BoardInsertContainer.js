@@ -8,7 +8,7 @@ const BoardInsertContainer = ({ store, history }) => {
   const [contents, setContents] = useState('');
   const [regions, setRegions] = useState('');
   const [file, setFile] = useState([]);
-  const { handleBoardInsert } = store.BoardStore;
+  const { handleBoardInsert, handleUploadFile } = store.BoardStore;
 
   const requestBoardInsert = (e) => {
     e.preventDefault();
@@ -18,6 +18,10 @@ const BoardInsertContainer = ({ store, history }) => {
         region: regions,
         files: file
     };
+
+    const fileParameter = {
+      files: file
+    }
   
     handleBoardInsert(bodyParameter)
       .then(response => {
@@ -30,6 +34,15 @@ const BoardInsertContainer = ({ store, history }) => {
       .catch (error => {
           console.log(error);
       });
+
+    handleUploadFile(fileParameter)
+      .then(response => {
+        console.log(response);
+      })
+
+      .catch (error => {
+        console.log(error);
+      })
   }
 
   return (
@@ -41,6 +54,8 @@ const BoardInsertContainer = ({ store, history }) => {
         regions ={regions}
         setRegions ={setRegions}
         requestBoardInsert ={requestBoardInsert}
+        file ={file}
+        setFile ={setFile}
     />
   );
 };

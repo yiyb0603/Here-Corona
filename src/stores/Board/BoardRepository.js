@@ -11,6 +11,15 @@ class BoardRepository {
         }
     }
 
+    handleUploadFile = async (request) => {
+        try {
+            const { data } = await axios.post(`${SERVER}/api/upload`, request);
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     handleBoardPage = async (idx) => {
         try {
             const { data } = await axios.get(`${SERVER}/api/post/${idx}`);
