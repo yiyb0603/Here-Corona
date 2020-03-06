@@ -10,7 +10,7 @@ import symptom3 from 'asset/images/symptom3.png';
 import symptomMain from 'asset/images/symptomMain.jpg';
 import $ from 'jquery';
 
-const Symptom =()=> {
+const Symptom =({ history })=> {
   useEffect(() => {
     $(document).ready(function() {
       $("#sidebarCollapse").on("click", function() {
@@ -35,7 +35,7 @@ const Symptom =()=> {
                     data-toggle="collapse"
                     aria-expanded="false"
                     onClick={() => {
-                      this.props.history.push("/");
+                      history.push("/");
                     }}
                   >
                     국내현황
@@ -44,7 +44,7 @@ const Symptom =()=> {
                 <li class="active">
                   <a
                     onClick={() => {
-                      this.props.history.push("/worldWide");
+                      history.push("/worldWide");
                     }}
                   >
                     전세계 현황
@@ -63,7 +63,7 @@ const Symptom =()=> {
                 </li>
                 <li
                   onClick={() => {
-                    this.props.history.push("/symptom");
+                    history.push("/symptom");
                   }}
                 >
                   <a>의심 증상</a>
