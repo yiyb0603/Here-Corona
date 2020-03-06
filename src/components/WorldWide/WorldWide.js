@@ -213,7 +213,8 @@ class WorldWide extends Component {
                     <div
                       className="pressCircle"
                       onClick={() => {
-                        this.props.history.push("/worldInfoAsia");
+                        // this.props.history.push("/worldInfoAsia");
+                        alert("개발중입니다.");
                       }}
                     >
                       <IoMdAddCircleOutline className="circleInPlus" />

@@ -176,10 +176,10 @@ class WorldseroChart extends Component {
       style: { lineWidth: 100, height: 1000 },
       meta: {
         number: {
-          alias: "1번"
+          alias: "코로나 확진자"
         },
         nation: {
-          alias: "2번"
+          alias: "국가"
         }
       }
     };

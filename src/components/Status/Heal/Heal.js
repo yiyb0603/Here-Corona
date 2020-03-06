@@ -48,7 +48,7 @@ class Heal extends Component {
         <div class="wrapper">
           <nav id="sidebar">
             <div class="sidebar-header">
-              <h3>코로나, 여기</h3>
+              <h3>메로나, 여기</h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -100,28 +100,42 @@ class Heal extends Component {
                   지역 공유 게시판
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                    <a href="/NationWideBoard">전국</a>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/NationWideBoard");
+                    }}
+                  >
+                    <a>전국</a>
                   </li>
-                  <li>
-                    <a href="/DaeguBoard">대구</a>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/DaeguBoard");
+                    }}
+                  >
+                    <a>대구</a>
                   </li>
-                  <li>
-                    <a href="/BusanBoard">부산</a>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/BusanBoard");
+                    }}
+                  >
+                    <a>부산</a>
                   </li>
-                  <li>
-                    <a href="/SeoulBoard">서울</a>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/SeoulBoard");
+                    }}
+                  >
+                    <a>서울</a>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a
-                  onClick={() => {
-                    this.props.history.push("/symptom");
-                  }}
-                >
-                  의심 증상
-                </a>
+              <li
+                onClick={() => {
+                  this.props.history.push("/symptom");
+                }}
+              >
+                <a>의심 증상</a>
               </li>
               <li>
                 <a
@@ -133,7 +147,7 @@ class Heal extends Component {
                 </a>
               </li>
               <li>
-                <a href="#">문의/질문</a>
+                <a>문의/질문</a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">
@@ -145,7 +159,6 @@ class Heal extends Component {
               </li>
             </ul>
           </nav>
-
           <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container-fluid">
@@ -169,7 +182,30 @@ class Heal extends Component {
                 <div
                   class="collapse navbar-collapse"
                   id="navbarSupportedContent"
-                ></div>
+                >
+                  {/* <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">
+                        Page
+                      </a>
+                    </li>
+                  </ul> */}
+                </div>
               </div>
             </nav>
             <Table striped bordered hover className="table-responsive">
