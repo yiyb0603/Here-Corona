@@ -1,5 +1,5 @@
 //의심 증상
-import React from 'react';
+import React, { useEffect } from 'react';
 import './symptom.scss';
 
 import { FaLongArrowAltDown } from "react-icons/fa";
@@ -8,11 +8,19 @@ import symptom1 from 'asset/images/symptom1.png';
 import symptom2 from 'asset/images/symptom2.png';
 import symptom3 from 'asset/images/symptom3.png';
 import symptomMain from 'asset/images/symptomMain.jpg';
+import $ from 'jquery';
 
 const Symptom =()=> {
+  useEffect(() => {
+    $(document).ready(function() {
+      $("#sidebarCollapse").on("click", function() {
+        $("#sidebar").toggleClass("active");
+        $(this).toggleClass("active");
+      });
+    });
+  }, [])
     return(
         <>
-        
         <div className="allType1">
           <div class="wrapper">
             <nav id="sidebar">
