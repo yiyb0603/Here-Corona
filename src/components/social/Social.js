@@ -85,17 +85,34 @@ class Social extends Component {
                       지역 공유 게시판
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                        <a href="/NationWideBoard">전국</a>
+                      <li
+                        onClick={() => {
+                          this.props.history.push("/NationWideBoard");
+                        }}
+                      >
+                        <a>전국</a>
                       </li>
-                      <li>
-                        <a href="/DaeguBoard">대구</a>
+                      <li
+                        onClick={() => {
+                          this.props.history.push("/DaeguBoard");
+                        }}
+                      >
+                        <a>대구</a>
                       </li>
-                      <li>
-                        <a href="/BusanBoard">부산</a>
+                      <li
+                        class="active"
+                        onClick={() => {
+                          this.props.history.push("/BusanBoard");
+                        }}
+                      >
+                        <a>부산</a>
                       </li>
-                      <li>
-                        <a href="/SeoulBoard">서울</a>
+                      <li
+                        onClick={() => {
+                          this.props.history.push("/SeoulBoard");
+                        }}
+                      >
+                        <a>서울</a>
                       </li>
                     </ul>
                   </li>
