@@ -16,6 +16,7 @@
       color: white;
       border-radius: 15px;
       display: inline-block;
+      margin-bottom: 2%;
     }
 
     .thirdBox3 {
@@ -28,6 +29,7 @@
       color: white;
       border-radius: 15px;
       display: inline-block;
+      margin-bottom: 2%;
     }
     .fourthBox4 {
       width: 100%;
@@ -47,6 +49,80 @@
         // position: relative;
         font-size: 1rem;
         font-weight: 500;
+        float: left;
+      }
+      .plus {
+        width: 50%;
+        float: right;
+        text-align: right;
+      }
+    }
+    .peoplePoint1 {
+      margin-top: 50px;
+      text-align: right;
+      // justify-content: center;
+      font-size: 1.2rem;
+    }
+    .pressCircle {
+      cursor: pointer;
+    }
+    .circleInPlus {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .allType2 {
+    .lastUpdate {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .firstBox1 {
+      width: 32%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      height: 20%;
+      max-height: 150px;
+      background-color: #eb962a;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+    }
+
+    .thirdBox3 {
+      width: 32%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      height: 20%;
+      max-height: 150px;
+      background-color: #05c2ab;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    .fourthBox4 {
+      width: 32%;
+      margin-bottom: 2%;
+      height: 20%;
+      max-height: 150px;
+      background-color: #7a69db;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    .mainplusBox {
+      width: 100%;
+      margin: 0 auto;
+
+      .mainText {
+        width: 50%;
+        // position: relative;
+        font-size: 1.5rem;
+        font-weight: bold;
         float: left;
       }
       .plus {

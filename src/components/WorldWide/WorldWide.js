@@ -213,7 +213,7 @@ class WorldWide extends Component {
                 <br />
                 <div className="peoplePoint1">{this.state.worldHeal}명</div>
               </div>
-              <div class="line"></div>
+              {/* <div class="line"></div> */}
               <div className="fourthBox4">
                 <div className="mainplusBox">
                   <div className="mainText">
