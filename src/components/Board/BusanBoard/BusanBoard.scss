@@ -6,14 +6,6 @@
   left: 0;
   overflow: hidden;
 
-  &-Top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }
-
   &-TitleZone {
     display: flex;
     justify-content: center;
@@ -56,24 +48,6 @@
     font-weight: 600;
     font-size: 0.9rem;
   }
-}
-
-.showNavbar {
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.boardSearch {
-  border: none;
-  background-color: #ecf0f1;
-  border-radius: 7px;
-  width: 70%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .writeBoard {

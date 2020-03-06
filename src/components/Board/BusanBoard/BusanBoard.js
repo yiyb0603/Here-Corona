@@ -210,15 +210,6 @@ class BusanBoard extends Component {
                 </div>
               </nav>
               <div className="BusanBoard">
-                <div className="BusanBoard-Top">
-                  <FaBars className="showNavbar" />
-                  <input
-                    type="text"
-                    className="boardSearch"
-                    placeholder="검색어를 입력하세요."
-                  />
-                </div>
-
                 <div className="BusanBoard-TitleZone">
                   <span className="BusanBoard-Title">
                     부산 정보 공유 게시판

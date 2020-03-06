@@ -212,15 +212,6 @@ class DaeguBoard extends Component {
                 </div>
               </nav>
               <div className="DaeguBoard">
-                <div className="DaeguBoard-Top">
-                  <FaBars className="showNavbar" />
-                  <input
-                    type="text"
-                    className="boardSearch"
-                    placeholder="검색어를 입력하세요."
-                  />
-                </div>
-
                 <div className="DaeguBoard-TitleZone">
                   <span className="DaeguBoard-Title">
                     대구 정보 공유 게시판

@@ -210,15 +210,6 @@ class SeoulBoard extends Component {
                 </div>
               </nav>
               <div className="SeoulBoard">
-                <span className="SeoulBoard-Top">
-                  <FaBars className="showNavbar" />
-                  <input
-                    type="text"
-                    className="boardSearch"
-                    placeholder="검색어를 입력하세요."
-                  />
-                </span>
-
                 <div className="SeoulBoard-TitleZone">
                   <span className="SeoulBoard-Title">
                     서울 정보 공유 게시판
