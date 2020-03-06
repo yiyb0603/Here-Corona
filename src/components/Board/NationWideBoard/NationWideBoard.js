@@ -1,57 +1,26 @@
-import React, { Component } from "react";
-import "./SeoulBoard.scss";
-import { FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
-import { Link, withRouter } from "react-router-dom";
+import React, { useEffect } from 'react';
+import './NationWideBoard.scss';
+import { FaBars } from 'react-icons/fa';
+import { withRouter } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./SeoulNav.scss";
 import $ from "jquery";
+import './NationWideNav.scss'
 
 /* eslint-disable */
 
-class SeoulBoard extends Component {
-  componentDidMount() {
-    $(document).ready(function() {
-      $("#sidebarCollapse").on("click", function() {
-        $("#sidebar").toggleClass("active");
-        $(this).toggleClass("active");
-      });
-    });
-  }
-  render() {
-    const { seoulList, history } = this.props;
-    const seoulItem = seoulList.map(data => {
-      let { idx, title, region, view, created_at } = data;
-      return (
-        <div className="BoardPage-List" key={idx}>
-          <span className="BoardPage-List-Location">지역: {region}</span>
-          <Link
-            to="/BoardPage"
-            onClick={() => {
-              sessionStorage.setItem("index", idx);
-            }}
-            className="BoardPage-List-Item"
-          >
-            제목: {title}
-          </Link>
+const NationWideBoard = ({ history }) => {
+    useEffect(() => {
+        $(document).ready(function() {
+            $("#sidebarCollapse").on("click", function() {
+              $("#sidebar").toggleClass("active");
+              $(this).toggleClass("active");
+            });
+          });
+    }, []);
 
-          <div>
-            <span className="BoardPage-List-Time">{created_at}</span>
-            <div className="BoardPage-Info">
-              <span className="BoardPage-List-View">
-                <FaPhabricator />
-                {view}
-              </span>
-              <FaRegCommentAlt />
-            </div>
-          </div>
-
-          <hr className="BoardPage-Line" />
-        </div>
-      );
-    });
     return (
-      <>
-        <div className="SeoulNav">
+        <>
+        <div className="NationWideNav">
           <div class="wrapper">
             <nav id="sidebar">
               <div class="sidebar-header">
@@ -217,38 +186,36 @@ class SeoulBoard extends Component {
                   </div>
                 </div>
               </nav>
-              <div className="SeoulBoard">
-                <div className="SeoulBoard-TitleZone">
-                  <span className="SeoulBoard-Title">
-                    서울 정보 공유 게시판
-                  </span>
-                </div>
 
-                <div className="Board-Button">
-                  <button
-                    className="Board-Button-Button"
-                    onClick={() => (window.location = "/BoardInsert")}
-                  >
-                    글쓰기
-                  </button>
-                  <button className="Board-Button-Button">인기순</button>
-                </div>
-
-                <div className="SeoulBoard-NoticeZone">
-                  <span className="SeoulBoard-Notice">공지</span>
-                  <span className="SeoulBoard-NoticeContents">
-                    익명 게시판입니다. 비방, 욕설 등은 삼가해주세요.
-                  </span>
-                </div>
-
-                <div className="SeoulBoard-List">{seoulItem}</div>
-              </div>
+        <div className ="NationWideBoard">
+            <div className="NationWideBoard-TitleZone">
+                <span className="NationWideBoard-Title">전국 정보 공유 게시판</span>
             </div>
-          </div>
+
+            <div className="Board-Button">
+                <button
+                  className="Board-Button-Button"
+                  onClick={() => (window.location = "/BoardInsert")}
+                >
+                글쓰기
+                </button>
+                <button className="Board-Button-Button">인기순</button>
+                </div>
+
+            <div className="NationWideBoard-NoticeZone">
+                <span className="NationWideBoard-Notice">공지</span>
+                <span className="NationWideBoard-NoticeContents">익명 게시판입니다. 비방, 욕설 등은 삼가해주세요.</span>
+            </div>
+
+            <div className="NationWideBoard-List">
+
+            </div>
         </div>
-      </>
+        </div>
+        </div>
+        </div>
+        </>
     );
-  }
 }
 
-export default withRouter(SeoulBoard);
+export default withRouter(NationWideBoard);

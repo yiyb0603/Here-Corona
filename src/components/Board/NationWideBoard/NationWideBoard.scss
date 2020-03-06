@@ -2,18 +2,7 @@
     .NationWideBoard {
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
         overflow-x: hidden;
-
-        &-Top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            margin-top: 5px;
-        }
 
         &-TitleZone {
             display: flex;
@@ -22,16 +11,6 @@
             & .NationWideBoard-Title {
                 color: #34495e;
                 font-weight: bold;
-            }
-
-            & .sortBtn {
-                border: 2px solid gray;
-                background-color: white;
-                border-radius: 5px;
-                padding-left: 10px;
-                padding-right: 10px;
-                position: absolute;
-                right: 0;
             }
         }
 
@@ -59,24 +38,6 @@
         }
     }
 
-    .showNavbar {
-        font-size: 1.5rem;
-        margin-right: 10px;
-    }
-
-    .boardSearch {
-        border: none;
-        background-color: #ecf0f1;
-        border-radius: 7px;
-        width: 70%;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        display: flex;
-        align-items: center; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .writeBoard {
         position: absolute;
         right: 5%;
@@ -101,15 +62,5 @@
     
         .NationWideBoard-NoticeContents {
             font-size: 1.25rem;
-        }
-    
-        .sortBtn {
-            padding: 10px;
-            cursor: pointer;
-        }
-    
-        .showNavbar {
-            font-size: 3rem;
-            cursor: pointer;
         }
     }

@@ -5,7 +5,7 @@ import Main from "./Main/Main";
 import Social from "./social/Social";
 import BoardInsert from "containers/BoardContainer/BoardInsert/BoardInsertContainer";
 import BoardPage from "containers/BoardContainer/BoardPage/BoardPageContainer";
-import NationWideBoard from "./Board/NationWide/NationWideBoard";
+import NationWideBoard from "./Board/NationWideBoard";
 import BusanBoard from 'containers/BoardContainer/BoardList/BusanBoardListContainer';
 import DaeguBoard from "containers/BoardContainer/BoardList/DaeguBoardListContainer";
 import SeoulBoard from "containers/BoardContainer/BoardList/SeoulBoardListContainer";
