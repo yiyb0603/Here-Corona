@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./SeoulBoard.scss";
-import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
+import { FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import { Link, withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SeoulNav.scss";
 import $ from "jquery";
+
+/* eslint-disable */
 
 class SeoulBoard extends Component {
   componentDidMount() {
@@ -16,7 +18,7 @@ class SeoulBoard extends Component {
     });
   }
   render() {
-    const { seoulList } = this.props;
+    const { seoulList, history } = this.props;
     const seoulItem = seoulList.map(data => {
       let { idx, title, region, view, created_at } = data;
       return (
@@ -63,7 +65,7 @@ class SeoulBoard extends Component {
                     data-toggle="collapse"
                     aria-expanded="false"
                     onClick={() => {
-                      this.props.history.push("/");
+                     history.push("/");
                     }}
                   >
                     국내현황
@@ -72,7 +74,7 @@ class SeoulBoard extends Component {
                 <li>
                   <a
                     onClick={() => {
-                      this.props.history.push("/worldWide");
+                      history.push("/worldWide");
                     }}
                   >
                     전세계 현황
@@ -80,7 +82,7 @@ class SeoulBoard extends Component {
 
                   <a
                     onClick={() => {
-                      this.props.history.push("/passed");
+                      history.push("/passed");
                     }}
                   >
                     국내 사망자 현황
@@ -89,7 +91,7 @@ class SeoulBoard extends Component {
                 <li>
                   <a
                     onClick={() => {
-                      this.props.history.push("/healed");
+                      history.push("/healed");
                     }}
                   >
                     국내 격리 해제 현황
@@ -107,14 +109,14 @@ class SeoulBoard extends Component {
                   <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li
                       onClick={() => {
-                        this.props.history.push("/NationWideBoard");
+                        history.push("/NationWideBoard");
                       }}
                     >
                       <a>전국</a>
                     </li>
                     <li
                       onClick={() => {
-                        this.props.history.push("/DaeguBoard");
+                        history.push("/DaeguBoard");
                       }}
                     >
                       <a>대구</a>
@@ -122,14 +124,14 @@ class SeoulBoard extends Component {
                     <li
                       class="active"
                       onClick={() => {
-                        this.props.history.push("/BusanBoard");
+                        history.push("/BusanBoard");
                       }}
                     >
                       <a>부산</a>
                     </li>
                     <li
                       onClick={() => {
-                        this.props.history.push("/SeoulBoard");
+                        history.push("/SeoulBoard");
                       }}
                     >
                       <a>서울</a>
@@ -138,7 +140,7 @@ class SeoulBoard extends Component {
                 </li>
                 <li
                   onClick={() => {
-                    this.props.history.push("/symptom");
+                    history.push("/symptom");
                   }}
                 >
                   <a>의심 증상</a>
@@ -214,7 +216,11 @@ class SeoulBoard extends Component {
                   <span className="SeoulBoard-Title">
                     서울 정보 공유 게시판
                   </span>
-                  <button className="sortBtn">인기순</button>
+                </div>
+
+                <div className ="Board-Button">
+                  <button className ="Board-Button-Button" onClick ={() => window.location ="/BoardInsert"}>글쓰기</button>
+                  <button className="Board-Button-Button">인기순</button>
                 </div>
 
                 <div className="SeoulBoard-NoticeZone">
@@ -225,13 +231,6 @@ class SeoulBoard extends Component {
                 </div>
 
                 <div className="SeoulBoard-List">{seoulItem}</div>
-
-                <button
-                  className="writeBoard"
-                  onClick={() => (window.location = "/BoardInsert")}
-                >
-                  <FaPen />
-                </button>
               </div>
             </div>
           </div>

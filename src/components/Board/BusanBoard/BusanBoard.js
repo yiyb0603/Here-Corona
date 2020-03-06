@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./BusanNav.scss";
 import $ from "jquery";
 
+/* eslint-disable */
+
 class BusanBoard extends Component {
   componentDidMount() {
     $(document).ready(function() {
@@ -16,7 +18,7 @@ class BusanBoard extends Component {
     });
   }
   render() {
-    const { busanList } = this.props;
+    const { busanList, history } = this.props;
     const busanItem = busanList.map(data => {
       let { idx, title, region, view, created_at } = data;
       return (
@@ -63,7 +65,7 @@ class BusanBoard extends Component {
                     data-toggle="collapse"
                     aria-expanded="false"
                     onClick={() => {
-                      this.props.history.push("/");
+                      history.push("/");
                     }}
                   >
                     국내현황
@@ -72,7 +74,7 @@ class BusanBoard extends Component {
                 <li>
                   <a
                     onClick={() => {
-                      this.props.history.push("/worldWide");
+                      history.push("/worldWide");
                     }}
                   >
                     전세계 현황
@@ -80,7 +82,7 @@ class BusanBoard extends Component {
 
                   <a
                     onClick={() => {
-                      this.props.history.push("/passed");
+                      history.push("/passed");
                     }}
                   >
                     국내 사망자 현황
@@ -89,7 +91,7 @@ class BusanBoard extends Component {
                 <li>
                   <a
                     onClick={() => {
-                      this.props.history.push("/healed");
+                      history.push("/healed");
                     }}
                   >
                     국내 격리 해제 현황
@@ -107,14 +109,14 @@ class BusanBoard extends Component {
                   <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li
                       onClick={() => {
-                        this.props.history.push("/NationWideBoard");
+                        history.push("/NationWideBoard");
                       }}
                     >
                       <a>전국</a>
                     </li>
                     <li
                       onClick={() => {
-                        this.props.history.push("/DaeguBoard");
+                        history.push("/DaeguBoard");
                       }}
                     >
                       <a>대구</a>
@@ -122,14 +124,14 @@ class BusanBoard extends Component {
                     <li
                       class="active"
                       onClick={() => {
-                        this.props.history.push("/BusanBoard");
+                        history.push("/BusanBoard");
                       }}
                     >
                       <a>부산</a>
                     </li>
                     <li
                       onClick={() => {
-                        this.props.history.push("/SeoulBoard");
+                        history.push("/SeoulBoard");
                       }}
                     >
                       <a>서울</a>
@@ -138,7 +140,7 @@ class BusanBoard extends Component {
                 </li>
                 <li
                   onClick={() => {
-                    this.props.history.push("/symptom");
+                    history.push("/symptom");
                   }}
                 >
                   <a>의심 증상</a>
@@ -214,7 +216,11 @@ class BusanBoard extends Component {
                   <span className="BusanBoard-Title">
                     부산 정보 공유 게시판
                   </span>
-                  <button className="sortBtn">인기순</button>
+                </div>
+
+                <div className ="Board-Button">
+                  <button className ="Board-Button-Button" onClick ={() => window.location ="/BoardInsert"}>글쓰기</button>
+                  <button className="Board-Button-Button">인기순</button>
                 </div>
 
                 <div className="BusanBoard-NoticeZone">
@@ -225,13 +231,6 @@ class BusanBoard extends Component {
                 </div>
 
                 <div className="BusanBoard-List">{busanItem}</div>
-
-                <button
-                  className="writeBoard"
-                  onClick={() => (window.location = "/BoardInsert")}
-                >
-                  <FaPen />
-                </button>
               </div>
             </div>
           </div>

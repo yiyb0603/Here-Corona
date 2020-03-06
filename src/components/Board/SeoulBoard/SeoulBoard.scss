@@ -2,8 +2,6 @@
   width: 100%;
   height: 100%;
   // position: absolute;
-  top: 0;
-  left: 0;
   overflow-x: hidden;
 
   &-Top {
@@ -21,16 +19,6 @@
     & .SeoulBoard-Title {
       color: #34495e;
       font-weight: bold;
-    }
-
-    & .sortBtn {
-      border: 2px solid gray;
-      background-color: white;
-      border-radius: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      position: absolute;
-      right: 0;
     }
   }
 
@@ -58,23 +46,6 @@
   }
 }
 
-.writeBoard {
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  background-color: #353b48;
-  color: white;
-  border: none;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  font-size: 2rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 1024px) {
   .SeoulBoard-Title {
     font-size: 1.5rem;
@@ -82,15 +53,5 @@
 
   .SeoulBoard-NoticeContents {
     font-size: 1.25rem;
-  }
-
-  .sortBtn {
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  .showNavbar {
-    font-size: 3rem;
-    cursor: pointer;
   }
 }

@@ -27,7 +27,7 @@ const BoardInsertContainer = ({ store, history }) => {
       .then(response => {
           if (response.message === "글 작성 성공.") {
               Swal.fire("띵동", "글 등록에 성공하셨습니다.", "success");
-              history.push("/NationWideBoard");
+              history.push("/DaeguBoard");
           }
       })
   
