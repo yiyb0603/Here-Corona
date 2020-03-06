@@ -195,7 +195,7 @@ class Heal extends Component {
                     <th>출생년도</th>
                     <th>성별</th>
                     <th>사망일</th>
-                    <th>감염경로</th>
+                    <th>신고시도</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -204,126 +204,126 @@ class Heal extends Component {
                     <td>1953(67)</td>
                     <td>남</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>41</td>
                     <td>1953(67)</td>
                     <td>남</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>40</td>
                     <td>1936(84)</td>
                     <td>여</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
                   <tr>
                     <td>39</td>
                     <td>1939(81)</td>
                     <td>남</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
                   <tr>
                     <td>38</td>
                     <td>1934(86)</td>
                     <td>여</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
                   <tr>
                     <td>37</td>
                     <td>1942(78)</td>
                     <td>남</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>36</td>
                     <td>1959(61)</td>
                     <td>남</td>
                     <td>03.05</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
                   <tr>
                     <td>35</td>
                     <td>1948(72)</td>
                     <td>남</td>
                     <td>03.04</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>34</td>
                     <td>1933(87)</td>
                     <td>여</td>
                     <td>03.04</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>33</td>
                     <td>1953(67)</td>
                     <td>여</td>
                     <td>03.04</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>32</td>
                     <td>1942(78)</td>
                     <td>남</td>
                     <td>03.03</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>31</td>
                     <td>1945(75)</td>
                     <td>남</td>
                     <td>03.03</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>30</td>
                     <td>1937(83)</td>
                     <td>남</td>
                     <td>03.03</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>29</td>
                     <td>1943(77)</td>
                     <td>남</td>
                     <td>03.03</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>28</td>
                     <td>1942(78)</td>
                     <td>여</td>
                     <td>03.02</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>27</td>
                     <td>1941(79)</td>
                     <td>여</td>
                     <td>03.02</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#2769</td>
                     <td>1933(86)</td>
                     <td>여</td>
                     <td>03.02</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
                   <tr>
                     <td>25</td>
                     <td>1956(64)</td>
                     <td>남</td>
                     <td>03.02</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -331,21 +331,21 @@ class Heal extends Component {
                     <td>1955(65)</td>
                     <td>남</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>23</td>
                     <td>1949(71)</td>
                     <td>남</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>22</td>
                     <td>1943(77)</td>
                     <td>여</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -353,7 +353,7 @@ class Heal extends Component {
                     <td>1943(77)</td>
                     <td>여</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -361,7 +361,7 @@ class Heal extends Component {
                     <td>1934(86)</td>
                     <td>여</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -369,14 +369,14 @@ class Heal extends Component {
                     <td>1940(80)</td>
                     <td>남</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>18</td>
                     <td>1937(83)</td>
                     <td>남</td>
                     <td>03.01</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -384,7 +384,7 @@ class Heal extends Component {
                     <td>1943(77)</td>
                     <td>남</td>
                     <td>02.29</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -392,7 +392,7 @@ class Heal extends Component {
                     <td>1957(63)</td>
                     <td>여</td>
                     <td>02.27</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -400,42 +400,42 @@ class Heal extends Component {
                     <td>1926(94)</td>
                     <td>여</td>
                     <td>02.28</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#2467</td>
                     <td>1950(70)</td>
                     <td>여</td>
                     <td>02.28</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#1443</td>
                     <td>1945(75)</td>
                     <td>남</td>
                     <td>02.27</td>
-                    <td>신천지대구교회</td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#114</td>
                     <td>1946(74)</td>
                     <td>남</td>
                     <td>02.26</td>
-                    <td>신천지대구교회</td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#875</td>
                     <td>1984(36)</td>
                     <td>남</td>
                     <td>02.25</td>
-                    <td>청도대남병원</td>
+                    <td>경기</td>
                   </tr>
                   <tr>
                     <td>#298</td>
                     <td>1962(58)</td>
                     <td>남</td>
                     <td>02.25</td>
-                    <td>청도대남병원</td>
+                    <td>경북</td>
                   </tr>
 
                   <tr>
@@ -443,7 +443,7 @@ class Heal extends Component {
                     <td>1951(69)</td>
                     <td>여</td>
                     <td>02.24</td>
-                    <td>신천지대구교회</td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -451,14 +451,14 @@ class Heal extends Component {
                     <td>1953(67)</td>
                     <td>남</td>
                     <td>02.24</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
                   <tr>
                     <td>#286</td>
                     <td>1958(62)</td>
                     <td>남</td>
                     <td>02.23</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
 
                   <tr>
@@ -466,7 +466,7 @@ class Heal extends Component {
                     <td>1961(59)</td>
                     <td>남</td>
                     <td>02.23</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
 
                   <tr>
@@ -474,7 +474,7 @@ class Heal extends Component {
                     <td>1963(57)</td>
                     <td>여</td>
                     <td>02.23</td>
-                    <td></td>
+                    <td>대구</td>
                   </tr>
 
                   <tr>
@@ -482,7 +482,7 @@ class Heal extends Component {
                     <td>1963(57)</td>
                     <td>남</td>
                     <td>02.23</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
 
                   <tr>
@@ -490,7 +490,7 @@ class Heal extends Component {
                     <td>1979(41)</td>
                     <td>남</td>
                     <td>02.21</td>
-                    <td></td>
+                    <td>경북</td>
                   </tr>
 
                   <tr>
@@ -498,7 +498,7 @@ class Heal extends Component {
                     <td>1965(55)</td>
                     <td>여</td>
                     <td>02.21</td>
-                    <td>청도대남병원</td>
+                    <td>부산</td>
                   </tr>
 
                   <tr>
@@ -506,7 +506,7 @@ class Heal extends Component {
                     <td>1957(63)</td>
                     <td>남</td>
                     <td>02.19</td>
-                    <td>청도대남병원</td>
+                    <td>경북</td>
                   </tr>
                 </tbody>
               </Table>
