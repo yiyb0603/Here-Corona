@@ -8,6 +8,7 @@ import "./styleSample.scss";
 import { Icon } from "@class101/ui";
 import Circle from "../Chart/Circle";
 import AgeChart from "../Chart/AgeChart";
+import SocialChart from "components/Chart/SocialChat";
 
 class Social extends Component {
   constructor(props) {
@@ -198,6 +199,7 @@ class Social extends Component {
                   </div>
                 </nav>
                 현재 지도 추가중에 있습니다.
+                <SocialChart />
                 <Circle />
                 <AgeChart />
               </div>
