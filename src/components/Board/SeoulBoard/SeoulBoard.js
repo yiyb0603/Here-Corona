@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SeoulBoard.scss";
 import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SeoulNav.scss";
 import $ from "jquery";
@@ -250,4 +250,4 @@ class SeoulBoard extends Component {
   }
 }
 
-export default SeoulBoard;
+export default withRouter(SeoulBoard);

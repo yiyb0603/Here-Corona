@@ -3,6 +3,7 @@ import "./DaeguBoard.scss";
 import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DaeguNav.scss";
+import { withRouter } from 'react-router-dom';
 import $ from "jquery";
 import { Link } from "react-router-dom";
 
@@ -251,4 +252,4 @@ class DaeguBoard extends Component {
   }
 }
 
-export default DaeguBoard;
+export default withRouter(DaeguBoard);
