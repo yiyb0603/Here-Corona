@@ -1,5 +1,6 @@
 import React from 'react';
 import './BoardComment.scss';
+import DaeguBoard from 'components/Board/DaeguBoard';
 
 const BoardComment = ({ commentInfo, contents, setContents, requestWriteComment }) => {
     const commentCount = commentInfo.length;
@@ -7,7 +8,7 @@ const BoardComment = ({ commentInfo, contents, setContents, requestWriteComment 
         const { content } = data;
         return (
             <div key ={data.idx}>
-                <div>댓글 내용: {content}</div>
+                <div className ="BoardComment-Comment">댓글 내용: {content}</div>
             </div>
         )
     })

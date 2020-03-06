@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { observer, inject } from "mobx-react";
 import Swal from "sweetalert2";
 import BoardComment from 'components/Board/BoardComment';
+import DaeguBoard from 'components/Board/DaeguBoard';
 
 const BoardCommentWriteContainer = ({ store, history }) => {
   const [contents, setContents] = useState('');

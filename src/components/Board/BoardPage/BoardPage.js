@@ -5,6 +5,13 @@ import { FaArrowLeft } from 'react-icons/fa';
 import BoardCommentWriteContainer from 'containers/BoardContainer/BoardComment/BoardCommentWriteContainer';
 
 const BoardPage = ({ history, boardPageInfo }) => {
+    // const boardImages = boardPageInfo.files.map(data => {
+    //     return (
+    //         <div>
+    //             <img src ={data} alt ="images" />
+    //         </div>
+    //     )
+    // })
     const { title, content, region } = boardPageInfo;
     return (
         <div className ="BoardPage">
@@ -19,6 +26,7 @@ const BoardPage = ({ history, boardPageInfo }) => {
                 <div className="BoardPage-Page-Title">제목: {title}</div>
                 <div className="BoardPage-Page-Location">지역: {region}</div>
                 <div className="BoardPage-Page-Contents">내용: {content}</div>
+                {/* {boardImages} */}
             </div>
 
             <BoardCommentWriteContainer />

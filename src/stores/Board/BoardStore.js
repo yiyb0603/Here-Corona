@@ -19,6 +19,20 @@ class BoardStore {
   }
 
   @action
+  handleUploadFile(data) {
+    try {
+      const response = BoardRepository.handleUploadFile(data);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
+    }
+  }
+
+  @action
   handleBoardPage(idx) {
     try {
       const response = BoardRepository.handleBoardPage(idx);

@@ -3,7 +3,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { withRouter } from 'react-router-dom';
 import './BoardInsert.scss';
 
-const BoardInsert = ({ history, titles, setTitles, contents, setContents, regions, setRegions, requestBoardInsert }) => {
+const BoardInsert = ({ history, titles, setTitles, contents, setContents, regions, setRegions, file, setFile, requestBoardInsert }) => {
     return (
         <div className ="BoardInsert">
             <span className="BoardInsert-Top">
@@ -15,17 +15,18 @@ const BoardInsert = ({ history, titles, setTitles, contents, setContents, region
 
             <form onSubmit ={requestBoardInsert} className="BoardInsert-Insert">
                 <input type ="text" value ={titles} onChange ={e => setTitles(e.target.value)} 
-                    maxlength ="20" required className ="BoardInsert-Insert-Title" placeholder ="제목을 입력하세요." />
+                    maxLength ="20" required className ="BoardInsert-Insert-Title" placeholder ="제목을 입력하세요." />
                 <div className ="BoardInsert-Insert-Choice">
                     <select onChange ={e => setRegions(e.target.value)} className ="BoardInsert-Insert-Choice-Select">
+                        <option value ="-1">지역을 선택하세요.</option>
                         <option value = "0">서울</option>
                         <option value ="4">대구</option>
                         <option value ="3">부산</option>
-                        <option selected>지역을 선택하세요.</option>
                     </select>
                 </div>
 
                 <textarea value ={contents} onChange ={e => setContents(e.target.value)} className="BoardInsert-Insert-Contents" rows ="15" required placeholder ="내용을 입력하세요." />
+                <input type ="file" className ="BoardInsert-Insert-File" onChange ={e => setFile(file.concat(e.target.value))} />
                 <button type ="submit" className ="BoardInsert-Button">완료</button>
             </form>
         </div>
