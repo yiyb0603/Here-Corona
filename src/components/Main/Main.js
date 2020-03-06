@@ -188,7 +188,11 @@ class Sample extends Component {
               >
                 <a>의심 증상</a>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  this.props.history.push("/market");
+                }}
+              >
                 <a href="#">자영업자 장터</a>
               </li>
               <li>

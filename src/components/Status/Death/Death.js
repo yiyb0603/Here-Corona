@@ -144,8 +144,12 @@ class Heal extends Component {
                   의심 증상
                 </a>
               </li>
-              <li>
-                <a href="#">자영업자 장터</a>
+              <li
+                onClick={() => {
+                  this.props.history.push("/market");
+                }}
+              >
+                <a>자영업자 장터</a>
               </li>
               <li>
                 <a href="#">문의/질문</a>

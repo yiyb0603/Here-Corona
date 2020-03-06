@@ -145,8 +145,12 @@ class BusanBoard extends Component {
                 >
                   <a>의심 증상</a>
                 </li>
-                <li>
-                  <a href="#">자영업자 장터</a>
+                <li
+                  onClick={() => {
+                    this.props.history.push("/market");
+                  }}
+                >
+                  <a>자영업자 장터</a>
                 </li>
                 <li>
                   <a href="#">문의/질문</a>
@@ -218,8 +222,13 @@ class BusanBoard extends Component {
                   </span>
                 </div>
 
-                <div className ="Board-Button">
-                  <button className ="Board-Button-Button" onClick ={() => window.location ="/BoardInsert"}>글쓰기</button>
+                <div className="Board-Button">
+                  <button
+                    className="Board-Button-Button"
+                    onClick={() => (window.location = "/BoardInsert")}
+                  >
+                    글쓰기
+                  </button>
                   <button className="Board-Button-Button">인기순</button>
                 </div>
 

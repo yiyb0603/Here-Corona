@@ -65,7 +65,7 @@ class SeoulBoard extends Component {
                     data-toggle="collapse"
                     aria-expanded="false"
                     onClick={() => {
-                     history.push("/");
+                      history.push("/");
                     }}
                   >
                     국내현황
@@ -146,7 +146,13 @@ class SeoulBoard extends Component {
                   <a>의심 증상</a>
                 </li>
                 <li>
-                  <a href="#">자영업자 장터</a>
+                  <a
+                    onClick={() => {
+                      this.props.history.push("/market");
+                    }}
+                  >
+                    자영업자 장터
+                  </a>
                 </li>
                 <li>
                   <a href="#">문의/질문</a>
@@ -218,8 +224,13 @@ class SeoulBoard extends Component {
                   </span>
                 </div>
 
-                <div className ="Board-Button">
-                  <button className ="Board-Button-Button" onClick ={() => window.location ="/BoardInsert"}>글쓰기</button>
+                <div className="Board-Button">
+                  <button
+                    className="Board-Button-Button"
+                    onClick={() => (window.location = "/BoardInsert")}
+                  >
+                    글쓰기
+                  </button>
                   <button className="Board-Button-Button">인기순</button>
                 </div>
 

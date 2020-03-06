@@ -3,7 +3,7 @@ import "./DaeguBoard.scss";
 import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DaeguNav.scss";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import $ from "jquery";
 import { Link } from "react-router-dom";
 
@@ -148,7 +148,13 @@ class DaeguBoard extends Component {
                   <a>의심 증상</a>
                 </li>
                 <li>
-                  <a href="#">자영업자 장터</a>
+                  <a
+                    onClick={() => {
+                      this.props.history.push("/market");
+                    }}
+                  >
+                    자영업자 장터
+                  </a>
                 </li>
                 <li>
                   <a href="#">문의/질문</a>
@@ -219,9 +225,14 @@ class DaeguBoard extends Component {
                     대구 정보 공유 게시판
                   </span>
                 </div>
-                
-                <div className ="Board-Button">
-                  <button className ="Board-Button-Button" onClick ={() => window.location ="/BoardInsert"}>글쓰기</button>
+
+                <div className="Board-Button">
+                  <button
+                    className="Board-Button-Button"
+                    onClick={() => (window.location = "/BoardInsert")}
+                  >
+                    글쓰기
+                  </button>
                   <button className="Board-Button-Button">인기순</button>
                 </div>
 
