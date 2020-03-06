@@ -5,8 +5,8 @@
 
     &-title{
         margin-left: 35%;
-        margin-bottom: 20px;
-        margin-top: 10px;
+        margin-bottom: 2%;
+        margin-top: 2%;
     }
     &-titleText{
         color: #34495e;
@@ -14,7 +14,6 @@
     }
 
     &-Notice{
-        margin-left: 2%;
         margin-bottom: 4%;
         background-color: #b2bec3;
         padding: 3%;
@@ -29,7 +28,47 @@
             color: #34495e;
             font-weight: bold;
             font-size: 0.925rem;
-            margin-left: 2%;
+            margin-left: 3%;
+        }
+    }
+}
+
+//-------------------------------------ㅡㄷ얌 볃교
+@media screen and (min-width: 1023px){
+
+    .market{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+
+        &-title{
+            margin-left: 45%;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        &-titleText{
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        &-Notice{
+            margin-bottom: 4%;
+            background-color: #b2bec3;
+            padding-top: 1%;
+            padding-bottom: 1%;
+
+            &-text{
+                background-color: #ecf0f1;
+                font-weight: bold;
+                padding: 0.2rem;
+            }
+
+            &-content{
+                color: #34495e;
+                font-weight: bold;
+                font-size: 1rem;
+                margin-left: 1%;
+            }
         }
     }
 }
