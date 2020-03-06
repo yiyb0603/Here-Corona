@@ -9,7 +9,6 @@ const Market = () => {
     return(
         <>
             <div className="market-title">
-                <input type="text" className="market-input"/>
                 <span className="market-titleText">자영업자 장터</span>
             </div>
 
@@ -19,6 +18,7 @@ const Market = () => {
             </div>
 
             <div className="market-list">
+                <MarketList/>
                 <MarketList/>
             </div>
         </>
