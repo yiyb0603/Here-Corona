@@ -273,7 +273,7 @@ class Sample extends Component {
               <br />
               <div className="peoplePoint">
                 {this.state.check}
-                <b className="smallText">(▲{this.state.checkUp})명</b>
+                <b className="smallText">(▲{this.state.checkUp})</b>명
               </div>
             </div>
             {/* </div> */}
@@ -291,7 +291,7 @@ class Sample extends Component {
               <br />
               <div className="peoplePoint">
                 {this.state.heal}
-                <b className="smallText">(▲{this.state.healUp})명</b>
+                <b className="smallText">(▲{this.state.healUp})</b>명
               </div>
             </div>
             {/* <div class="line"></div> */}
@@ -347,10 +347,7 @@ class Sample extends Component {
             </div>
             <div className="secondBoxLong">
               <div className="mainplusBox">
-                <div className="mainText">
-                  전세계
-                  <br />총 확진자
-                </div>
+                <div className="mainText">자영업자 장터</div>
                 <div className="plus">
                   <div
                     className="pressCircle"
@@ -367,10 +364,11 @@ class Sample extends Component {
                 className="peoplePoint"
                 id="noned"
                 onClick={() => {
-                  this.props.history.push("/social");
+                  alert("개발중입니다.");
+                  this.props.history.push("/");
                 }}
               >
-                자세히 알아보기
+                구경하러 가기
                 <IoMdArrowRoundForward className="circleInPlus" />
               </div>
               <br />
@@ -399,7 +397,7 @@ class Sample extends Component {
                 className="peoplePoint"
                 id="noned"
                 onClick={() => {
-                  this.props.history.push("/social");
+                  this.props.history.push("/NationWideBoard");
                 }}
               >
                 지역공유 계시판 바로가기
