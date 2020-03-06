@@ -4,8 +4,7 @@
     overflow-x: hidden;
 
     &-title{
-        justify-content: center;
-        align-items: center;
+        margin-left: 35%;
         margin-bottom: 20px;
         margin-top: 10px;
     }
@@ -14,14 +13,23 @@
         font-weight: bold;
     }
 
-    &-input{
-        border: none;
-        background-color: #ecf0f1;
-        border-radius: 3px;
-        width: 65%;
-        padding: 1.5%;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
+    &-Notice{
+        margin-left: 2%;
+        margin-bottom: 4%;
+        background-color: #b2bec3;
+        padding: 3%;
+
+        &-text{
+            background-color: #ecf0f1;
+            font-weight: bold;
+            padding: 0.2rem;
+        }
+
+        &-content{
+            color: #34495e;
+            font-weight: bold;
+            font-size: 0.925rem;
+            margin-left: 2%;
+        }
     }
 }

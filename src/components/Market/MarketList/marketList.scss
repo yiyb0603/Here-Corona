@@ -2,3 +2,12 @@
     margin-left: 10%;
     margin-bottom: 8%;
 }
+
+//---------------------------------media query
+@media screen and (min-width: 1023px){
+    .marketList{
+        display: inline-block;
+        margin-left: 4%;
+        margin-bottom: 8%;
+    }
+}

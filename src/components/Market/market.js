@@ -13,8 +13,8 @@ const Market = () => {
             </div>
 
             <div className="market-Notice">
-                <span>공지</span>
-                <span>공지사항 내용 들어가는 부분 입니다.</span>
+                <span className="market-Notice-text">공지</span>
+                <span className="market-Notice-content">가게 홍보 문의는 email@email.com 으로 부탁드립니다.</span>
             </div>
 
             <div className="market-list">
