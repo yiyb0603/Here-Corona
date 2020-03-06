@@ -129,8 +129,12 @@ class WorldWide extends Component {
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">의심 증상</a>
+                <li
+                  onClick={() => {
+                    this.props.history.push("/symptom");
+                  }}
+                >
+                  <a>의심 증상</a>
                 </li>
                 <li>
                   <a
@@ -142,7 +146,7 @@ class WorldWide extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="#">문의/질문</a>
+                  <a>문의/질문</a>
                 </li>
               </ul>
               <ul class="list-unstyled CTAs">
