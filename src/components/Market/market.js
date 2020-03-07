@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import MarketList from "components/Market/MarketList/marketList";
 import { FaBars } from "react-icons/fa";
 import "components/Market/market.scss";
+import { Callout, CalloutStatus } from "@class101/ui";
 
 const Market = ({ history }) => {
   useEffect(() => {
@@ -180,19 +181,15 @@ const Market = ({ history }) => {
               </div>
             </nav>
 
-            <div className="market-title">
+            {/* <div className="market-title">
               <span className="market-titleText">자영업자 장터</span>
-            </div>
+            </div> */}
 
-            <div className="market-Notice">
-              <span className="market-Notice-text">공지</span>
-              <span className="market-Notice-content">
-                가게 홍보 문의는 email@email.com 으로 부탁드립니다.
-              </span>
-            </div>
+              <Callout title="공지사항" status={CalloutStatus.DEFAULT} className="market-notice">
+              가게 등록 및 문의는 채팅을 이용해 주시기 바랍니다.
+            </Callout>
 
             <div className="market-list">
-              <MarketList />
               <MarketList />
             </div>
           </div>
