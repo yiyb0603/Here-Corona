@@ -71,7 +71,7 @@ class WorldseroChart extends Component {
     const config = {
       title: {
         visible: true,
-        text: "모오든나라"
+        text: "전세계 코로나 확진자 수"
       },
       forceFit: true,
       data: [
