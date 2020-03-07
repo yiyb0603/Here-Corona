@@ -211,7 +211,7 @@ class WorldWide extends Component {
               <div className="firstBox1">
                 <div className="mainplusBox">
                   <div className="mainText">
-                    국제 총 <br /> 확진자
+                    전세계 총 <br /> 확진자
                   </div>
                   <div className="plus">
                     <div
@@ -234,7 +234,7 @@ class WorldWide extends Component {
               <div className="thirdBox3">
                 <div className="mainplusBox">
                   <div className="mainText">
-                    국제 총 <br /> 회복자
+                    전세계 총 <br /> 회복자
                   </div>
                   <div className="plus"></div>
                 </div>
@@ -245,7 +245,7 @@ class WorldWide extends Component {
               <div className="fourthBox4">
                 <div className="mainplusBox">
                   <div className="mainText">
-                    국제 총 <br /> 사망자
+                    전세계 총 <br /> 사망자
                   </div>
                   <div className="plus"></div>
                 </div>
