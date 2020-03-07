@@ -8,7 +8,7 @@ const BoardInsertContainer = ({ store, history }) => {
   const [contents, setContents] = useState('');
   const [regions, setRegions] = useState('');
   const [file, setFile] = useState([]);
-  const file1 = new FormData();
+  const formData = new FormData();
   const { handleBoardInsert, handleUploadFile } = store.BoardStore;
 
   const requestBoardInsert = (e) => {
@@ -36,11 +36,10 @@ const BoardInsertContainer = ({ store, history }) => {
 
   const requestFileUpload = (e) => {
     e.preventDefault(); // 글 작성 버튼 호출 중지
-    handleUploadFile(file1)
+    handleUploadFile(formData)
       .then(response => {
-        console.log(response);
         if (response.message === "파일 업로드 성공.") {
-          setFile(file.concat(response.data.files));
+          Swal.fire("띵동", "파일 업로드에 성공하였습니다", "success");
         }
       })
 

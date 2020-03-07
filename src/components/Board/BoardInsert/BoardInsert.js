@@ -26,7 +26,9 @@ const BoardInsert = ({ history, titles, setTitles, contents, setContents, region
                 </div>
 
                 <textarea value ={contents} onChange ={e => setContents(e.target.value)} className="BoardInsert-Insert-Contents" rows ="15" required placeholder ="내용을 입력하세요." />
-                <input type ="file" className ="BoardInsert-Insert-File" onChange ={e => setFile(file.concat(e.target.value))} />
+                <input type ="file" className ="BoardInsert-Insert-File" onChange = {e => {
+                    setFile(file.concat(e.target.value));
+                }} />
                 <button onClick ={requestFileUpload}>파일 업로드</button>
                 <button type ="submit" className ="BoardInsert-Button">완료</button>
             </form>
