@@ -102,19 +102,19 @@ const Market = ({ history }) => {
                     <a>서울</a>
                   </li>
                   <li
-                      onClick={() => {
-                        history.push("/GwangjuBoard");
-                      }}
-                    >
-                      <a>광주</a>
-                    </li>
-                    <li
-                      onClick={() => {
-                        history.push("/DaejeonBoard");
-                      }}
-                    >
-                      <a>대전</a>
-                    </li>
+                    onClick={() => {
+                      history.push("/GwangjuBoard");
+                    }}
+                  >
+                    <a>광주</a>
+                  </li>
+                  <li
+                    onClick={() => {
+                      history.push("/DaejeonBoard");
+                    }}
+                  >
+                    <a>대전</a>
+                  </li>
                 </ul>
               </li>
               <li
@@ -133,7 +133,9 @@ const Market = ({ history }) => {
                 <a>자영업자 장터</a>
               </li>
               <li>
-                <a href="#">문의/질문</a>
+                <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                  문의/질문
+                </a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">
@@ -199,8 +201,15 @@ const Market = ({ history }) => {
               <span className="market-titleText">자영업자 장터</span>
             </div> */}
 
-              <Callout title="공지사항" status={CalloutStatus.DEFAULT} className="market-notice">
-              가게 등록 및 문의는 채팅을 이용해 주시기 바랍니다.
+            <Callout
+              title="공지사항"
+              status={CalloutStatus.DEFAULT}
+              className="market-notice"
+            >
+              저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
+              자영업자 분들께 조금이라도 도움이 되고 싶어 소비자와 자영업자를
+              이어주는 장터입니다. <br /> 모든 광고는 무료로 진행되며 가게등록
+              및 문의는 채팅을 이용해 주시기 바랍니다.
             </Callout>
 
             <div className="market-list">

@@ -20,77 +20,80 @@ class BusanBoard extends Component {
 
   state = {
     isTimeOrder: false
-  }
+  };
 
   render() {
-    const { isTimeOrder } = this.state
-    const { busanList, history, requestTimeList, popularBusanList } = this.props;
+    const { isTimeOrder } = this.state;
+    const {
+      busanList,
+      history,
+      requestTimeList,
+      popularBusanList
+    } = this.props;
     let busanItem;
     if (!isTimeOrder) {
-    busanItem = busanList.map((data, index) => {
-      let { idx, title, region, view, created_at } = data;
-      return (
-        <div className="BoardPage-List" key ={index}>
-          <span className="BoardPage-List-Location">지역: {region}</span>
-          <Link
-            to="/BoardPage"
-            onClick={() => {
-              sessionStorage.setItem("index", idx);
-            }}
-            className="BoardPage-List-Item"
-          >
-            제목: {title}
-          </Link>
+      busanItem = busanList.map((data, index) => {
+        let { idx, title, region, view, created_at } = data;
+        return (
+          <div className="BoardPage-List" key={index}>
+            <span className="BoardPage-List-Location">지역: {region}</span>
+            <Link
+              to="/BoardPage"
+              onClick={() => {
+                sessionStorage.setItem("index", idx);
+              }}
+              className="BoardPage-List-Item"
+            >
+              제목: {title}
+            </Link>
 
-          <div>
-            <span className="BoardPage-List-Time">{created_at}</span>
-            <div className="BoardPage-Info">
-              <span className="BoardPage-List-View">
-                <FaPhabricator />
-                {view}
-              </span>
-              <FaRegCommentAlt />
+            <div>
+              <span className="BoardPage-List-Time">{created_at}</span>
+              <div className="BoardPage-Info">
+                <span className="BoardPage-List-View">
+                  <FaPhabricator />
+                  {view}
+                </span>
+                <FaRegCommentAlt />
+              </div>
             </div>
+
+            <hr className="BoardPage-Line" />
           </div>
+        );
+      });
+    } else if (isTimeOrder) {
+      busanItem = popularBusanList.map((data, index) => {
+        let { idx, title, region, view, created_at } = data;
+        return (
+          <div className="BoardPage-List" key={index}>
+            <span className="BoardPage-List-Location">지역: {region}</span>
+            <Link
+              to="/BoardPage"
+              onClick={() => {
+                sessionStorage.setItem("index", idx);
+              }}
+              className="BoardPage-List-Item"
+            >
+              제목: {title}
+            </Link>
 
-          <hr className="BoardPage-Line" />
-        </div>
-      );
-    })
-  }
-
-  else if (isTimeOrder) {
-    busanItem = popularBusanList.map((data, index) => {
-      let { idx, title, region, view, created_at } = data;
-      return (
-        <div className="BoardPage-List" key ={index}>
-          <span className="BoardPage-List-Location">지역: {region}</span>
-          <Link
-            to="/BoardPage"
-            onClick={() => {
-              sessionStorage.setItem("index", idx);
-            }}
-            className="BoardPage-List-Item"
-          >
-            제목: {title}
-          </Link>
-
-          <div>
-            <span className="BoardPage-List-Time">{created_at}</span>
-            <div className="BoardPage-Info">
-              <span className="BoardPage-List-View">
-                <FaPhabricator />
-                {view}
-              </span>
-              <FaRegCommentAlt />
+            <div>
+              <span className="BoardPage-List-Time">{created_at}</span>
+              <div className="BoardPage-Info">
+                <span className="BoardPage-List-View">
+                  <FaPhabricator />
+                  {view}
+                </span>
+                <FaRegCommentAlt />
+              </div>
             </div>
-          </div>
 
-          <hr className="BoardPage-Line" />
-        </div>
-      );
-    })
-  }
+            <hr className="BoardPage-Line" />
+          </div>
+        );
+      });
+    }
     return (
       <>
         <div className="BusanNav">
@@ -209,7 +212,9 @@ class BusanBoard extends Component {
                   <a>자영업자 장터</a>
                 </li>
                 <li>
-                  <a href="#">문의/질문</a>
+                  <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                    문의/질문
+                  </a>
                 </li>
               </ul>
               <ul class="list-unstyled CTAs">
@@ -285,12 +290,15 @@ class BusanBoard extends Component {
                   >
                     글쓰기
                   </button>
-                  <button className="Board-Button-Button" onClick ={() => {
-                    requestTimeList(),
-                    this.setState({ isTimeOrder: !isTimeOrder })
-                  }}>{
-                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
-                  }</button>
+                  <button
+                    className="Board-Button-Button"
+                    onClick={() => {
+                      requestTimeList(),
+                        this.setState({ isTimeOrder: !isTimeOrder });
+                    }}
+                  >
+                    {isTimeOrder ? <span>인기순</span> : <span>최신순</span>}
+                  </button>
                 </div>
 
                 <div className="BusanBoard-NoticeZone">

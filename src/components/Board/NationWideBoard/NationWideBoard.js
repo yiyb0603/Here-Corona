@@ -177,19 +177,19 @@ const NationWideBoard = ({
                     <a>서울</a>
                   </li>
                   <li
-                      onClick={() => {
-                        history.push("/GwangjuBoard");
-                      }}
-                    >
-                      <a>광주</a>
-                    </li>
-                    <li
-                      onClick={() => {
-                        history.push("/DaejeonBoard");
-                      }}
-                    >
-                      <a>대전</a>
-                    </li>
+                    onClick={() => {
+                      history.push("/GwangjuBoard");
+                    }}
+                  >
+                    <a>광주</a>
+                  </li>
+                  <li
+                    onClick={() => {
+                      history.push("/DaejeonBoard");
+                    }}
+                  >
+                    <a>대전</a>
+                  </li>
                 </ul>
               </li>
               <li
@@ -209,7 +209,9 @@ const NationWideBoard = ({
                 </a>
               </li>
               <li>
-                <a href="#">문의/질문</a>
+                <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                  문의/질문
+                </a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">

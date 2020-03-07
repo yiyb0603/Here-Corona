@@ -129,19 +129,19 @@ class Heal extends Component {
                     <a>서울</a>
                   </li>
                   <li
-                      onClick={() => {
-                        this.props.history.push("/GwangjuBoard");
-                      }}
-                    >
-                      <a>광주</a>
-                    </li>
-                    <li
-                      onClick={() => {
-                        this.props.history.push("/DaejeonBoard");
-                      }}
-                    >
-                      <a>대전</a>
-                    </li>
+                    onClick={() => {
+                      this.props.history.push("/GwangjuBoard");
+                    }}
+                  >
+                    <a>광주</a>
+                  </li>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/DaejeonBoard");
+                    }}
+                  >
+                    <a>대전</a>
+                  </li>
                 </ul>
               </li>
               <li
@@ -161,7 +161,9 @@ class Heal extends Component {
                 </a>
               </li>
               <li>
-                <a>문의/질문</a>
+                <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                  문의/질문
+                </a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">

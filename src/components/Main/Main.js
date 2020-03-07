@@ -180,19 +180,19 @@ class Sample extends Component {
                     <a>서울</a>
                   </li>
                   <li
-                      onClick={() => {
-                        this.props.history.push("/GwangjuBoard");
-                      }}
-                    >
-                      <a>광주</a>
-                    </li>
-                    <li
-                      onClick={() => {
-                        this.props.history.push("/DaejeonBoard");
-                      }}
-                    >
-                      <a>대전</a>
-                    </li>
+                    onClick={() => {
+                      this.props.history.push("/GwangjuBoard");
+                    }}
+                  >
+                    <a>광주</a>
+                  </li>
+                  <li
+                    onClick={() => {
+                      this.props.history.push("/DaejeonBoard");
+                    }}
+                  >
+                    <a>대전</a>
+                  </li>
                 </ul>
               </li>
               <li
@@ -207,10 +207,12 @@ class Sample extends Component {
                   this.props.history.push("/market");
                 }}
               >
-                <a href="#">자영업자 장터</a>
+                <a>자영업자 장터</a>
               </li>
               <li>
-                <a href="#">문의/질문</a>
+                <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                  문의/질문
+                </a>
               </li>
             </ul>
             <ul class="list-unstyled CTAs">
@@ -274,7 +276,9 @@ class Sample extends Component {
             </nav>
             {/* <div className="twoBoxalign"> */}
             <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
-              간혹 업데이트가 간혈적으로 지연되는 현상이 발생하고 있습니다.
+              간혹 업데이트가 간혈적으로 지연되는 현상이 발생하고 있습니다.{" "}
+              <br />
+              저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
             </Callout>
             <div className="firstBox">
               <div className="mainplusBox">

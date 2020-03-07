@@ -160,7 +160,9 @@ class WorldWide extends Component {
                   </a>
                 </li>
                 <li>
-                  <a>문의/질문</a>
+                  <a href="https://open.kakao.com/o/swwGCL0b" target="_blank">
+                    문의/질문
+                  </a>
                 </li>
               </ul>
               <ul class="list-unstyled CTAs">
