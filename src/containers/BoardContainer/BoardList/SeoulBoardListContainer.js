@@ -5,6 +5,7 @@ import SeoulBoard from 'components/Board/SeoulBoard';
 
 const SeoulBoardListContainer = ({ store, history }) => {
   const [seoulList, setSeoulList] = useState([]);
+  const [popularSeoulList, setPopularSeoulList] = useState([]);
   const { handleSeoulBoardList } = store.BoardStore;
 
   const requestSeoulList = useCallback(() => {
@@ -20,12 +21,25 @@ const SeoulBoardListContainer = ({ store, history }) => {
         })
   }, []);
 
+  const requestTimeList = () => {
+    handleSeoulBoardList('hit')
+      .then(response => {
+        if (response.message === "글 목록 조회 성공.") {
+            setPopularSeoulList(response.data.posts);
+        }
+      })
+
+      .catch (error => {
+        console.log(error);
+      })
+  }
+
   useEffect(() => {
       requestSeoulList();
   }, []);
 
   return (
-    <SeoulBoard seoulList ={seoulList} />
+    <SeoulBoard seoulList ={seoulList} requestTimeList ={requestTimeList} popularSeoulList ={popularSeoulList}/>
   );
 };
 

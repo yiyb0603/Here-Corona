@@ -5,6 +5,7 @@ import DaeguBoard from 'components/Board/DaeguBoard';
 
 const DaeguBoardListContainer = ({ store, history }) => {
   const [daeguList, setDaeguList] = useState([]);
+  const [popularDaeguList, setPopularDaeguList] = useState([]);
   const { handleDaeguBoardList } = store.BoardStore;
 
   const requestDaeguList = useCallback(() => {
@@ -20,12 +21,25 @@ const DaeguBoardListContainer = ({ store, history }) => {
         })
   }, []);
 
+  const requestTimeList = () => {
+    handleDaeguBoardList('hit')
+      .then(response => {
+        if (response.message === "글 목록 조회 성공.") {
+          setPopularDaeguList(response.data.posts);
+        }
+      })
+
+      .catch (error => {
+        console.log(error);
+      })
+  }
+
   useEffect(() => {
       requestDaeguList();
   }, []);
 
   return (
-    <DaeguBoard daeguList ={daeguList} />
+    <DaeguBoard daeguList ={daeguList} requestTimeList ={requestTimeList} popularDaeguList ={popularDaeguList} />
   );
 };
 

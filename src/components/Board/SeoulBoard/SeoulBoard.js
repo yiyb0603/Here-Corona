@@ -17,12 +17,21 @@ class SeoulBoard extends Component {
       });
     });
   }
+
+  state = {
+    isTimeOrder: false
+  }
+
   render() {
-    const { seoulList, history } = this.props;
-    const seoulItem = seoulList.map(data => {
+    const { seoulList, history, requestTimeList, popularSeoulList } = this.props;
+    const { isTimeOrder } = this.state;
+    let seoulItem = seoulList;
+
+    if (!isTimeOrder) {
+    seoulItem = seoulList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
       return (
-        <div className="BoardPage-List" key={idx}>
+        <div className="BoardPage-List" key={index}>
           <span className="BoardPage-List-Location">지역: {region}</span>
           <Link
             to="/BoardPage"
@@ -49,6 +58,41 @@ class SeoulBoard extends Component {
         </div>
       );
     });
+  }
+
+  else if (isTimeOrder) {
+    seoulItem = popularSeoulList.map((data, index) => {
+      let { idx, title, region, view, created_at } = data;
+      return (
+        <div className="BoardPage-List" key={index}>
+          <span className="BoardPage-List-Location">지역: {region}</span>
+          <Link
+            to="/BoardPage"
+            onClick={() => {
+              sessionStorage.setItem("index", idx);
+            }}
+            className="BoardPage-List-Item"
+          >
+            제목: {title}
+          </Link>
+
+          <div>
+            <span className="BoardPage-List-Time">{created_at}</span>
+            <div className="BoardPage-Info">
+              <span className="BoardPage-List-View">
+                <FaPhabricator />
+                {view}
+              </span>
+              <FaRegCommentAlt />
+            </div>
+          </div>
+
+          <hr className="BoardPage-Line" />
+        </div>
+      );
+    });
+  }
+
     return (
       <>
         <div className="SeoulNav">
@@ -231,7 +275,17 @@ class SeoulBoard extends Component {
                   >
                     글쓰기
                   </button>
-                  <button className="Board-Button-Button">인기순</button>
+                  {/* <button className="Board-Button-Button" onClick ={() => {
+                    this.setState({ isTimeOrder: !isTimeOrder })
+                  }}>{
+                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
+                  }</button> */}
+                  <button className="Board-Button-Button" onClick ={() => {
+                    requestTimeList(),
+                    this.setState({ isTimeOrder: !isTimeOrder })
+                  }}>{
+                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
+                  }</button>
                 </div>
 
                 <div className="SeoulBoard-NoticeZone">

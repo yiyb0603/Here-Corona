@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './NationWideBoard.scss';
 import { FaBars, FaPhabricator, FaRegCommentAlt } from 'react-icons/fa';
 import { withRouter, Link } from 'react-router-dom';
@@ -8,7 +8,9 @@ import './NationWideNav.scss'
 
 /* eslint-disable */
 
-const NationWideBoard = ({ history, nationList }) => {
+const NationWideBoard = ({ history, nationList, requestTimeList, popularNationWideList }) => {
+  const [isTimeOrder, setIsTimeOrder] = useState(false);
+  let nationItem;
     useEffect(() => {
         $(document).ready(function() {
             $("#sidebarCollapse").on("click", function() {
@@ -18,10 +20,11 @@ const NationWideBoard = ({ history, nationList }) => {
           });
     }, []);
 
-    const nationItem = nationList.map(data => {
+    if (!isTimeOrder) {
+    nationItem = nationList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
       return (
-        <div className="BoardPage-List" key={idx}>
+        <div className="BoardPage-List" key={index}>
           <span className="BoardPage-List-Location">지역: {region}</span>
           <Link
             to="/BoardPage"
@@ -48,6 +51,40 @@ const NationWideBoard = ({ history, nationList }) => {
         </div>
       );
     });
+  }
+
+  else if (isTimeOrder) {
+    nationItem = popularNationWideList.map((data, index) => {
+      let { idx, title, region, view, created_at } = data;
+      return (
+        <div className="BoardPage-List" key={index}>
+          <span className="BoardPage-List-Location">지역: {region}</span>
+          <Link
+            to="/BoardPage"
+            onClick={() => {
+              sessionStorage.setItem("index", idx);
+            }}
+            className="BoardPage-List-Item"
+          >
+            제목: {title}
+          </Link>
+
+          <div>
+            <span className="BoardPage-List-Time">{created_at}</span>
+            <div className="BoardPage-Info">
+              <span className="BoardPage-List-View">
+                <FaPhabricator />
+                {view}
+              </span>
+              <FaRegCommentAlt />
+            </div>
+          </div>
+
+          <hr className="BoardPage-Line" />
+        </div>
+      );
+    });
+  }
 
     return (
         <>
@@ -230,7 +267,12 @@ const NationWideBoard = ({ history, nationList }) => {
                 >
                 글쓰기
                 </button>
-                <button className="Board-Button-Button">인기순</button>
+                <button className="Board-Button-Button" onClick ={() => {
+                    requestTimeList(),
+                    setIsTimeOrder(!isTimeOrder);
+                  }}>{
+                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
+                  }</button>
                 </div>
 
             <div className="NationWideBoard-NoticeZone">
