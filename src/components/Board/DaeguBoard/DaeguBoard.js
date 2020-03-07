@@ -19,9 +19,17 @@ class DaeguBoard extends Component {
     });
   }
 
+  state = {
+    isTimeOrder: false
+  }
+
   render() {
-    const { daeguList, history } = this.props;
-    const daeguItem = daeguList.map(data => {
+    const { isTimeOrder } = this.state
+    const { daeguList, history, requestTimeList, popularDaeguList } = this.props;
+    let daeguItem;
+
+    if (!isTimeOrder) {
+    daeguItem = daeguList.map(data => {
       let { idx, title, region, view, created_at } = data;
       return (
         <div className="BoardPage-List" key={idx}>
@@ -50,7 +58,42 @@ class DaeguBoard extends Component {
           <hr className="BoardPage-Line" />
         </div>
       );
-    });
+    })
+  }
+
+  else if (isTimeOrder) {
+    daeguItem = popularDaeguList.map((data, index) => {
+      let { idx, title, region, view, created_at } = data;
+      return (
+        <div className="BoardPage-List" key ={index}>
+          <span className="BoardPage-List-Location">지역: {region}</span>
+          <Link
+            to="/BoardPage"
+            onClick={() => {
+              sessionStorage.setItem("index", idx);
+            }}
+            className="BoardPage-List-Item"
+          >
+            제목: {title}
+          </Link>
+
+          <div>
+            <span className="BoardPage-List-Time">{created_at}</span>
+            <div className="BoardPage-Info">
+              <span className="BoardPage-List-View">
+                <FaPhabricator />
+                {view}
+              </span>
+              <FaRegCommentAlt />
+            </div>
+          </div>
+
+          <hr className="BoardPage-Line" />
+        </div>
+      );
+    })
+  }
+    
     return (
       <>
         <div className="DaeguNav">
@@ -233,7 +276,12 @@ class DaeguBoard extends Component {
                   >
                     글쓰기
                   </button>
-                  <button className="Board-Button-Button">인기순</button>
+                  <button className="Board-Button-Button" onClick ={() => {
+                    requestTimeList(),
+                    this.setState({ isTimeOrder: !isTimeOrder })
+                  }}>{
+                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
+                  }</button>
                 </div>
 
                 <div className="DaeguBoard-NoticeZone">

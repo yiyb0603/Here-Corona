@@ -33,7 +33,6 @@ class SocialChart extends Component {
     let getRegionData = async () => {
       await axios.get(`${SERVER}/api/infectee/region`).then(response => {
         const { region_infectee } = response.data.data;
-        console.log(region_infectee);
 
         this.setState({
           0: region_infectee[0],
@@ -57,7 +56,6 @@ class SocialChart extends Component {
       });
     };
     getRegionData();
-    console.log(this.state.getAsia);
   }
   render() {
     const config = {

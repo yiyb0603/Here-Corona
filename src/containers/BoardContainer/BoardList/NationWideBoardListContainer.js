@@ -5,6 +5,7 @@ import NationWideBoard from 'components/Board/NationWideBoard';
 
 const NationWideBoardListContainer = ({ store, history }) => {
   const [nationWideList, setNationWideList] = useState([]);
+  const [popularNationWideList, setPopularNationWideList] = useState([])
   const { handleNationWideBoardList } = store.BoardStore;
 
   const requestNationWideList = useCallback(() => {
@@ -20,12 +21,25 @@ const NationWideBoardListContainer = ({ store, history }) => {
         })
   }, []);
 
+  const requestTimeList = () => {
+    handleNationWideBoardList('hit')
+      .then(response => {
+        if (response.message === "글 목록 조회 성공.") {
+          setPopularNationWideList(response.data.posts);
+        }
+      })
+
+      .catch (error => {
+        console.log(error);
+      })
+  }
+
   useEffect(() => {
       requestNationWideList();
   }, []);
 
   return (
-    <NationWideBoard nationList = {nationWideList} />
+    <NationWideBoard nationList = {nationWideList} requestTimeList ={requestTimeList} popularNationWideList ={popularNationWideList}/>
   );
 };
 

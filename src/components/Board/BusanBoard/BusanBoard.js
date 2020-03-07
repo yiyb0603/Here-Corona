@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import "./BusanBoard.scss";
 import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import { Link, withRouter } from "react-router-dom";
@@ -17,12 +17,20 @@ class BusanBoard extends Component {
       });
     });
   }
+
+  state = {
+    isTimeOrder: false
+  }
+
   render() {
-    const { busanList, history } = this.props;
-    const busanItem = busanList.map(data => {
+    const { isTimeOrder } = this.state
+    const { busanList, history, requestTimeList, popularBusanList } = this.props;
+    let busanItem;
+    if (!isTimeOrder) {
+    busanItem = busanList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
       return (
-        <div className="BoardPage-List" key={idx}>
+        <div className="BoardPage-List" key ={index}>
           <span className="BoardPage-List-Location">지역: {region}</span>
           <Link
             to="/BoardPage"
@@ -48,7 +56,41 @@ class BusanBoard extends Component {
           <hr className="BoardPage-Line" />
         </div>
       );
-    });
+    })
+  }
+
+  else if (isTimeOrder) {
+    busanItem = popularBusanList.map((data, index) => {
+      let { idx, title, region, view, created_at } = data;
+      return (
+        <div className="BoardPage-List" key ={index}>
+          <span className="BoardPage-List-Location">지역: {region}</span>
+          <Link
+            to="/BoardPage"
+            onClick={() => {
+              sessionStorage.setItem("index", idx);
+            }}
+            className="BoardPage-List-Item"
+          >
+            제목: {title}
+          </Link>
+
+          <div>
+            <span className="BoardPage-List-Time">{created_at}</span>
+            <div className="BoardPage-Info">
+              <span className="BoardPage-List-View">
+                <FaPhabricator />
+                {view}
+              </span>
+              <FaRegCommentAlt />
+            </div>
+          </div>
+
+          <hr className="BoardPage-Line" />
+        </div>
+      );
+    })
+  }
     return (
       <>
         <div className="BusanNav">
@@ -229,7 +271,12 @@ class BusanBoard extends Component {
                   >
                     글쓰기
                   </button>
-                  <button className="Board-Button-Button">인기순</button>
+                  <button className="Board-Button-Button" onClick ={() => {
+                    requestTimeList(),
+                    this.setState({ isTimeOrder: !isTimeOrder })
+                  }}>{
+                    isTimeOrder ? <span>인기순</span> : <span>최신순</span>
+                  }</button>
                 </div>
 
                 <div className="BusanBoard-NoticeZone">

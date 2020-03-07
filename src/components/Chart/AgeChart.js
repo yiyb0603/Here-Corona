@@ -14,26 +14,26 @@ class AgeChart extends Component {
     const config = {
       title: {
         visible: true,
-        text: "확진자 연령대별 확진자 수(현제 값은 테스트에 있습니다.)"
+        text: "확진자 연령대별 확진자 수"
       },
       forceFit: true,
       data: [
         {
           type: "20대 미만",
-          sales: 4
+          sales: 2407
         },
 
         {
           type: "40대 미만",
-          sales: 196
+          sales: 1668
         },
         {
           type: "60대 미만",
-          sales: 113
+          sales: 2117
         },
         {
           type: "60대 이상",
-          sales: 146
+          sales: 575
         }
       ],
       padding: "auto",

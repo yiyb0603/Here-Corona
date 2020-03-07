@@ -6,11 +6,11 @@ import BoardCommentWriteContainer from 'containers/BoardContainer/BoardComment/B
 
 const BoardPage = ({ history, boardPageInfo, fileInfo }) => {
     console.log(fileInfo);
-    const files = fileInfo.map((data, index) => {
-        return (
-            <img src ={data} key ={index} alt ="files" />
-        );
-    })
+    // const files = fileInfo.map((data, index) => {
+    //     return (
+    //         <img src ={data} key ={index} alt ="files" />
+    //     );
+    // })
 
     const { title, content, region } = boardPageInfo;
     return (
@@ -26,7 +26,7 @@ const BoardPage = ({ history, boardPageInfo, fileInfo }) => {
                 <div className="BoardPage-Page-Title">제목: {title}</div>
                 <div className="BoardPage-Page-Location">지역: {region}</div>
                 <div className="BoardPage-Page-Contents">내용: {content}</div>
-                {files}
+                {/* {files} */}
             </div>
 
             <BoardCommentWriteContainer />
