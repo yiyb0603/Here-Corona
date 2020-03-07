@@ -12,11 +12,11 @@ class Circle extends Component {
     const data = [
       {
         type: "남성",
-        value: 343
+        value: 2522
       },
       {
         type: "여성",
-        value: 550
+        value: 4245
       }
     ];
 
@@ -24,7 +24,7 @@ class Circle extends Component {
       forceFit: true,
       title: {
         visible: true,
-        text: "메로나"
+        text: "확진자 수 남녀성비"
       },
       description: {
         visible: true,

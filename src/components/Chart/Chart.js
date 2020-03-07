@@ -48,7 +48,6 @@ class Chart extends Component {
   componentDidMount() {
     let date = async () => {
       await axios.get(`${SERVER}/api/infectee/date`).then(response => {
-        console.log(response.data.data.date_infectee);
         if (response.data.data.date_infectee.reverse().length >= 4) {
           response.data.data.date_infectee.length = 4;
           this.setState({
@@ -60,7 +59,6 @@ class Chart extends Component {
       });
     };
     date();
-    // console.log(getArray);
   }
   render() {
     // date();

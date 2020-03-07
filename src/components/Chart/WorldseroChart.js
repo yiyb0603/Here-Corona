@@ -38,7 +38,6 @@ class WorldseroChart extends Component {
     let getAllWorld = async () => {
       await axios.get(`${SERVER}/api/infectee/nation`).then(response => {
         const { nation_infectee } = response.data.data;
-        console.log(nation_infectee[0].number);
 
         this.setState({
           0: nation_infectee[0].number,
@@ -67,7 +66,6 @@ class WorldseroChart extends Component {
       });
     };
     getAllWorld();
-    console.log(this.state.getAsia);
   }
   render() {
     const config = {
