@@ -406,8 +406,7 @@ class Sample extends Component {
                 className="peoplePoint"
                 id="noned"
                 onClick={() => {
-                  alert("개발중입니다.");
-                  this.props.history.push("/");
+                  this.props.history.push("/market");
                 }}
               >
                 구경하러 가기
