@@ -61,6 +61,34 @@ class BoardStore {
   }
 
   @action
+  handleGwangjuBoardList(ORDER) {
+    try {
+      const response = BoardRepository.handleGwangjuBoardList(ORDER);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
+    }
+  }
+
+  @action
+  handleDaejeonBoardList(ORDER) {
+    try {
+      const response = BoardRepository.handleDaejeonBoardList(ORDER);
+      return new Promise((resolve, reject) => {
+        resolve(response);
+      })
+    } catch (error) {
+      return new Promise((resolve, reject) => {
+        reject(error);
+      })
+    }
+  }
+
+  @action
   handleBusanBoardList(ORDER) {
     try {
       const response = BoardRepository.handleBusanBoardList(ORDER);

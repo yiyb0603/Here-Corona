@@ -179,6 +179,20 @@ class Sample extends Component {
                   >
                     <a>서울</a>
                   </li>
+                  <li
+                      onClick={() => {
+                        this.props.history.push("/GwangjuBoard");
+                      }}
+                    >
+                      <a>광주</a>
+                    </li>
+                    <li
+                      onClick={() => {
+                        this.props.history.push("/DaejeonBoard");
+                      }}
+                    >
+                      <a>대전</a>
+                    </li>
                 </ul>
               </li>
               <li

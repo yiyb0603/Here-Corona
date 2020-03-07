@@ -9,6 +9,8 @@ import NationWideBoard from "containers/BoardContainer/BoardList/NationWideBoard
 import BusanBoard from 'containers/BoardContainer/BoardList/BusanBoardListContainer';
 import DaeguBoard from "containers/BoardContainer/BoardList/DaeguBoardListContainer";
 import SeoulBoard from "containers/BoardContainer/BoardList/SeoulBoardListContainer";
+import GwangjuBoard from 'containers/BoardContainer/BoardList/GwangjuBoardListContainer';
+import DaejeonBoard from 'containers/BoardContainer/BoardList/DaejeonBoardListContainer';
 import NewsTemplate from "./News/NewsTemplate";
 import NewsInsert from "./News/NewsInsert";
 import NewsPage from "./News/NewsPage";
@@ -33,6 +35,8 @@ function App() {
         <Route exact path="/BoardInsert" component={BoardInsert} />
         <Route exact path="/NationWideBoard" component={NationWideBoard} />
         <Route exact path="/DaeguBoard" component={DaeguBoard} />
+        <Route exact path ="/DaejeonBoard" component ={DaejeonBoard} />
+        <Route exact path ="/GwangjuBoard" component ={GwangjuBoard} />
         <Route exact path="/SeoulBoard" component={SeoulBoard} />
         <Route exact path="/BusanBoard" component={BusanBoard} />
         <Route exact path="/News" component={NewsTemplate} />

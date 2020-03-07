@@ -180,6 +180,20 @@ class SeoulBoard extends Component {
                     >
                       <a>서울</a>
                     </li>
+                    <li
+                      onClick={() => {
+                        history.push("/GwangjuBoard");
+                      }}
+                    >
+                      <a>광주</a>
+                    </li>
+                    <li
+                      onClick={() => {
+                        history.push("/DaejeonBoard");
+                      }}
+                    >
+                      <a>대전</a>
+                    </li>
                   </ul>
                 </li>
                 <li

@@ -48,6 +48,8 @@ const BoardInsert = ({
             <option value="0">서울</option>
             <option value="4">대구</option>
             <option value="3">부산</option>
+            <option value ="5">광주</option>
+            <option value ="6">대전</option>
           </select>
         </div>
 
@@ -62,7 +64,7 @@ const BoardInsert = ({
         {/* <input type ="file" className ="BoardInsert-Insert-File" onChange = {requestFileUpload}/> */}
         {/* <button onClick ={requestFileUpload}>파일 업로드</button> */}
         <button type="submit" className="BoardInsert-Button">
-          완료
+          작성하기
         </button>
       </form>
     </div>

@@ -1,0 +1,50 @@
+.DaejeonBoard {
+    width: 100%;
+    height: 100%;
+    // position: absolute;
+    overflow: hidden;
+  
+    &-TitleZone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .DaejeonBoard-Title {
+        color: #34495e;
+        font-weight: bold;
+      }
+    }
+  
+    &-NoticeZone {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #b2bec3;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    &-Notice {
+      background-color: #ecf0f1;
+      font-weight: 600;
+      margin-right: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  
+    &-NoticeContents {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .DaejeonBoard-Title {
+      font-size: 1.5rem;
+    }
+  
+    .DaejeonBoard-NoticeContents {
+      font-size: 1.25rem;
+    }
+  }
+  

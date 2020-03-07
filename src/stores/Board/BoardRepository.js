@@ -56,6 +56,24 @@ class BoardRepository {
         }
     }
 
+    handleDaejeonBoardList = async (ORDER) => {
+        try {
+            const { data } = await axios.get(`${SERVER}/api/post?region=6&order=${ORDER}`);
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    handleGwangjuBoardList = async (ORDER) => {
+        try {
+            const { data } = await axios.get(`${SERVER}/api/post?region=5&order=${ORDER}`);
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     handleNationWideBoardList = async (ORDER) => {
         try {
             const { data } = await axios.get(`${SERVER}/api/post?region&order=${ORDER}`);

@@ -1,14 +1,14 @@
-import React, { Component, useRef } from "react";
-import "./BusanBoard.scss";
-import { FaBars, FaPen, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
+import React, { Component } from "react";
+import './DaejeonBoard.scss';
+import './DaejeonNav.scss';
+import { FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import { Link, withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./BusanNav.scss";
 import $ from "jquery";
 
 /* eslint-disable */
 
-class BusanBoard extends Component {
+class DaejeonBoard extends Component {
   componentDidMount() {
     $(document).ready(function() {
       $("#sidebarCollapse").on("click", function() {
@@ -24,10 +24,10 @@ class BusanBoard extends Component {
 
   render() {
     const { isTimeOrder } = this.state
-    const { busanList, history, requestTimeList, popularBusanList } = this.props;
-    let busanItem;
+    const { daejeonList, history, requestTimeList, popularDaejeonList } = this.props;
+    let daejeonItem;
     if (!isTimeOrder) {
-    busanItem = busanList.map((data, index) => {
+        daejeonItem = daejeonList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
       return (
         <div className="BoardPage-List" key ={index}>
@@ -60,7 +60,7 @@ class BusanBoard extends Component {
   }
 
   else if (isTimeOrder) {
-    busanItem = popularBusanList.map((data, index) => {
+    daejeonItem = popularDaejeonList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
       return (
         <div className="BoardPage-List" key ={index}>
@@ -93,7 +93,7 @@ class BusanBoard extends Component {
   }
     return (
       <>
-        <div className="BusanNav">
+        <div className="DaejeonNav">
           <div class="wrapper">
             <nav id="sidebar">
               <div class="sidebar-header">
@@ -178,6 +178,7 @@ class BusanBoard extends Component {
                     >
                       <a>서울</a>
                     </li>
+
                     <li
                       onClick={() => {
                         history.push("/GwangjuBoard");
@@ -185,6 +186,7 @@ class BusanBoard extends Component {
                     >
                       <a>광주</a>
                     </li>
+
                     <li
                       onClick={() => {
                         history.push("/DaejeonBoard");
@@ -271,10 +273,10 @@ class BusanBoard extends Component {
                   </div>
                 </div>
               </nav>
-              <div className="BusanBoard">
-                <div className="BusanBoard-TitleZone">
-                  <span className="BusanBoard-Title">
-                    부산 정보 공유 게시판
+              <div className="DaejeonBoard">
+                <div className="DaejeonBoard-TitleZone">
+                  <span className="DaejeonBoard-Title">
+                    대전 정보 공유 게시판
                   </span>
                 </div>
 
@@ -293,14 +295,14 @@ class BusanBoard extends Component {
                   }</button>
                 </div>
 
-                <div className="BusanBoard-NoticeZone">
-                  <span className="BusanBoard-Notice">공지</span>
-                  <span className="BusanBoard-NoticeContents">
+                <div className="DaejeonBoard-NoticeZone">
+                  <span className="DaejeonBoard-Notice">공지</span>
+                  <span className="DaejeonBoard-NoticeContents">
                     익명 게시판입니다. 비방, 욕설 등은 삼가해주세요.
                   </span>
                 </div>
 
-                <div className="BusanBoard-List">{busanItem}</div>
+                <div className="DaejeonBoard-List">{daejeonItem}</div>
               </div>
             </div>
           </div>
@@ -310,4 +312,4 @@ class BusanBoard extends Component {
   }
 }
 
-export default withRouter(BusanBoard);
+export default withRouter(DaejeonBoard);
