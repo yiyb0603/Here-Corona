@@ -357,7 +357,12 @@ class Sample extends Component {
 
             <div class="line"></div>
             <ColumnChart />
-            <div className="firstBoxLong">
+            <div
+              className="firstBoxLong"
+              onClick={() => {
+                this.props.history.push("/social");
+              }}
+            >
               <div className="mainplusBox">
                 <div className="mainText">
                   지금 우리 <br />
@@ -375,19 +380,18 @@ class Sample extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                className="peoplePoint"
-                id="noned"
-                onClick={() => {
-                  this.props.history.push("/social");
-                }}
-              >
+              <div className="peoplePoint" id="noned">
                 우리 지역 알아보기
                 <IoMdArrowRoundForward className="circleInPlus" />
               </div>
               <br />
             </div>
-            <div className="secondBoxLong">
+            <div
+              className="secondBoxLong"
+              onClick={() => {
+                this.props.history.push("/market");
+              }}
+            >
               <div className="mainplusBox">
                 <div className="mainText">자영업자 장터</div>
                 <div className="plus">
@@ -402,20 +406,19 @@ class Sample extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                className="peoplePoint"
-                id="noned"
-                onClick={() => {
-                  this.props.history.push("/market");
-                }}
-              >
+              <div className="peoplePoint" id="noned">
                 구경하러 가기
                 <IoMdArrowRoundForward className="circleInPlus" />
               </div>
               <br />
             </div>
 
-            <div className="thirdBoxLong">
+            <div
+              className="thirdBoxLong"
+              onClick={() => {
+                this.props.history.push("/NationWideBoard");
+              }}
+            >
               <div className="mainplusBox">
                 <div className="mainText">
                   지역공유
@@ -434,13 +437,7 @@ class Sample extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                className="peoplePoint"
-                id="noned"
-                onClick={() => {
-                  this.props.history.push("/NationWideBoard");
-                }}
-              >
+              <div className="peoplePoint" id="noned">
                 지역공유 계시판 바로가기
                 <IoMdArrowRoundForward className="circleInPlus" />
               </div>
