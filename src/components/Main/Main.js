@@ -14,7 +14,7 @@ import ColumnChart from "../Chart/Chart";
 import { SERVER } from "../../config/server.json";
 import axios from "axios";
 import Moment from "moment";
-
+import { Callout, CalloutStatus } from "@class101/ui";
 class Sample extends Component {
   constructor(props) {
     super(props);
@@ -259,6 +259,9 @@ class Sample extends Component {
               </div>
             </nav>
             {/* <div className="twoBoxalign"> */}
+            <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
+              간혹 업데이트가 간혈적으로 지연되는 현상이 발생하고 있습니다.
+            </Callout>
             <div className="firstBox">
               <div className="mainplusBox">
                 <div className="mainText">
