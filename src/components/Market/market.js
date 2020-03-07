@@ -102,7 +102,11 @@ const Market = ({ history }) => {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  history.push("/symptom");
+                }}
+              >
                 <a>의심 증상</a>
               </li>
               <li
