@@ -78,7 +78,7 @@ const AdminArea = ({
         </form>
         <form onSubmit={requestOne}>
           <input
-            placeholder="세정"
+            placeholder="세종"
             value={one}
             onChange={e => setOne(e.target.value)}
           ></input>
