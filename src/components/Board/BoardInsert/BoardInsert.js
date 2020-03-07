@@ -3,7 +3,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { withRouter } from 'react-router-dom';
 import './BoardInsert.scss';
 
-const BoardInsert = ({ history, titles, setTitles, contents, setContents, regions, setRegions, file, setFile, requestBoardInsert }) => {
+const BoardInsert = ({ history, titles, setTitles, contents, setContents, regions, setRegions, file, setFile, requestBoardInsert, requestFileUpload }) => {
     return (
         <div className ="BoardInsert">
             <span className="BoardInsert-Top">
@@ -27,6 +27,7 @@ const BoardInsert = ({ history, titles, setTitles, contents, setContents, region
 
                 <textarea value ={contents} onChange ={e => setContents(e.target.value)} className="BoardInsert-Insert-Contents" rows ="15" required placeholder ="내용을 입력하세요." />
                 <input type ="file" className ="BoardInsert-Insert-File" onChange ={e => setFile(file.concat(e.target.value))} />
+                <button onClick ={requestFileUpload}>파일 업로드</button>
                 <button type ="submit" className ="BoardInsert-Button">완료</button>
             </form>
         </div>

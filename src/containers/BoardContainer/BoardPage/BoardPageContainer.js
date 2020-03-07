@@ -5,14 +5,17 @@ import BoardPage from 'components/Board/BoardPage';
 
 const BoardPageContainer = ({ store, history }) => {
   const [boardPageInfo, setBoardPageInfo] = useState({});
+  const [fileInfo, setFileInfo] = useState([]);
   const { handleBoardPage } = store.BoardStore;
 
   const requestBoardPage = useCallback((idx) => {
       idx = sessionStorage.getItem('index');
       handleBoardPage(idx)
         .then(response => {
+            console.log(response);
             if (response.message === "글 조회 성공.") {
                 setBoardPageInfo(response.data.post);
+                setFileInfo(fileInfo.concat(response.data.post.files));
             }
         })
 
@@ -27,7 +30,7 @@ const BoardPageContainer = ({ store, history }) => {
 
   return(
     <>
-        <BoardPage boardPageInfo ={boardPageInfo} />
+        <BoardPage boardPageInfo ={boardPageInfo} fileInfo ={fileInfo}/>
     </>
   )
 };

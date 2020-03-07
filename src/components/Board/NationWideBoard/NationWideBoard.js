@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import './NationWideBoard.scss';
-import { FaBars } from 'react-icons/fa';
-import { withRouter } from 'react-router-dom';
+import { FaBars, FaPhabricator, FaRegCommentAlt } from 'react-icons/fa';
+import { withRouter, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
 import './NationWideNav.scss'
 
 /* eslint-disable */
 
-const NationWideBoard = ({ history }) => {
+const NationWideBoard = ({ history, nationList }) => {
     useEffect(() => {
         $(document).ready(function() {
             $("#sidebarCollapse").on("click", function() {
@@ -17,6 +17,37 @@ const NationWideBoard = ({ history }) => {
             });
           });
     }, []);
+
+    const nationItem = nationList.map(data => {
+      let { idx, title, region, view, created_at } = data;
+      return (
+        <div className="BoardPage-List" key={idx}>
+          <span className="BoardPage-List-Location">지역: {region}</span>
+          <Link
+            to="/BoardPage"
+            onClick={() => {
+              sessionStorage.setItem("index", idx);
+            }}
+            className="BoardPage-List-Item"
+          >
+            제목: {title}
+          </Link>
+
+          <div>
+            <span className="BoardPage-List-Time">{created_at}</span>
+            <div className="BoardPage-Info">
+              <span className="BoardPage-List-View">
+                <FaPhabricator />
+                {view}
+              </span>
+              <FaRegCommentAlt />
+            </div>
+          </div>
+
+          <hr className="BoardPage-Line" />
+        </div>
+      );
+    });
 
     return (
         <>
@@ -207,9 +238,7 @@ const NationWideBoard = ({ history }) => {
                 <span className="NationWideBoard-NoticeContents">익명 게시판입니다. 비방, 욕설 등은 삼가해주세요.</span>
             </div>
 
-            <div className="NationWideBoard-List">
-
-            </div>
+            {nationItem}
         </div>
         </div>
         </div>

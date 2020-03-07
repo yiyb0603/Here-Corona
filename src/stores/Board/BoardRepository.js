@@ -56,6 +56,15 @@ class BoardRepository {
         }
     }
 
+    handleNationWideBoardList = async (ORDER) => {
+        try {
+            const { data } = await axios.get(`${SERVER}/api/post?region&order=${ORDER}`);
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     handleBoardCommentWrite = async (request) => {
         try {
             const { data } = await axios.post(`${SERVER}/api/post/comment`, request);

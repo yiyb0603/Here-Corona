@@ -4,7 +4,13 @@ import './BoardPage.scss';
 import { FaArrowLeft } from 'react-icons/fa';
 import BoardCommentWriteContainer from 'containers/BoardContainer/BoardComment/BoardCommentWriteContainer';
 
-const BoardPage = ({ history, boardPageInfo }) => {
+const BoardPage = ({ history, boardPageInfo, fileInfo }) => {
+    console.log(fileInfo);
+    const files = fileInfo.map((data, index) => {
+        return (
+            <img src ={data} key ={index} alt ="files" />
+        );
+    })
     // const boardImages = boardPageInfo.files.map(data => {
     //     return (
     //         <div>
@@ -27,6 +33,7 @@ const BoardPage = ({ history, boardPageInfo }) => {
                 <div className="BoardPage-Page-Location">지역: {region}</div>
                 <div className="BoardPage-Page-Contents">내용: {content}</div>
                 {/* {boardImages} */}
+                {files}
             </div>
 
             <BoardCommentWriteContainer />
