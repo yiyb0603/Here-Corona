@@ -1,19 +1,46 @@
 .BoardComment {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    // margin-left: 2%;
+    margin-top: 3%;
 
     &-Count {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 0.5%;
+        margin-left: 2%;
     }
 
     &-Input {
-        width: 80%;
+        float: left;
+        width: 50%;
+        height: 40px;
+        resize: none;
+        margin-left: 2%;
+        padding: 0.5%;
     }
 
     &-Comment {
+        width: 80%;
         font-size: 1.25rem;
         white-space: pre-line;
+        margin-left: 2%;
+        padding-top: 0.5rem;
+        &:first-child{
+            margin-top: 2%;
+        }
+    }
+
+    &-sendBtn{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #afafaf;
+        background-color: white;
+        margin-left: 0.5%;
+        transition: 0.2s;
+        &:hover{
+            background-color: #afafaf;
+        }
+    }
+
+    &-icon{
+        font-size: 1rem;
     }
 }

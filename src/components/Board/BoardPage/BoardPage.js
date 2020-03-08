@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './BoardPage.scss';
 import { FaArrowLeft } from 'react-icons/fa';
+import { Callout, CalloutStatus } from "@class101/ui";
 import BoardCommentWriteContainer from 'containers/BoardContainer/BoardComment/BoardCommentWriteContainer';
 
 const BoardPage = ({ history, boardPageInfo, fileInfo }) => {
@@ -17,15 +18,13 @@ const BoardPage = ({ history, boardPageInfo, fileInfo }) => {
         <div className ="BoardPage">
             <span className="BoardPage-Top">
                 <FaArrowLeft className ="BoardPage-Arrow" onClick ={() => history.go(-1)}/> {/* 이전 페이지 이동 */}
-                <span>게시글 보기</span>
+                <span>{title}</span>
             </span>
-
             <hr />
 
+            <Callout title={region+" 지역 게시판"} status={CalloutStatus.SUGGEST}/>
             <div className="BoardPage-Page">
-                <div className="BoardPage-Page-Title">제목: {title}</div>
-                <div className="BoardPage-Page-Location">지역: {region}</div>
-                <div className="BoardPage-Page-Contents">내용: {content}</div>
+                <div className="BoardPage-Page-Contents">{content}</div>
                 {/* {files} */}
             </div>
 
