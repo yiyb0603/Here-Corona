@@ -314,7 +314,7 @@ class Sample extends Component {
               <br />
               <div className="peoplePoint">
                 {this.state.check}
-                <b className="smallText">(▲{this.state.checkUp})</b>명
+                <b className="smallText"></b>명
               </div>
             </div>
             {/* </div> */}
