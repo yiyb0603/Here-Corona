@@ -38,7 +38,7 @@ const GwangjuBoardListContainer = ({ store, history }) => {
   }, []);
 
   return (
-    <GwangjuBoard gwangjuList ={gwangjuList} requestTimeList ={requestTimeList} popularDaeguList ={popularGwangjuList} />
+    <GwangjuBoard gwangjuList ={gwangjuList} requestTimeList ={requestTimeList} popularGwangjuList ={popularGwangjuList} />
   );
 };
 

@@ -25,9 +25,52 @@ const NationWideBoard = ({
     });
   }, []);
 
+  const sub = document.getElementsByClassName('BoardPage-List-Time');
+
+  function timeBefore(parameterTime) { 
+    let now = new Date();
+    let sec;
+    let day;
+    let hour;
+    let min;
+    let writeDay = new Date(parameterTime);
+    
+    let minus; //현재 년도랑 글쓴시간의 년도 비교 
+    if (now.getFullYear() > writeDay.getFullYear()){ minus= now.getFullYear()-writeDay.getFullYear(); 
+        sub.innerHTML = minus+ "년 전";
+  } else if(now.getMonth() > writeDay.getMonth()) 
+  {
+    minus= now.getMonth()-writeDay.getMonth(); 
+    sub.innerHTML = minus+"달 전";
+  } else if(now.getDate() > writeDay.getDate())
+  { 
+    minus= now.getDate()-writeDay.getDate(); 
+    sub.innerHTML = minus+"일 전";
+  } else if(now.getDate() == writeDay.getDate()){ 
+  let nowTime = now.getTime(); 
+  let writeTime = writeDay.getTime(); 
+  if (nowTime > writeTime) { //시간을 비교 
+    sec = parseInt(nowTime - writeTime) / 1000; 
+    day = parseInt(sec/60/60/24); 
+    sec = (sec - (day * 60 * 60 * 24)); 
+    hour = parseInt(sec/60/60); 
+    sec = (sec - (hour*60*60));
+    min = parseInt(sec/60); 
+    sec = parseInt(sec-(min*60)); 
+    if (hour > 0) { 
+      sub.innerHTML = hour + "시간 전";
+   } else if (min > 0) { 
+    sub.innerHTML = min + "분 전";
+  } else if (sec > 0)
+  {
+    sub.innerHTML = sec+  "초 전";
+  } } } }
+
+
   if (!isTimeOrder) {
     nationItem = nationList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
+      timeBefore(created_at);
       return (
         <div className="BoardPage-List" key={index}>
           <span className="BoardPage-List-Location">지역: {region}</span>
@@ -42,7 +85,7 @@ const NationWideBoard = ({
           </Link>
 
           <div>
-            <span className="BoardPage-List-Time">{created_at}</span>
+            <span className="BoardPage-List-Time">{sub.innerHTML}</span>
             <div className="BoardPage-Info">
               <span className="BoardPage-List-View">
                 <FaPhabricator />
@@ -59,6 +102,7 @@ const NationWideBoard = ({
   } else if (isTimeOrder) {
     nationItem = popularNationWideList.map((data, index) => {
       let { idx, title, region, view, created_at } = data;
+      timeBefore(created_at);
       return (
         <div className="BoardPage-List" key={index}>
           <span className="BoardPage-List-Location">지역: {region}</span>
@@ -73,7 +117,7 @@ const NationWideBoard = ({
           </Link>
 
           <div>
-            <span className="BoardPage-List-Time">{created_at}</span>
+            <span className="BoardPage-List-Time">{sub.innerHTML}</span>
             <div className="BoardPage-Info">
               <span className="BoardPage-List-View">
                 <FaPhabricator />
