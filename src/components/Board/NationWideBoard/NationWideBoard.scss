@@ -15,26 +15,11 @@
         }
 
         &-NoticeZone {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #b2bec3;
             padding-top: 10px;
             padding-bottom: 10px;
-        }
-
-        &-Notice {
-            background-color: #ecf0f1;
-            font-weight: 600;
-            margin-right: 10px;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-        &-NoticeContents {
-            font-weight: 600;
-            font-size: 0.9rem;
         }
     }
 
@@ -57,10 +42,25 @@
 
     @media screen and (min-width: 1024px) {
         .NationWideBoard-Title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
     
         .NationWideBoard-NoticeContents {
             font-size: 1.25rem;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .BoardPage-List-Item {
+            font-size: 15px;
+        }
+
+        .BoardPage-List-Time {
+            position: absolute;
+            left: 20px;
+        }
+
+        .BoardPage-List-Location {
+            font-size: 15px;
         }
     }

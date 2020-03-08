@@ -4,6 +4,7 @@ import { FaBars, FaPhabricator, FaRegCommentAlt } from "react-icons/fa";
 import { withRouter, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
+import { Callout, CalloutStatus } from "@class101/ui";
 import "./NationWideNav.scss";
 
 /* eslint-disable */
@@ -344,10 +345,11 @@ const NationWideBoard = ({
               </div>
 
               <div className="NationWideBoard-NoticeZone">
-                <span className="NationWideBoard-Notice">공지</span>
-                <span className="NationWideBoard-NoticeContents">
-                  익명 게시판입니다. 비방, 욕설 등은 삼가해주세요.
-                </span>
+                <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
+                간혹 업데이트가 간헐적으로 지연되는 현상이 발생하고 있습니다.{" "}
+                <br />
+                저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
+              </Callout>
               </div>
 
               {nationItem}
