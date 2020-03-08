@@ -29,7 +29,6 @@ class WorldWide extends Component {
     //
     let getNation = async () => {
       await axios.get(`${SERVER}/api/infectee/nation/total`).then(response => {
-        console.log(response.data.data);
         this.setState({
           worldConfirmed: response.data.data.nation_total.confirmed,
           worldHeal: response.data.data.nation_total.heal,

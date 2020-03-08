@@ -38,7 +38,6 @@ class Heal extends Component {
     });
     let getinfectee = async () => {
       await axios.get(`${SERVER}/api/infectee/total`).then(response => {
-        console.log(response.data.data.total_state);
         this.setState({
           confirmed: response.data.data.total_state.confirmed,
           confirmedUp: response.data.data.total_state.last_confirmed,
@@ -257,6 +256,20 @@ class Heal extends Component {
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>49</td>
+                    <td>1942(78)</td>
+                    <td>여</td>
+                    <td>03.08</td>
+                    <td>경북</td>
+                  </tr>
+                  <tr>
+                    <td>49</td>
+                    <td>1929(91)</td>
+                    <td>남</td>
+                    <td>03.07</td>
+                    <td>대구</td>
+                  </tr>
                   <tr>
                     <td>48</td>
                     <td>1928(92)</td>
