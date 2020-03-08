@@ -268,7 +268,7 @@ class GwangjuBoard extends Component {
               </ul>
               <ul class="list-unstyled CTAs">
                 <li>
-                  <a>지역 콜센터 120</a>
+                  <a>(지역번호)-120</a>
                 </li>
                 <li>
                   <a>콜센터 1339</a>
@@ -351,11 +351,11 @@ class GwangjuBoard extends Component {
                 </div>
 
                 <div className="GwangjuBoard-NoticeZone">
-                <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
-                간혹 업데이트가 간헐적으로 지연되는 현상이 발생하고 있습니다.{" "}
-                <br />
-                저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
-              </Callout>
+                  <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
+                    간혹 업데이트가 간헐적으로 지연되는 현상이 발생하고
+                    있습니다. <br />
+                    저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
+                  </Callout>
                 </div>
 
                 <div className="GwangjuBoard-List">{gwangjuItem}</div>

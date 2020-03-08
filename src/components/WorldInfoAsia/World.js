@@ -89,7 +89,7 @@ class World extends Component {
               </ul>
               <ul class="list-unstyled CTAs">
                 <li>
-                  <a>지역 콜센터 120</a>
+                  <a>(지역번호)-120</a>
                 </li>
                 <li>
                   <a>콜센터 1339</a>
