@@ -38,9 +38,7 @@ class Heal extends Component {
     });
   }
 
-  handleChangeSite() {
-    console.log("test");
-  }
+  handleChangeSite() {}
   render() {
     var { dataList } = this.state;
     return (
