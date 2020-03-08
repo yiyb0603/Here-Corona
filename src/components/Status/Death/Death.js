@@ -38,7 +38,6 @@ class Heal extends Component {
     });
     let getinfectee = async () => {
       await axios.get(`${SERVER}/api/infectee/total`).then(response => {
-        console.log(response.data.data.total_state);
         this.setState({
           confirmed: response.data.data.total_state.confirmed,
           confirmedUp: response.data.data.total_state.last_confirmed,

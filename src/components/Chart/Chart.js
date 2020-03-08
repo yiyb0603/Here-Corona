@@ -73,7 +73,7 @@ class Chart extends Component {
       color: "#e53a40",
       xField: "date",
       yField: "number",
-      style: { lineWidth: 100, height: 600 },
+      style: { lineWidth: 100, height: 400 },
       meta: {
         date: {
           alias: "날짜"
