@@ -34,11 +34,11 @@ class Social extends Component {
             <div class="wrapper">
               <nav id="sidebar">
                 <div class="sidebar-header">
-                  <h3>코로나, 여기</h3>
+                  <h3>여기 코로나</h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                  <p>Corona?</p>
+                  <p>Here Corona</p>
                   <li class="active">
                     <a
                       data-toggle="collapse"
