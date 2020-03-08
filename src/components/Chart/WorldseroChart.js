@@ -88,48 +88,53 @@ class WorldseroChart extends Component {
           number: this.state[2]
         },
         {
-          nation: "일본",
-          number: this.state[3]
-        },
-        {
           nation: "이란",
           number: this.state[4]
-        },
-        {
-          nation: "싱가폴",
-          number: this.state[5]
-        },
-        {
-          nation: "홍콩",
-          number: this.state[6]
-        },
-        {
-          nation: "독일",
-          number: this.state[7]
-        },
-        {
-          nation: "미국",
-          number: this.state[8]
         },
         {
           nation: "프랑스",
           number: this.state[9]
         },
         {
-          nation: "쿠웨이트",
-          number: this.state[10]
+          nation: "독일",
+          number: this.state[7]
         },
         {
           nation: "스페인",
           number: this.state[11]
         },
         {
-          nation: "태국",
-          number: this.state[12]
+          nation: "일본",
+          number: this.state[3]
         },
         {
-          nation: "대만",
-          number: this.state[13]
+          nation: "미국",
+          number: this.state[8]
+        },
+        {
+          nation: "영국",
+          number: this.state[17]
+        },
+        {
+          nation: "스웨덴",
+          number: this.state[20]
+        },
+
+        {
+          nation: "싱가폴",
+          number: this.state[5]
+        },
+        {
+          nation: "스위스",
+          number: this.state[19]
+        },
+        {
+          nation: "홍콩",
+          number: this.state[6]
+        },
+        {
+          nation: "말레이시아",
+          number: this.state[16]
         },
         {
           nation: "바레인",
@@ -140,25 +145,22 @@ class WorldseroChart extends Component {
           number: this.state[15]
         },
         {
-          nation: "말레이시아",
-          number: this.state[16]
-        },
-        {
-          nation: "영국",
-          number: this.state[17]
+          nation: "쿠웨이트",
+          number: this.state[10]
         },
         {
           nation: "케나다",
           number: this.state[18]
         },
         {
-          nation: "스위스",
-          number: this.state[19]
+          nation: "태국",
+          number: this.state[12]
         },
         {
-          nation: "스웨덴",
-          number: this.state[20]
+          nation: "대만",
+          number: this.state[13]
         },
+
         {
           nation: "인도",
           number: this.state[21]
