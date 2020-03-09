@@ -51,7 +51,7 @@ class AgeChart extends Component {
       yField: "sales",
       meta: {
         type: {
-          alias: "날짜"
+          alias: "확진자 연령대별 수"
         },
         sales: {
           alias: "국내 확진자"

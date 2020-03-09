@@ -70,69 +70,70 @@ class SocialChart extends Component {
           number: this.state[4]
         },
         {
-          nation: "서울",
-          number: this.state[0]
-        },
-        {
-          nation: "세종",
-          number: this.state[1]
-        },
-        {
-          nation: "인천",
-          number: this.state[2]
-        },
-        {
-          nation: "부산",
-          number: this.state[3]
-        },
-
-        {
-          nation: "광주",
-          number: this.state[5]
-        },
-        {
-          nation: "대전",
-          number: this.state[6]
-        },
-        {
-          nation: "울산",
-          number: this.state[7]
+          nation: "경상북도",
+          number: this.state[15]
         },
         {
           nation: "경기도",
           number: this.state[8]
         },
         {
-          nation: "강원도",
-          number: this.state[9]
+          nation: "서울",
+          number: this.state[0]
         },
         {
           nation: "충청남도",
           number: this.state[10]
         },
         {
-          nation: "충청북도",
-          number: this.state[11]
-        },
-        {
-          nation: "전라남도",
-          number: this.state[12]
-        },
-        {
-          nation: "전라북도",
-          number: this.state[13]
+          nation: "부산",
+          number: this.state[3]
         },
         {
           nation: "경상남도",
           number: this.state[14]
         },
         {
-          nation: "경상북도",
-          number: this.state[15]
+          nation: "강원도",
+          number: this.state[9]
         },
+        {
+          nation: "충청북도",
+          number: this.state[11]
+        },
+        {
+          nation: "울산",
+          number: this.state[7]
+        },
+        {
+          nation: "대전",
+          number: this.state[6]
+        },
+        {
+          nation: "광주",
+          number: this.state[5]
+        },
+        {
+          nation: "인천",
+          number: this.state[2]
+        },
+        {
+          nation: "전라북도",
+          number: this.state[13]
+        },
+
+        {
+          nation: "전라남도",
+          number: this.state[12]
+        },
+
         {
           nation: "제주도",
           number: this.state[16]
+        },
+        {
+          nation: "세종",
+          number: this.state[1]
         }
       ],
       padding: "auto",
