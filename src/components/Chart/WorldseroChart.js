@@ -84,14 +84,14 @@ class WorldseroChart extends Component {
           number: this.state[2]
         },
         {
+          nation: "이란",
+          number: this.state[4]
+        },
+        {
           nation: "한국",
           number: this.state[1]
         },
 
-        {
-          nation: "이란",
-          number: this.state[4]
-        },
         {
           nation: "프랑스",
           number: this.state[9]
