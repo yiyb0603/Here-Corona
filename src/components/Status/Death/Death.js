@@ -279,7 +279,7 @@ class Heal extends Component {
                   </tr>
                   <tr>
                     <td>51</td>
-                    <td>1950(08)</td>
+                    <td>1950(70)</td>
                     <td>남</td>
                     <td>03.09</td>
                     <td>경북</td>
