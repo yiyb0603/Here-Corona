@@ -12,7 +12,6 @@ const BoardPageContainer = ({ store, history }) => {
       idx = sessionStorage.getItem('index');
       handleBoardPage(idx)
         .then(response => {
-            console.log(response);
             if (response.message === "글 조회 성공.") {
                 setBoardPageInfo(response.data.post);
                 setFileInfo(fileInfo.concat(response.data.post.files));

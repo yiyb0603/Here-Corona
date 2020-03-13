@@ -16,7 +16,6 @@ const AdminLoginContainer = ({ store, history }) => {
     };
     handleAdminLogin(data)
       .then(response => {
-        console.log(response.message);
         if (response.message === "로그인 성공.") {
           Swal.fire("성공", "로그인에 성공하였습니다", "success");
           localStorage.setItem(

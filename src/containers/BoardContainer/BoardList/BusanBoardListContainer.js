@@ -11,7 +11,6 @@ const BusanBoardListContainer = ({ store, history }) => {
   const requestBusanList = useCallback(() => {
     handleBusanBoardList()
         .then(response => {
-          console.log(response);
             if (response.message === "글 목록 조회 성공.") {
                 setBusanList(busanList.concat(response.data.posts));
             }

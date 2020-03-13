@@ -16,7 +16,6 @@ const AdminPageBarContainer = ({ store, history }) => {
     };
     handleAdminPageBar(data)
       .then(response => {
-        console.log(response);
         if (response.message === "날짜별 확진자 생성 성공.") {
           Swal.fire("성공", "날짜별 확진자 생성 성공", "success");
         }

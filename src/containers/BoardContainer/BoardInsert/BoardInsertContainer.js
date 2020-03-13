@@ -22,7 +22,6 @@ const BoardInsertContainer = ({ store, history }) => {
 
     handleBoardInsert(bodyParameter)
       .then(response => {
-        console.log(response);
           if (response.message === "글 작성 성공.") {
               Swal.fire("띵동", "글 등록에 성공하셨습니다.", "success");
               history.push("/NationWideBoard");
@@ -41,8 +40,6 @@ const BoardInsertContainer = ({ store, history }) => {
     formData.append("files", files[0]);
     handleUploadFile(formData)
       .then(response => {
-        console.log(response);
-        console.log(response.data.files);
         if (response.message === "파일 업로드 성공.") {
           Swal.fire("띵동", "파일 업로드에 성공하였습니다", "success");
         }
