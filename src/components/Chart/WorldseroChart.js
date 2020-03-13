@@ -1,8 +1,8 @@
-import React from "react";
-import { BarChart } from "@opd/g2plot-react";
-import { Component } from "react";
-import axios from "axios";
-import { SERVER } from "../../config/server.json";
+import React from 'react';
+import { BarChart } from '@opd/g2plot-react';
+import { Component } from 'react';
+import axios from 'axios';
+import { SERVER } from '../../config/server.json';
 
 class WorldseroChart extends Component {
   constructor(props) {
@@ -71,118 +71,119 @@ class WorldseroChart extends Component {
     const config = {
       title: {
         visible: true,
-        text: "전세계 코로나 확진자 수"
+        text: '전세계 코로나 확진자 수'
       },
       forceFit: true,
       data: [
         {
-          nation: "중국",
+          nation: '중국',
           number: this.state[0]
         },
         {
-          nation: "이탈리아",
+          nation: '이탈리아',
           number: this.state[2]
         },
         {
-          nation: "이란",
+          nation: '이란',
           number: this.state[4]
         },
         {
-          nation: "한국",
+          nation: '한국',
           number: this.state[1]
         },
 
         {
-          nation: "프랑스",
+          nation: '프랑스',
           number: this.state[9]
         },
         {
-          nation: "독일",
-          number: this.state[7]
-        },
-        {
-          nation: "스페인",
+          nation: '스페인',
           number: this.state[11]
         },
         {
-          nation: "미국",
+          nation: '독일',
+          number: this.state[7]
+        },
+
+        {
+          nation: '미국',
           number: this.state[8]
         },
         {
-          nation: "일본",
+          nation: '일본',
           number: this.state[3]
         },
 
         {
-          nation: "영국",
+          nation: '영국',
           number: this.state[17]
         },
         {
-          nation: "스위스",
+          nation: '스위스',
           number: this.state[19]
         },
         {
-          nation: "스웨덴",
+          nation: '스웨덴',
           number: this.state[20]
         },
 
         {
-          nation: "싱가폴",
+          nation: '싱가폴',
           number: this.state[5]
         },
 
         {
-          nation: "홍콩",
+          nation: '홍콩',
           number: this.state[6]
         },
         {
-          nation: "말레이시아",
+          nation: '말레이시아',
           number: this.state[16]
         },
         {
-          nation: "바레인",
+          nation: '바레인',
           number: this.state[14]
         },
         {
-          nation: "오스트레일리아",
+          nation: '오스트레일리아',
           number: this.state[15]
         },
         {
-          nation: "쿠웨이트",
+          nation: '쿠웨이트',
           number: this.state[10]
         },
         {
-          nation: "케나다",
+          nation: '케나다',
           number: this.state[18]
         },
         {
-          nation: "태국",
+          nation: '태국',
           number: this.state[12]
         },
         {
-          nation: "대만",
+          nation: '대만',
           number: this.state[13]
         },
 
         {
-          nation: "인도",
+          nation: '인도',
           number: this.state[21]
         }
       ],
-      padding: "auto",
-      color: "#eb962a",
-      xField: "number",
-      yField: "nation",
-      stroke: "#3e3e3e",
+      padding: 'auto',
+      color: '#eb962a',
+      xField: 'number',
+      yField: 'nation',
+      stroke: '#3e3e3e',
       visible: true,
       lineWidth: 100,
       style: { lineWidth: 100, height: 1000 },
       meta: {
         number: {
-          alias: "코로나 확진자"
+          alias: '코로나 확진자'
         },
         nation: {
-          alias: "국가"
+          alias: '국가'
         }
       }
     };
