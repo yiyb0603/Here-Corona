@@ -355,7 +355,13 @@ class BusanBoard extends Component {
                   </Callout>
                 </div>
 
-                <div className="BusanBoard-List">{busanItem}</div>
+                <div className="BusanBoard-List">
+                {
+                   busanItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                    글을 남겨보세요!
+                  </div> : busanItem
+                }
+                </div>
               </div>
             </div>
           </div>

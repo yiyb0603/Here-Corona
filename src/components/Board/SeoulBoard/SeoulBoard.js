@@ -362,7 +362,13 @@ class SeoulBoard extends Component {
               </Callout>
                 </div>
 
-                <div className="SeoulBoard-List">{seoulItem}</div>
+                <div className="SeoulBoard-List">
+                {
+                  seoulItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                    글을 남겨보세요!
+                  </div> : seoulItem
+                }
+                </div>
               </div>
             </div>
           </div>

@@ -357,7 +357,13 @@ class DaejeonBoard extends Component {
                   </Callout>
                 </div>
 
-                <div className="DaejeonBoard-List">{daejeonItem}</div>
+                <div className="DaejeonBoard-List">
+                {
+                   daejeonItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                    글을 남겨보세요!
+                  </div> : daejeonItem
+                }
+                </div>
               </div>
             </div>
           </div>

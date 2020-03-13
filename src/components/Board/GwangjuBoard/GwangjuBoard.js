@@ -358,7 +358,13 @@ class GwangjuBoard extends Component {
                   </Callout>
                 </div>
 
-                <div className="GwangjuBoard-List">{gwangjuItem}</div>
+                <div className="GwangjuBoard-List">
+                  {
+                    gwangjuItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                      글을 남겨보세요!
+                    </div> : gwangjuItem
+                  }
+                </div>
               </div>
             </div>
           </div>

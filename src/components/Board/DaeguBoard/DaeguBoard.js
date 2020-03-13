@@ -352,7 +352,11 @@ class DaeguBoard extends Component {
                   </Callout>
                 </div>
 
-                {daeguItem}
+                {
+                   daeguItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                    글을 남겨보세요!
+                  </div> : daeguItem
+                }
               </div>
             </div>
           </div>

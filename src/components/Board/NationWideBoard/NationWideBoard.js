@@ -350,7 +350,11 @@ const NationWideBoard = ({
                 저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
               </Callout>
 
-              {nationItem}
+              {
+                nationItem.length === 0 ? <div className ="noneList">작성된 글이 없습니다 <br />
+                    글을 남겨보세요!
+                  </div> : nationItem
+              }
             </div>
           </div>
         </div>
