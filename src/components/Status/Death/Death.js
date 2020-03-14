@@ -257,6 +257,27 @@ class Heal extends Component {
                 </thead>
                 <tbody>
                 <tr>
+                    <td>72</td>
+                    <td>1933(87)</td>
+                    <td>남</td>
+                    <td>03.14</td>
+                    <td>대구</td>
+                  </tr>
+                <tr>
+                    <td>71</td>
+                    <td>1934(86)</td>
+                    <td>남</td>
+                    <td>03.13</td>
+                    <td>대구</td>
+                  </tr>
+                <tr>
+                    <td>70</td>
+                    <td>1942(78)</td>
+                    <td>여</td>
+                    <td>03.13</td>
+                    <td>경북</td>
+                  </tr>
+                <tr>
                     <td>69</td>
                     <td>1935(85)</td>
                     <td>남</td>
