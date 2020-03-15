@@ -91,11 +91,6 @@ class WorldseroChart extends Component {
           nation: '한국',
           number: this.state[1]
         },
-
-        {
-          nation: '프랑스',
-          number: this.state[9]
-        },
         {
           nation: '스페인',
           number: this.state[11]
@@ -103,6 +98,10 @@ class WorldseroChart extends Component {
         {
           nation: '독일',
           number: this.state[7]
+        },
+        {
+          nation: '프랑스',
+          number: this.state[9]
         },
 
         {
