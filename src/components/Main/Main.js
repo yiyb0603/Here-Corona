@@ -1,33 +1,33 @@
 /* eslint-disable */
 
-import React from "react";
-import { Component } from "react";
+import React from 'react';
+import { Component } from 'react';
 // import Navbar from "react-bootstrap/Navbar";
 // import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./sample.scss";
-import $ from "jquery";
-import "./styleSample.scss";
-import { Icon } from "@class101/ui";
-import { IoMdAddCircleOutline, IoMdArrowRoundForward } from "react-icons/io";
-import ColumnChart from "../Chart/Chart";
-import { SERVER } from "../../config/server.json";
-import axios from "axios";
-import Moment from "moment";
-import { Callout, CalloutStatus } from "@class101/ui";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './sample.scss';
+import $ from 'jquery';
+import './styleSample.scss';
+import { Icon } from '@class101/ui';
+import { IoMdAddCircleOutline, IoMdArrowRoundForward } from 'react-icons/io';
+import ColumnChart from '../Chart/Chart';
+import { SERVER } from '../../config/server.json';
+import axios from 'axios';
+import Moment from 'moment';
+import { Callout, CalloutStatus } from '@class101/ui';
 class Sample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      confirmed: "",
-      confirmedUp: "",
-      check: "",
-      checkUp: "",
-      heal: "",
-      healUp: "",
-      death: "",
-      deathUp: "",
-      time: ""
+      confirmed: '',
+      confirmedUp: '',
+      check: '',
+      checkUp: '',
+      heal: '',
+      healUp: '',
+      death: '',
+      deathUp: '',
+      time: ''
     };
   }
 
@@ -62,9 +62,9 @@ class Sample extends Component {
   // }
   componentDidMount() {
     $(document).ready(function() {
-      $("#sidebarCollapse").on("click", function() {
-        $("#sidebar").toggleClass("active");
-        $(this).toggleClass("active");
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('active');
       });
     });
     let getinfectee = async () => {
@@ -80,8 +80,8 @@ class Sample extends Component {
           deathUp: response.data.data.total_state.last_death,
           time: Moment(
             response.data.data.total_state.last_update,
-            "llll"
-          ).format("YYYY-MM-DD h:mm a")
+            'llll'
+          ).format('YYYY-MM-DD h:mm a')
         });
       });
     };
@@ -89,7 +89,7 @@ class Sample extends Component {
   }
 
   handleChangeSite() {
-    console.log("test");
+    console.log('test');
   }
   render() {
     return (
@@ -107,7 +107,7 @@ class Sample extends Component {
                   data-toggle="collapse"
                   aria-expanded="false"
                   onClick={() => {
-                    this.props.history.push("/");
+                    this.props.history.push('/');
                   }}
                 >
                   국내현황
@@ -116,7 +116,7 @@ class Sample extends Component {
               <li>
                 <a
                   onClick={() => {
-                    this.props.history.push("/worldWide");
+                    this.props.history.push('/worldWide');
                   }}
                 >
                   전세계 현황
@@ -124,7 +124,7 @@ class Sample extends Component {
 
                 <a
                   onClick={() => {
-                    this.props.history.push("/passed");
+                    this.props.history.push('/passed');
                   }}
                 >
                   국내 사망자 현황
@@ -133,7 +133,7 @@ class Sample extends Component {
               <li>
                 <a
                   onClick={() => {
-                    this.props.history.push("/healed");
+                    this.props.history.push('/healed');
                   }}
                 >
                   국내 격리 해제 현황
@@ -151,59 +151,23 @@ class Sample extends Component {
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                   <li
                     onClick={() => {
-                      this.props.history.push("/NationWideBoard");
+                      this.props.history.push('/NationWideBoard');
                     }}
                   >
                     <a>전국</a>
-                  </li>
-                  <li
-                    onClick={() => {
-                      this.props.history.push("/DaeguBoard");
-                    }}
-                  >
-                    <a>대구</a>
-                  </li>
-                  <li
-                    class="active"
-                    onClick={() => {
-                      this.props.history.push("/BusanBoard");
-                    }}
-                  >
-                    <a>부산</a>
-                  </li>
-                  <li
-                    onClick={() => {
-                      this.props.history.push("/SeoulBoard");
-                    }}
-                  >
-                    <a>서울</a>
-                  </li>
-                  <li
-                    onClick={() => {
-                      this.props.history.push("/GwangjuBoard");
-                    }}
-                  >
-                    <a>광주</a>
-                  </li>
-                  <li
-                    onClick={() => {
-                      this.props.history.push("/DaejeonBoard");
-                    }}
-                  >
-                    <a>대전</a>
                   </li>
                 </ul>
               </li>
               <li
                 onClick={() => {
-                  this.props.history.push("/symptom");
+                  this.props.history.push('/symptom');
                 }}
               >
                 <a>의심 증상</a>
               </li>
               <li
                 onClick={() => {
-                  this.props.history.push("/market");
+                  this.props.history.push('/market');
                 }}
               >
                 <a>자영업자 장터</a>
@@ -275,7 +239,7 @@ class Sample extends Component {
             </nav>
             {/* <div className="twoBoxalign"> */}
             <Callout title="공지사항" status={CalloutStatus.DEFAULT}>
-              간혹 업데이트가 간헐적으로 지연되는 현상이 발생하고 있습니다.{" "}
+              간혹 업데이트가 간헐적으로 지연되는 현상이 발생하고 있습니다.{' '}
               <br />
               저희는 코로나19에 맞서 싸우고 계신 모든 분들을 응원합니다!
             </Callout>
@@ -289,7 +253,7 @@ class Sample extends Component {
                   <div
                     className="pressCircle"
                     onClick={() => {
-                      this.props.history.push("/social");
+                      this.props.history.push('/social');
                     }}
                   >
                     {/* <IoMdAddCircleOutline className="circleInPlus" /> */}
@@ -359,7 +323,7 @@ class Sample extends Component {
             <div
               className="firstBoxLong"
               onClick={() => {
-                this.props.history.push("/social");
+                this.props.history.push('/social');
               }}
             >
               <div className="mainplusBox">
@@ -371,7 +335,7 @@ class Sample extends Component {
                   <div
                     className="pressCircle"
                     onClick={() => {
-                      this.props.history.push("/social");
+                      this.props.history.push('/social');
                     }}
                   >
                     {/* 다른지역
@@ -388,7 +352,7 @@ class Sample extends Component {
             <div
               className="secondBoxLong"
               onClick={() => {
-                this.props.history.push("/market");
+                this.props.history.push('/market');
               }}
             >
               <div className="mainplusBox">
@@ -397,7 +361,7 @@ class Sample extends Component {
                   <div
                     className="pressCircle"
                     onClick={() => {
-                      this.props.history.push("/social");
+                      this.props.history.push('/social');
                     }}
                   >
                     {/* 다른지역
@@ -415,7 +379,7 @@ class Sample extends Component {
             <div
               className="thirdBoxLong"
               onClick={() => {
-                this.props.history.push("/NationWideBoard");
+                this.props.history.push('/NationWideBoard');
               }}
             >
               <div className="mainplusBox">
@@ -428,7 +392,7 @@ class Sample extends Component {
                   <div
                     className="pressCircle"
                     onClick={() => {
-                      this.props.history.push("/social");
+                      this.props.history.push('/social');
                     }}
                   >
                     {/* 다른지역
